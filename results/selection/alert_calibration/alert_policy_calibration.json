@@ -1,0 +1,5219 @@
+{
+  "contract": "acpdad-sim-research-v5-4r2",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "selected_policy": {
+    "alert_k": 4,
+    "alert_n": 6,
+    "evidence_expiry_s": 0.8,
+    "clear_benign_predictions": 3,
+    "physics_threshold": 0.010762422533106636,
+    "max_ev_evidence_age_s": 0.35
+  },
+  "validation_acceptance_met": true,
+  "acceptance_thresholds": {
+    "benign_mission_alert_rate_max": 0.2,
+    "false_alert_episodes_per_benign_minute_max": 0.35,
+    "evil_twin_pre_attack_mission_rate_max": 0.2,
+    "mean_attack_alert_detection_delay_s_max": 1.5
+  },
+  "selected_metrics": {
+    "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+    "mean_condition_false_episodes_per_minute": 0.3277777777777778,
+    "mean_condition_pre_attack_rate": 0.0861111111111111,
+    "mean_condition_attack_alert_rate": 0.9722222222222222,
+    "mean_condition_end_to_end_recall": 0.860926809843463,
+    "mean_condition_attack_alert_delay_s": 1.4105488149398988,
+    "condition_metrics": {
+      "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+        "evil_twin_tp": 6862,
+        "scheduled_evil_twin": 7953,
+        "scored_evil_twin": 6886,
+        "evil_twin_end_to_end_recall": 0.8628190619891865,
+        "evil_twin_conditional_recall": 0.996514667441185,
+        "evil_twin_precision": 0.9976737423669672,
+        "evil_twin_predictions": 6878,
+        "benign_false_positive_rate": 0.00996827456918307,
+        "benign_false_positives": 553,
+        "benign_scored": 55476,
+        "prediction_coverage": 0.9332,
+        "scored_rows": 83988,
+        "macro_f1": 0.967867811539546,
+        "confusion_matrix": [
+          [
+            54923,
+            464,
+            52,
+            14,
+            23
+          ],
+          [
+            1185,
+            6040,
+            0,
+            0,
+            0
+          ],
+          [
+            74,
+            1,
+            7207,
+            2,
+            0
+          ],
+          [
+            23,
+            1,
+            0,
+            6862,
+            0
+          ],
+          [
+            133,
+            0,
+            0,
+            0,
+            6984
+          ]
+        ],
+        "mission_recall_min": 0.9702970297029703,
+        "mission_recall_mean": 0.9965672861169531,
+        "benign_mission_alert_rate": 0.1,
+        "benign_false_episodes": 8,
+        "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+        "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+        "evil_twin_alert_mission_rate": 1.0,
+        "evil_twin_specific_pre_attack_alert_rate": 0.0,
+        "evil_twin_specific_alert_mission_rate": 1.0,
+        "evil_twin_specific_alert_delay_s": 1.0067952058499998,
+        "mean_attack_alert_detection_delay_s": 1.0027785397
+      },
+      "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+        "evil_twin_tp": 1282,
+        "scheduled_evil_twin": 1478,
+        "scored_evil_twin": 1292,
+        "evil_twin_end_to_end_recall": 0.8673883626522327,
+        "evil_twin_conditional_recall": 0.9922600619195047,
+        "evil_twin_precision": 0.9968895800933126,
+        "evil_twin_predictions": 1286,
+        "benign_false_positive_rate": 0.02888446215139442,
+        "benign_false_positives": 319,
+        "benign_scored": 11044,
+        "prediction_coverage": 0.9341111111111111,
+        "scored_rows": 16814,
+        "macro_f1": 0.9172590863376924,
+        "confusion_matrix": [
+          [
+            10725,
+            286,
+            10,
+            4,
+            19
+          ],
+          [
+            478,
+            1116,
+            0,
+            0,
+            0
+          ],
+          [
+            71,
+            0,
+            1442,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0,
+            1282,
+            0
+          ],
+          [
+            184,
+            0,
+            0,
+            0,
+            1187
+          ]
+        ],
+        "mission_recall_min": 0.9764705882352941,
+        "mission_recall_mean": 0.9920928308655149,
+        "benign_mission_alert_rate": 0.16666666666666666,
+        "benign_false_episodes": 7,
+        "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+        "evil_twin_pre_attack_alert_rate": 0.0,
+        "evil_twin_alert_mission_rate": 1.0,
+        "evil_twin_specific_pre_attack_alert_rate": 0.0,
+        "evil_twin_specific_alert_mission_rate": 1.0,
+        "evil_twin_specific_alert_delay_s": 1.08895595275,
+        "mean_attack_alert_detection_delay_s": 1.08895595275
+      },
+      "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+        "evil_twin_tp": 1356,
+        "scheduled_evil_twin": 1605,
+        "scored_evil_twin": 1374,
+        "evil_twin_end_to_end_recall": 0.8448598130841122,
+        "evil_twin_conditional_recall": 0.9868995633187773,
+        "evil_twin_precision": 0.9955947136563876,
+        "evil_twin_predictions": 1362,
+        "benign_false_positive_rate": 0.0227640813388519,
+        "benign_false_positives": 253,
+        "benign_scored": 11114,
+        "prediction_coverage": 0.9258333333333333,
+        "scored_rows": 16665,
+        "macro_f1": 0.8949729397322889,
+        "confusion_matrix": [
+          [
+            10861,
+            204,
+            12,
+            5,
+            32
+          ],
+          [
+            738,
+            697,
+            0,
+            0,
+            0
+          ],
+          [
+            32,
+            0,
+            1315,
+            0,
+            0
+          ],
+          [
+            16,
+            2,
+            0,
+            1356,
+            0
+          ],
+          [
+            94,
+            0,
+            0,
+            1,
+            1300
+          ]
+        ],
+        "mission_recall_min": 0.963302752293578,
+        "mission_recall_mean": 0.98679561088684,
+        "benign_mission_alert_rate": 0.16666666666666666,
+        "benign_false_episodes": 2,
+        "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+        "evil_twin_pre_attack_alert_rate": 0.25,
+        "evil_twin_alert_mission_rate": 0.9166666666666666,
+        "evil_twin_specific_pre_attack_alert_rate": 0.0,
+        "evil_twin_specific_alert_mission_rate": 1.0,
+        "evil_twin_specific_alert_delay_s": 1.3173901654166666,
+        "mean_attack_alert_detection_delay_s": 1.2964159768181818
+      },
+      "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+        "evil_twin_tp": 1418,
+        "scheduled_evil_twin": 1626,
+        "scored_evil_twin": 1433,
+        "evil_twin_end_to_end_recall": 0.8720787207872078,
+        "evil_twin_conditional_recall": 0.9895324494068388,
+        "evil_twin_precision": 0.9936930623686054,
+        "evil_twin_predictions": 1427,
+        "benign_false_positive_rate": 0.02684139177586986,
+        "benign_false_positives": 297,
+        "benign_scored": 11065,
+        "prediction_coverage": 0.9322222222222222,
+        "scored_rows": 16780,
+        "macro_f1": 0.8734243153477405,
+        "confusion_matrix": [
+          [
+            10768,
+            230,
+            20,
+            9,
+            38
+          ],
+          [
+            856,
+            633,
+            0,
+            0,
+            0
+          ],
+          [
+            102,
+            0,
+            1330,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0,
+            1418,
+            0
+          ],
+          [
+            115,
+            1,
+            0,
+            0,
+            1245
+          ]
+        ],
+        "mission_recall_min": 0.967948717948718,
+        "mission_recall_mean": 0.9896715927322702,
+        "benign_mission_alert_rate": 0.16666666666666666,
+        "benign_false_episodes": 5,
+        "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+        "evil_twin_pre_attack_alert_rate": 0.0,
+        "evil_twin_alert_mission_rate": 1.0,
+        "evil_twin_specific_pre_attack_alert_rate": 0.0,
+        "evil_twin_specific_alert_mission_rate": 1.0,
+        "evil_twin_specific_alert_delay_s": 1.0472926541666665,
+        "mean_attack_alert_detection_delay_s": 1.0472926541666665
+      },
+      "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+        "evil_twin_tp": 1408,
+        "scheduled_evil_twin": 1614,
+        "scored_evil_twin": 1429,
+        "evil_twin_end_to_end_recall": 0.872366790582404,
+        "evil_twin_conditional_recall": 0.9853044086773968,
+        "evil_twin_precision": 0.9943502824858758,
+        "evil_twin_predictions": 1416,
+        "benign_false_positive_rate": 0.03964159652457236,
+        "benign_false_positives": 438,
+        "benign_scored": 11049,
+        "prediction_coverage": 0.9399444444444445,
+        "scored_rows": 16919,
+        "macro_f1": 0.8837677430229454,
+        "confusion_matrix": [
+          [
+            10611,
+            404,
+            8,
+            8,
+            18
+          ],
+          [
+            767,
+            745,
+            0,
+            0,
+            0
+          ],
+          [
+            92,
+            4,
+            1310,
+            0,
+            0
+          ],
+          [
+            19,
+            2,
+            0,
+            1408,
+            0
+          ],
+          [
+            72,
+            0,
+            0,
+            0,
+            1451
+          ]
+        ],
+        "mission_recall_min": 0.956140350877193,
+        "mission_recall_mean": 0.9860182878703699,
+        "benign_mission_alert_rate": 0.3333333333333333,
+        "benign_false_episodes": 8,
+        "false_alert_episodes_per_benign_minute": 0.6666666666666666,
+        "evil_twin_pre_attack_alert_rate": 0.25,
+        "evil_twin_alert_mission_rate": 0.9166666666666666,
+        "evil_twin_specific_pre_attack_alert_rate": 0.0,
+        "evil_twin_specific_alert_mission_rate": 1.0,
+        "evil_twin_specific_alert_delay_s": 1.3857149558333335,
+        "mean_attack_alert_detection_delay_s": 2.8718636174545455
+      },
+      "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+        "evil_twin_tp": 1231,
+        "scheduled_evil_twin": 1455,
+        "scored_evil_twin": 1244,
+        "evil_twin_end_to_end_recall": 0.8460481099656357,
+        "evil_twin_conditional_recall": 0.9895498392282959,
+        "evil_twin_precision": 0.9513137557959814,
+        "evil_twin_predictions": 1294,
+        "benign_false_positive_rate": 0.015582115980522355,
+        "benign_false_positives": 176,
+        "benign_scored": 11295,
+        "prediction_coverage": 0.9321111111111111,
+        "scored_rows": 16778,
+        "macro_f1": 0.9220002156926818,
+        "confusion_matrix": [
+          [
+            11119,
+            91,
+            11,
+            58,
+            16
+          ],
+          [
+            618,
+            873,
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            0,
+            1402,
+            0,
+            0
+          ],
+          [
+            13,
+            0,
+            0,
+            1231,
+            0
+          ],
+          [
+            59,
+            0,
+            0,
+            0,
+            1282
+          ]
+        ],
+        "mission_recall_min": 0.9609375,
+        "mission_recall_mean": 0.9897191783910534,
+        "benign_mission_alert_rate": 0.0,
+        "benign_false_episodes": 0,
+        "false_alert_episodes_per_benign_minute": 0.0,
+        "evil_twin_pre_attack_alert_rate": 0.0,
+        "evil_twin_alert_mission_rate": 1.0,
+        "evil_twin_specific_pre_attack_alert_rate": 0.0,
+        "evil_twin_specific_alert_mission_rate": 1.0,
+        "evil_twin_specific_alert_delay_s": 1.15598614875,
+        "mean_attack_alert_detection_delay_s": 1.15598614875
+      }
+    },
+    "alert_policy": {
+      "alert_k": 4,
+      "alert_n": 6,
+      "evidence_expiry_s": 0.8,
+      "clear_benign_predictions": 3,
+      "physics_threshold": 0.010762422533106636,
+      "max_ev_evidence_age_s": 0.35
+    },
+    "validation_acceptance_met": true
+  },
+  "candidates": [
+    {
+      "mean_condition_benign_alert_mission_rate": 0.28888888888888886,
+      "mean_condition_false_episodes_per_minute": 0.688888888888889,
+      "mean_condition_pre_attack_rate": 0.10555555555555557,
+      "mean_condition_attack_alert_rate": 1.0,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.0793703663277776,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.15,
+          "benign_false_episodes": 18,
+          "false_alert_episodes_per_benign_minute": 0.3,
+          "evil_twin_pre_attack_alert_rate": 0.05,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5475614325833332,
+          "mean_attack_alert_detection_delay_s": 0.5395288549666667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 13,
+          "false_alert_episodes_per_benign_minute": 1.0833333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5863550908333331,
+          "mean_attack_alert_detection_delay_s": 0.5863550908333331
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 4,
+          "false_alert_episodes_per_benign_minute": 0.3333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8172142901666666,
+          "mean_attack_alert_detection_delay_s": 0.7018720539166666
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5842629300000001,
+          "mean_attack_alert_detection_delay_s": 0.5842629300000001
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.4166666666666667,
+          "benign_false_episodes": 14,
+          "false_alert_episodes_per_benign_minute": 1.1666666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8545197581666666,
+          "mean_attack_alert_detection_delay_s": 3.43623087075
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 6,
+          "false_alert_episodes_per_benign_minute": 0.5,
+          "evil_twin_pre_attack_alert_rate": 0.08333333333333333,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.08333333333333333,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.6279723975000001,
+          "mean_attack_alert_detection_delay_s": 0.6279723975000001
+        }
+      },
+      "alert_policy": {
+        "alert_k": 2,
+        "alert_n": 3,
+        "evidence_expiry_s": 0.6,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.28888888888888886,
+      "mean_condition_false_episodes_per_minute": 0.6555555555555556,
+      "mean_condition_pre_attack_rate": 0.10555555555555557,
+      "mean_condition_attack_alert_rate": 0.9722222222222222,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 0.8946923202924242,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.15,
+          "benign_false_episodes": 16,
+          "false_alert_episodes_per_benign_minute": 0.26666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.05,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5475614325833332,
+          "mean_attack_alert_detection_delay_s": 0.5395288549666667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 13,
+          "false_alert_episodes_per_benign_minute": 1.0833333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5863550908333331,
+          "mean_attack_alert_detection_delay_s": 0.5863550908333331
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 4,
+          "false_alert_episodes_per_benign_minute": 0.3333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.7698810318333335,
+          "mean_attack_alert_detection_delay_s": 0.6945972868181819
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5842629300000001,
+          "mean_attack_alert_detection_delay_s": 0.5842629300000001
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.4166666666666667,
+          "benign_false_episodes": 12,
+          "false_alert_episodes_per_benign_minute": 1.0,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8545197581666666,
+          "mean_attack_alert_detection_delay_s": 2.3354373616363633
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 6,
+          "false_alert_episodes_per_benign_minute": 0.5,
+          "evil_twin_pre_attack_alert_rate": 0.08333333333333333,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.08333333333333333,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.6279723975000001,
+          "mean_attack_alert_detection_delay_s": 0.6279723975000001
+        }
+      },
+      "alert_policy": {
+        "alert_k": 2,
+        "alert_n": 3,
+        "evidence_expiry_s": 0.8,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.28888888888888886,
+      "mean_condition_false_episodes_per_minute": 0.6416666666666666,
+      "mean_condition_pre_attack_rate": 0.10555555555555557,
+      "mean_condition_attack_alert_rate": 0.9583333333333334,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 0.6519820808863636,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.15,
+          "benign_false_episodes": 16,
+          "false_alert_episodes_per_benign_minute": 0.26666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.05,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5475614325833332,
+          "mean_attack_alert_detection_delay_s": 0.5395288549666667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 12,
+          "false_alert_episodes_per_benign_minute": 1.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5863550908333331,
+          "mean_attack_alert_detection_delay_s": 0.5863550908333331
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 4,
+          "false_alert_episodes_per_benign_minute": 0.3333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.7698810318333335,
+          "mean_attack_alert_detection_delay_s": 0.6945972868181819
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.5842629300000001,
+          "mean_attack_alert_detection_delay_s": 0.5842629300000001
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.4166666666666667,
+          "benign_false_episodes": 12,
+          "false_alert_episodes_per_benign_minute": 1.0,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.8333333333333334,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8545197581666666,
+          "mean_attack_alert_detection_delay_s": 0.8791759252
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 6,
+          "false_alert_episodes_per_benign_minute": 0.5,
+          "evil_twin_pre_attack_alert_rate": 0.08333333333333333,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.08333333333333333,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.6279723975000001,
+          "mean_attack_alert_detection_delay_s": 0.6279723975000001
+        }
+      },
+      "alert_policy": {
+        "alert_k": 2,
+        "alert_n": 3,
+        "evidence_expiry_s": 1.2,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.1861111111111111,
+      "mean_condition_false_episodes_per_minute": 0.43333333333333335,
+      "mean_condition_pre_attack_rate": 0.09166666666666667,
+      "mean_condition_attack_alert_rate": 1.0,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.370684766211111,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.11666666666666667,
+          "benign_false_episodes": 11,
+          "false_alert_episodes_per_benign_minute": 0.18333333333333332,
+          "evil_twin_pre_attack_alert_rate": 0.05,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.7743498254333333,
+          "mean_attack_alert_detection_delay_s": 0.77115964185
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 10,
+          "false_alert_episodes_per_benign_minute": 0.8333333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8783740603333334,
+          "mean_attack_alert_detection_delay_s": 0.8783740603333334
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 4,
+          "false_alert_episodes_per_benign_minute": 0.3333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1483268183333333,
+          "mean_attack_alert_detection_delay_s": 1.0138155331666667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8681151709166667,
+          "mean_attack_alert_detection_delay_s": 0.8681151709166667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 10,
+          "false_alert_episodes_per_benign_minute": 0.8333333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1769920009166668,
+          "mean_attack_alert_detection_delay_s": 3.7547340019166664
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.9379101890833333,
+          "mean_attack_alert_detection_delay_s": 0.9379101890833333
+        }
+      },
+      "alert_policy": {
+        "alert_k": 3,
+        "alert_n": 4,
+        "evidence_expiry_s": 0.6,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.1861111111111111,
+      "mean_condition_false_episodes_per_minute": 0.4166666666666667,
+      "mean_condition_pre_attack_rate": 0.09166666666666667,
+      "mean_condition_attack_alert_rate": 0.9722222222222222,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.1933849375760102,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.11666666666666667,
+          "benign_false_episodes": 10,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.05,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.7743498254333333,
+          "mean_attack_alert_detection_delay_s": 0.77115964185
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 10,
+          "false_alert_episodes_per_benign_minute": 0.8333333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8783740603333334,
+          "mean_attack_alert_detection_delay_s": 0.8783740603333334
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 4,
+          "false_alert_episodes_per_benign_minute": 0.3333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1347953025,
+          "mean_attack_alert_detection_delay_s": 1.0717738923636364
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8681151709166667,
+          "mean_attack_alert_detection_delay_s": 0.8681151709166667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1433296255833334,
+          "mean_attack_alert_detection_delay_s": 2.632976670909091
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.9379101890833333,
+          "mean_attack_alert_detection_delay_s": 0.9379101890833333
+        }
+      },
+      "alert_policy": {
+        "alert_k": 3,
+        "alert_n": 4,
+        "evidence_expiry_s": 0.8,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.1861111111111111,
+      "mean_condition_false_episodes_per_minute": 0.4166666666666667,
+      "mean_condition_pre_attack_rate": 0.09166666666666667,
+      "mean_condition_attack_alert_rate": 0.9583333333333334,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 0.9526578269578283,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.11666666666666667,
+          "benign_false_episodes": 10,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.05,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.7743498254333333,
+          "mean_attack_alert_detection_delay_s": 0.77115964185
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 10,
+          "false_alert_episodes_per_benign_minute": 0.8333333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8783740603333334,
+          "mean_attack_alert_detection_delay_s": 0.8783740603333334
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 4,
+          "false_alert_episodes_per_benign_minute": 0.3333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1347953025,
+          "mean_attack_alert_detection_delay_s": 1.0717738923636364
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.8681151709166667,
+          "mean_attack_alert_detection_delay_s": 0.8681151709166667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.8333333333333334,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1433296255833334,
+          "mean_attack_alert_detection_delay_s": 1.1886140072000002
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 0.9379101890833333,
+          "mean_attack_alert_detection_delay_s": 0.9379101890833333
+        }
+      },
+      "alert_policy": {
+        "alert_k": 3,
+        "alert_n": 4,
+        "evidence_expiry_s": 1.2,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+      "mean_condition_false_episodes_per_minute": 0.3416666666666666,
+      "mean_condition_pre_attack_rate": 0.0861111111111111,
+      "mean_condition_attack_alert_rate": 1.0,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.6151197126666663,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.1,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0200725773166666,
+          "mean_attack_alert_detection_delay_s": 1.0160559111666665
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 7,
+          "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1056483405,
+          "mean_attack_alert_detection_delay_s": 1.1056483405
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 2,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.3519659768333332,
+          "mean_attack_alert_detection_delay_s": 1.28996551525
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0939385612499999,
+          "mean_attack_alert_detection_delay_s": 1.0939385612499999
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.4532672781666667,
+          "mean_attack_alert_detection_delay_s": 4.029123799083333
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.15598614875,
+          "mean_attack_alert_detection_delay_s": 1.15598614875
+        }
+      },
+      "alert_policy": {
+        "alert_k": 4,
+        "alert_n": 5,
+        "evidence_expiry_s": 0.6,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+      "mean_condition_false_episodes_per_minute": 0.3277777777777778,
+      "mean_condition_pre_attack_rate": 0.0861111111111111,
+      "mean_condition_attack_alert_rate": 0.9722222222222222,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.435587170639394,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.1,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0067952058499998,
+          "mean_attack_alert_detection_delay_s": 1.0027785397
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 7,
+          "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1056483405,
+          "mean_attack_alert_detection_delay_s": 1.1056483405
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 2,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.33454416625,
+          "mean_attack_alert_detection_delay_s": 1.3490219873636364
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0939385612499999,
+          "mean_attack_alert_detection_delay_s": 1.0939385612499999
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.6666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.41714363225,
+          "mean_attack_alert_detection_delay_s": 2.9061494462727273
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.15598614875,
+          "mean_attack_alert_detection_delay_s": 1.15598614875
+        }
+      },
+      "alert_policy": {
+        "alert_k": 4,
+        "alert_n": 5,
+        "evidence_expiry_s": 0.8,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": true
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+      "mean_condition_false_episodes_per_minute": 0.3277777777777778,
+      "mean_condition_pre_attack_rate": 0.0861111111111111,
+      "mean_condition_attack_alert_rate": 0.9583333333333334,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.1959524739272729,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.1,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0067952058499998,
+          "mean_attack_alert_detection_delay_s": 1.0027785397
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 7,
+          "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.1056483405,
+          "mean_attack_alert_detection_delay_s": 1.1056483405
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 2,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.33454416625,
+          "mean_attack_alert_detection_delay_s": 1.3490219873636364
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0939385612499999,
+          "mean_attack_alert_detection_delay_s": 1.0939385612499999
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.6666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.8333333333333334,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.41714363225,
+          "mean_attack_alert_detection_delay_s": 1.468341266
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.15598614875,
+          "mean_attack_alert_detection_delay_s": 1.15598614875
+        }
+      },
+      "alert_policy": {
+        "alert_k": 4,
+        "alert_n": 5,
+        "evidence_expiry_s": 1.2,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": true
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+      "mean_condition_false_episodes_per_minute": 0.3416666666666666,
+      "mean_condition_pre_attack_rate": 0.0861111111111111,
+      "mean_condition_attack_alert_rate": 1.0,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.588268921361111,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.1,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0200725773166666,
+          "mean_attack_alert_detection_delay_s": 1.0160559111666665
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 7,
+          "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.08895595275,
+          "mean_attack_alert_detection_delay_s": 1.08895595275
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 2,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.334811976,
+          "mean_attack_alert_detection_delay_s": 1.2236277386666667
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0472926541666665,
+          "mean_attack_alert_detection_delay_s": 1.0472926541666665
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 9,
+          "false_alert_episodes_per_benign_minute": 0.75,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.4218386017500002,
+          "mean_attack_alert_detection_delay_s": 3.9976951226666664
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.15598614875,
+          "mean_attack_alert_detection_delay_s": 1.15598614875
+        }
+      },
+      "alert_policy": {
+        "alert_k": 4,
+        "alert_n": 6,
+        "evidence_expiry_s": 0.6,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": false
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+      "mean_condition_false_episodes_per_minute": 0.3277777777777778,
+      "mean_condition_pre_attack_rate": 0.0861111111111111,
+      "mean_condition_attack_alert_rate": 0.9722222222222222,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.4105488149398988,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.1,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0067952058499998,
+          "mean_attack_alert_detection_delay_s": 1.0027785397
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 7,
+          "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.08895595275,
+          "mean_attack_alert_detection_delay_s": 1.08895595275
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 2,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.3173901654166666,
+          "mean_attack_alert_detection_delay_s": 1.2964159768181818
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0472926541666665,
+          "mean_attack_alert_detection_delay_s": 1.0472926541666665
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.6666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.3857149558333335,
+          "mean_attack_alert_detection_delay_s": 2.8718636174545455
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.15598614875,
+          "mean_attack_alert_detection_delay_s": 1.15598614875
+        }
+      },
+      "alert_policy": {
+        "alert_k": 4,
+        "alert_n": 6,
+        "evidence_expiry_s": 0.8,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": true
+    },
+    {
+      "mean_condition_benign_alert_mission_rate": 0.15555555555555556,
+      "mean_condition_false_episodes_per_minute": 0.3277777777777778,
+      "mean_condition_pre_attack_rate": 0.0861111111111111,
+      "mean_condition_attack_alert_rate": 0.9583333333333334,
+      "mean_condition_end_to_end_recall": 0.860926809843463,
+      "mean_condition_attack_alert_delay_s": 1.1703426877474745,
+      "condition_metrics": {
+        "ACPDAD_Simulated_Research_v5_4r2_trainval": {
+          "evil_twin_tp": 6862,
+          "scheduled_evil_twin": 7953,
+          "scored_evil_twin": 6886,
+          "evil_twin_end_to_end_recall": 0.8628190619891865,
+          "evil_twin_conditional_recall": 0.996514667441185,
+          "evil_twin_precision": 0.9976737423669672,
+          "evil_twin_predictions": 6878,
+          "benign_false_positive_rate": 0.00996827456918307,
+          "benign_false_positives": 553,
+          "benign_scored": 55476,
+          "prediction_coverage": 0.9332,
+          "scored_rows": 83988,
+          "macro_f1": 0.967867811539546,
+          "confusion_matrix": [
+            [
+              54923,
+              464,
+              52,
+              14,
+              23
+            ],
+            [
+              1185,
+              6040,
+              0,
+              0,
+              0
+            ],
+            [
+              74,
+              1,
+              7207,
+              2,
+              0
+            ],
+            [
+              23,
+              1,
+              0,
+              6862,
+              0
+            ],
+            [
+              133,
+              0,
+              0,
+              0,
+              6984
+            ]
+          ],
+          "mission_recall_min": 0.9702970297029703,
+          "mission_recall_mean": 0.9965672861169531,
+          "benign_mission_alert_rate": 0.1,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.13333333333333333,
+          "evil_twin_pre_attack_alert_rate": 0.016666666666666666,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0067952058499998,
+          "mean_attack_alert_detection_delay_s": 1.0027785397
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state": {
+          "evil_twin_tp": 1282,
+          "scheduled_evil_twin": 1478,
+          "scored_evil_twin": 1292,
+          "evil_twin_end_to_end_recall": 0.8673883626522327,
+          "evil_twin_conditional_recall": 0.9922600619195047,
+          "evil_twin_precision": 0.9968895800933126,
+          "evil_twin_predictions": 1286,
+          "benign_false_positive_rate": 0.02888446215139442,
+          "benign_false_positives": 319,
+          "benign_scored": 11044,
+          "prediction_coverage": 0.9341111111111111,
+          "scored_rows": 16814,
+          "macro_f1": 0.9172590863376924,
+          "confusion_matrix": [
+            [
+              10725,
+              286,
+              10,
+              4,
+              19
+            ],
+            [
+              478,
+              1116,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              0,
+              1442,
+              0,
+              0
+            ],
+            [
+              10,
+              0,
+              0,
+              1282,
+              0
+            ],
+            [
+              184,
+              0,
+              0,
+              0,
+              1187
+            ]
+          ],
+          "mission_recall_min": 0.9764705882352941,
+          "mission_recall_mean": 0.9920928308655149,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 7,
+          "false_alert_episodes_per_benign_minute": 0.5833333333333334,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.08895595275,
+          "mean_attack_alert_detection_delay_s": 1.08895595275
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic": {
+          "evil_twin_tp": 1356,
+          "scheduled_evil_twin": 1605,
+          "scored_evil_twin": 1374,
+          "evil_twin_end_to_end_recall": 0.8448598130841122,
+          "evil_twin_conditional_recall": 0.9868995633187773,
+          "evil_twin_precision": 0.9955947136563876,
+          "evil_twin_predictions": 1362,
+          "benign_false_positive_rate": 0.0227640813388519,
+          "benign_false_positives": 253,
+          "benign_scored": 11114,
+          "prediction_coverage": 0.9258333333333333,
+          "scored_rows": 16665,
+          "macro_f1": 0.8949729397322889,
+          "confusion_matrix": [
+            [
+              10861,
+              204,
+              12,
+              5,
+              32
+            ],
+            [
+              738,
+              697,
+              0,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              1315,
+              0,
+              0
+            ],
+            [
+              16,
+              2,
+              0,
+              1356,
+              0
+            ],
+            [
+              94,
+              0,
+              0,
+              1,
+              1300
+            ]
+          ],
+          "mission_recall_min": 0.963302752293578,
+          "mission_recall_mean": 0.98679561088684,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 2,
+          "false_alert_episodes_per_benign_minute": 0.16666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.9166666666666666,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.3173901654166666,
+          "mean_attack_alert_detection_delay_s": 1.2964159768181818
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity": {
+          "evil_twin_tp": 1418,
+          "scheduled_evil_twin": 1626,
+          "scored_evil_twin": 1433,
+          "evil_twin_end_to_end_recall": 0.8720787207872078,
+          "evil_twin_conditional_recall": 0.9895324494068388,
+          "evil_twin_precision": 0.9936930623686054,
+          "evil_twin_predictions": 1427,
+          "benign_false_positive_rate": 0.02684139177586986,
+          "benign_false_positives": 297,
+          "benign_scored": 11065,
+          "prediction_coverage": 0.9322222222222222,
+          "scored_rows": 16780,
+          "macro_f1": 0.8734243153477405,
+          "confusion_matrix": [
+            [
+              10768,
+              230,
+              20,
+              9,
+              38
+            ],
+            [
+              856,
+              633,
+              0,
+              0,
+              0
+            ],
+            [
+              102,
+              0,
+              1330,
+              0,
+              0
+            ],
+            [
+              15,
+              0,
+              0,
+              1418,
+              0
+            ],
+            [
+              115,
+              1,
+              0,
+              0,
+              1245
+            ]
+          ],
+          "mission_recall_min": 0.967948717948718,
+          "mission_recall_mean": 0.9896715927322702,
+          "benign_mission_alert_rate": 0.16666666666666666,
+          "benign_false_episodes": 5,
+          "false_alert_episodes_per_benign_minute": 0.4166666666666667,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.0472926541666665,
+          "mean_attack_alert_detection_delay_s": 1.0472926541666665
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment": {
+          "evil_twin_tp": 1408,
+          "scheduled_evil_twin": 1614,
+          "scored_evil_twin": 1429,
+          "evil_twin_end_to_end_recall": 0.872366790582404,
+          "evil_twin_conditional_recall": 0.9853044086773968,
+          "evil_twin_precision": 0.9943502824858758,
+          "evil_twin_predictions": 1416,
+          "benign_false_positive_rate": 0.03964159652457236,
+          "benign_false_positives": 438,
+          "benign_scored": 11049,
+          "prediction_coverage": 0.9399444444444445,
+          "scored_rows": 16919,
+          "macro_f1": 0.8837677430229454,
+          "confusion_matrix": [
+            [
+              10611,
+              404,
+              8,
+              8,
+              18
+            ],
+            [
+              767,
+              745,
+              0,
+              0,
+              0
+            ],
+            [
+              92,
+              4,
+              1310,
+              0,
+              0
+            ],
+            [
+              19,
+              2,
+              0,
+              1408,
+              0
+            ],
+            [
+              72,
+              0,
+              0,
+              0,
+              1451
+            ]
+          ],
+          "mission_recall_min": 0.956140350877193,
+          "mission_recall_mean": 0.9860182878703699,
+          "benign_mission_alert_rate": 0.3333333333333333,
+          "benign_false_episodes": 8,
+          "false_alert_episodes_per_benign_minute": 0.6666666666666666,
+          "evil_twin_pre_attack_alert_rate": 0.25,
+          "evil_twin_alert_mission_rate": 0.8333333333333334,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.3857149558333335,
+          "mean_attack_alert_detection_delay_s": 1.4306268542999998
+        },
+        "ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming": {
+          "evil_twin_tp": 1231,
+          "scheduled_evil_twin": 1455,
+          "scored_evil_twin": 1244,
+          "evil_twin_end_to_end_recall": 0.8460481099656357,
+          "evil_twin_conditional_recall": 0.9895498392282959,
+          "evil_twin_precision": 0.9513137557959814,
+          "evil_twin_predictions": 1294,
+          "benign_false_positive_rate": 0.015582115980522355,
+          "benign_false_positives": 176,
+          "benign_scored": 11295,
+          "prediction_coverage": 0.9321111111111111,
+          "scored_rows": 16778,
+          "macro_f1": 0.9220002156926818,
+          "confusion_matrix": [
+            [
+              11119,
+              91,
+              11,
+              58,
+              16
+            ],
+            [
+              618,
+              873,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              1402,
+              0,
+              0
+            ],
+            [
+              13,
+              0,
+              0,
+              1231,
+              0
+            ],
+            [
+              59,
+              0,
+              0,
+              0,
+              1282
+            ]
+          ],
+          "mission_recall_min": 0.9609375,
+          "mission_recall_mean": 0.9897191783910534,
+          "benign_mission_alert_rate": 0.0,
+          "benign_false_episodes": 0,
+          "false_alert_episodes_per_benign_minute": 0.0,
+          "evil_twin_pre_attack_alert_rate": 0.0,
+          "evil_twin_alert_mission_rate": 1.0,
+          "evil_twin_specific_pre_attack_alert_rate": 0.0,
+          "evil_twin_specific_alert_mission_rate": 1.0,
+          "evil_twin_specific_alert_delay_s": 1.15598614875,
+          "mean_attack_alert_detection_delay_s": 1.15598614875
+        }
+      },
+      "alert_policy": {
+        "alert_k": 4,
+        "alert_n": 6,
+        "evidence_expiry_s": 1.2,
+        "clear_benign_predictions": 3,
+        "physics_threshold": 0.010762422533106636,
+        "max_ev_evidence_age_s": 0.35
+      },
+      "validation_acceptance_met": true
+    }
+  ],
+  "candidate_grid": "2-of-3, 3-of-4, 4-of-5, 4-of-6; expiry 0.6, 0.8, 1.2 s; EV source-age limit 0.35 s",
+  "old_checkpoint_sha256": "edaa48018e8bad0a91689915b3ebac8b61d6c37414b9521aa6826761ee6f292e",
+  "new_checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "classifier_weights_changed": false,
+  "validation_data": [
+    {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r2_trainval",
+      "run_manifest_sha256": "f6c5fd72ff19abd2a8a349cad0a4ad31d5f0a3d724c8ff111ebf11239a37e226",
+      "checksums_sha256": "dec4089dbb60f95c8cf18ee518fa5408155592585784f0e3bac769012a9859f6"
+    },
+    {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r2_dev_mission_initial_state",
+      "run_manifest_sha256": "6c8bbf9d897dbb2134d5b00b10eb0b4545636898f87c7f5303d4068a8630d1f0",
+      "checksums_sha256": "8ac885b789f7d2f1cd47f19a795d989c134f627da19d54402ef923bb21440ac8"
+    },
+    {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r2_dev_wind_background_traffic",
+      "run_manifest_sha256": "d4b515599f77bb863459c0cd1fce65c7c32c08e2fcb803d5254cd14e9f6fc461",
+      "checksums_sha256": "4065e88c8e0bb964544e8cdc5c5450612698555a573a007afd105b32048791e8"
+    },
+    {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r2_dev_attack_timing_duration_intensity",
+      "run_manifest_sha256": "90981ac2dc0912de799ce04c6e68b4b0423d68aeaf007ff019f4f8295e21ae6d",
+      "checksums_sha256": "44b7ab32c080ef5298d859c8f5f18bea565857222327d8b716192c3de4fdec5a"
+    },
+    {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r2_dev_replay_delay_source_segment",
+      "run_manifest_sha256": "f11bd808b4f323a5e039bb7a4021c65241d0c25a4a45ce5a12bba54560da93de",
+      "checksums_sha256": "7c660caac3cc1c51d61168032c6d3846b2eb161e40618b79ffa25bb617b36b26"
+    },
+    {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r2_dev_unseen_ap_benign_roaming",
+      "run_manifest_sha256": "d5294d937cc4a5176c62343d762554fd6e95dfa9f195a0b3e580baa6bc394b9b",
+      "checksums_sha256": "c5265936eaa928a7d9275ae0166c975a78f68b30c043b09647b3131f6880d050"
+    }
+  ],
+  "trainval_only_threshold_and_fitted_model_settings_unchanged": true
+}

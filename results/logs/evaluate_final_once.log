@@ -1,0 +1,18 @@
+{
+  "status": "completed_once",
+  "report": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/acpdad_research_v5_4r2/final_test/IMPLEMENTATION_REPORT.md",
+  "dashboard": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/acpdad_research_v5_4r2/final_test/index.html",
+  "metrics": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/acpdad_research_v5_4r2/final_test/analysis/metrics.json",
+  "target_results": {
+    "pooled_end_to_end_evil_twin_recall": true,
+    "every_condition_end_to_end_evil_twin_recall": true,
+    "pooled_evil_twin_precision": true,
+    "every_condition_evil_twin_precision": false,
+    "benign_scored_row_fpr": true,
+    "benign_alert_mission_rate": false,
+    "false_alert_episode_rate": false,
+    "evil_twin_pre_attack_alert_rate": true,
+    "mean_attack_alert_detection_delay": true
+  },
+  "all_targets_met": false
+}

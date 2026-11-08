@@ -1,0 +1,2 @@
+start_time_ns,end_time_ns,duration_s,source,supporting_models,close_reason,run_id
+810871062,1414466269,0.603595207,persistent_physics_warning,fallback_base,physics_hysteresis_clear,v5_4r2_val_3_000

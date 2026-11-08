@@ -1,0 +1,10 @@
+usage: run_project.py [-h]
+                      {render-validation,render-final,finalize-spec,freeze-final,lock-generated-final} ...
+
+V5.4R2 validation and one-pass fresh simulated test lock.
+
+positional arguments:
+  {render-validation,render-final,finalize-spec,freeze-final,lock-generated-final}
+
+options:
+  -h, --help            show this help message and exit

@@ -1,0 +1,2 @@
+run_id,scenario,scheduled_rows,timely_predictions,offline_predictions,coverage,evil_twin_support,evil_twin_scored_support,evil_twin_tp,evil_twin_end_to_end_recall,evil_twin_conditional_recall,evil_twin_precision,benign_scored_rows,benign_fp,benign_row_fpr,unavailable_rows,alert_episodes,false_alert_episodes,attack_alert_mission,pre_attack_attack_alert,attack_alert_detection_delay_s,false_alert_mission
+v5_4r2_val_3_000,Evil_Twin,300,257,257,0.8566666666666667,109,86,86,0.7889908256880734,1.0,1.0,171,0,0.0,43,2,0,True,False,0.904076304,False

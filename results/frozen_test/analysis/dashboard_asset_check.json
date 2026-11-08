@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-11-08T15:17:27.435871+00:00",
+  "html_pages_checked": 6,
+  "pages": [
+    {
+      "html": "results/acpdad_research_v5_4r2/final_test/index.html",
+      "local_reference_count": 19,
+      "missing_references": [],
+      "assets_resolve": true
+    },
+    {
+      "html": "results/acpdad_research_v5_4r2/final_test/evaluations/attack_timing_duration_intensity/index.html",
+      "local_reference_count": 3,
+      "missing_references": [],
+      "assets_resolve": true
+    },
+    {
+      "html": "results/acpdad_research_v5_4r2/final_test/evaluations/mission_initial_state/index.html",
+      "local_reference_count": 3,
+      "missing_references": [],
+      "assets_resolve": true
+    },
+    {
+      "html": "results/acpdad_research_v5_4r2/final_test/evaluations/replay_delay_source_segment/index.html",
+      "local_reference_count": 3,
+      "missing_references": [],
+      "assets_resolve": true
+    },
+    {
+      "html": "results/acpdad_research_v5_4r2/final_test/evaluations/unseen_ap_benign_roaming/index.html",
+      "local_reference_count": 3,
+      "missing_references": [],
+      "assets_resolve": true
+    },
+    {
+      "html": "results/acpdad_research_v5_4r2/final_test/evaluations/wind_background_traffic/index.html",
+      "local_reference_count": 3,
+      "missing_references": [],
+      "assets_resolve": true
+    }
+  ],
+  "image_files_checked": [
+    "results/acpdad_research_v5_4r2/final_test/analysis/benign_false_alert_rate.png",
+    "results/acpdad_research_v5_4r2/final_test/analysis/condition_recall_coverage.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/attack_timing_duration_intensity/gap_breakdown.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/attack_timing_duration_intensity/mission_coverage.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/attack_timing_duration_intensity/timeline.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/mission_initial_state/gap_breakdown.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/mission_initial_state/mission_coverage.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/mission_initial_state/timeline.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/replay_delay_source_segment/gap_breakdown.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/replay_delay_source_segment/mission_coverage.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/replay_delay_source_segment/timeline.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/unseen_ap_benign_roaming/gap_breakdown.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/unseen_ap_benign_roaming/mission_coverage.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/unseen_ap_benign_roaming/timeline.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/wind_background_traffic/gap_breakdown.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/wind_background_traffic/mission_coverage.png",
+    "results/acpdad_research_v5_4r2/final_test/evaluations/wind_background_traffic/timeline.png"
+  ],
+  "static_asset_resolution": "PASS",
+  "raster_image_decode": "PASS",
+  "browser_rendering": "NOT VERIFIED",
+  "browser_attempts": {
+    "chromium": "No screenshot: restricted user-data/crashpad profile initialization failed.",
+    "firefox": "No screenshot: headless process did not produce output (retry terminated with exit 139)."
+  },
+  "browser_screenshot": null
+}

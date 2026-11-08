@@ -1,0 +1,211 @@
+{
+  "protocol": "ACPDAD V5.4R2 frozen fresh simulated test; score once",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "created_utc": "2026-11-08T14:15:37.342419+00:00",
+  "test_spec_sha256": "c1cca3555e2322685140b96362a6329d760b0e1c7737ab8a760f21bcd7cc8e70",
+  "test_config_sha256": {
+    "mission_initial_state.json": "81725e5a4ccf38e9498023bb241c059d2bbce00b6e217a1aa47f4889fa33ce4f",
+    "wind_background_traffic.json": "5b37a071b1045783c4861c739d65db256ef1e3b324c57c716947ee13b6219938",
+    "attack_timing_duration_intensity.json": "345ca1568d0a1aac73fcdd8fdbd072e79f852fc857f5ff4d86c47ba4982fcb2e",
+    "replay_delay_source_segment.json": "566f3284cc9d99cdeb4a14167505c2ddc586f020887100c58c1b565655f5f3c4",
+    "unseen_ap_benign_roaming.json": "def23cb49aba373f4b17dd0a23c45c08b00a2a744cc4599a74c0d60b6f05e8c9"
+  },
+  "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "model_manifest_sha256": "adcedbdf79d8555cc11155ac7e3168db03d93a060662760149f47d1bc3ce517d",
+  "source_sha256": {
+    "simulation/research_v5_4r2/core.py": "b2dc3eac2fe13e8939be4660f08ec2985062a8c457d45751151da054d55f8582",
+    "simulation/research_v5_4r2/experiment.py": "20661ecaacb49bdf3d0d67aab9f14f139abee509e6163c1752b490a0a56c127e",
+    "simulation/research_v5_4r2/protocol.py": "a142d8250d7c918765e6ef903a0ae9bb8fa5400276c6ca18851f769226a63e77",
+    "simulation/research_v5_4r2/experiment_spec_v5_4r2.json": "984e0fefbe7a0114df11a0fedbefb64c0e0bd33d128eb896da04cfe19e854bea",
+    "simulation/research_v5_4r2/validation_matrix_v5_4r2.json": "e9a4ad0299113254af3d8ff52ee9f87cc7882f9ad1db356acc9ca1f2a59b7230",
+    "simulation/research_v5_4r2/final_test_spec_v5_4r2.json": "c1cca3555e2322685140b96362a6329d760b0e1c7737ab8a760f21bcd7cc8e70",
+    "run_project.py": "f8dc5fed013ea415cff80e2ef574e54322186e392396da3110b5329f003c5935",
+    "run_project_v5_4r2.py": "b86f921bacafb22da395de85fa5e7fa9c6a0e5b47060c3bf92c894c6a7e2faf6",
+    "simulation/models/acpdad_research_v5_4r2/checkpoint.pkl": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+    "simulation/models/acpdad_research_v5_4r2/manifest.json": "adcedbdf79d8555cc11155ac7e3168db03d93a060662760149f47d1bc3ce517d"
+  },
+  "trainval_checksums_sha256": "dec4089dbb60f95c8cf18ee518fa5408155592585784f0e3bac769012a9859f6",
+  "validation_selection_sha256": "73f78613704c72d4ee88a50a3f5d7b56dff371023b29783ae947cd6034460bf0",
+  "validation_alert_calibration_sha256": "9fc4ecb08c19f16e4e44b9d6811eed4d7d46ae1642e2d9b26df3a6318757148b",
+  "conditions": [
+    {
+      "id": "mission_initial_state",
+      "master_seed": 84100000,
+      "ap_base": 54000000,
+      "overrides": {
+        "mission_radius_m": [
+          10,
+          60
+        ],
+        "initial_position_xy_m_range": [
+          -22,
+          22
+        ],
+        "initial_velocity_xy_mps_range": [
+          -1.2,
+          1.2
+        ],
+        "altitude_m": [
+          5,
+          42
+        ],
+        "speed_mps": [
+          1.2,
+          8.5
+        ],
+        "telemetry_queue_policy": "expedited_priority",
+        "run_prefix": "v5_4r2_final_mission_initial_state"
+      }
+    },
+    {
+      "id": "wind_background_traffic",
+      "master_seed": 84200000,
+      "ap_base": 54100000,
+      "overrides": {
+        "wind_sigma_mps2": [
+          0.07,
+          0.13
+        ],
+        "background_offered_pps": [
+          45,
+          75
+        ],
+        "background_loss": [
+          0.03,
+          0.12
+        ],
+        "background_jitter_s": [
+          0.02,
+          0.06
+        ],
+        "delivery_capacity_pps": [
+          50,
+          85
+        ],
+        "telemetry_queue_policy": "expedited_priority",
+        "run_prefix": "v5_4r2_final_wind_background_traffic"
+      }
+    },
+    {
+      "id": "attack_timing_duration_intensity",
+      "master_seed": 84300000,
+      "ap_base": 54200000,
+      "overrides": {
+        "attack_start_fraction": [
+          0.12,
+          0.45
+        ],
+        "attack_duration_fraction": [
+          0.25,
+          0.6
+        ],
+        "attack_intensity": [
+          0.22,
+          0.68
+        ],
+        "evil_twin_relay_delay_s": [
+          0.018,
+          0.08
+        ],
+        "telemetry_queue_policy": "expedited_priority",
+        "run_prefix": "v5_4r2_final_attack_timing_duration_intensity"
+      }
+    },
+    {
+      "id": "replay_delay_source_segment",
+      "master_seed": 84400000,
+      "ap_base": 54300000,
+      "overrides": {
+        "replay_delay_samples": [
+          45,
+          90
+        ],
+        "replay_repetitions": [
+          1,
+          6
+        ],
+        "replay_segment_samples": [
+          20,
+          70
+        ],
+        "background_offered_pps": [
+          45,
+          75
+        ],
+        "background_loss": [
+          0.03,
+          0.12
+        ],
+        "background_jitter_s": [
+          0.02,
+          0.06
+        ],
+        "delivery_capacity_pps": [
+          50,
+          85
+        ],
+        "telemetry_queue_policy": "expedited_priority",
+        "run_prefix": "v5_4r2_final_replay_delay_source_segment"
+      }
+    },
+    {
+      "id": "unseen_ap_benign_roaming",
+      "master_seed": 84500000,
+      "ap_base": 54400000,
+      "overrides": {
+        "benign_roam_interval_samples": [
+          25,
+          70
+        ],
+        "benign_roam_duration_samples": [
+          2,
+          12
+        ],
+        "benign_roam_handoff_delay_s": [
+          0.02,
+          0.14
+        ],
+        "benign_roam_recovery_samples": [
+          1,
+          6
+        ],
+        "telemetry_queue_policy": "expedited_priority",
+        "run_prefix": "v5_4r2_final_unseen_ap_benign_roaming"
+      }
+    }
+  ],
+  "runs_per_class_per_condition": 20,
+  "prediction_deadline_s": 0.5,
+  "frozen_model_settings": {
+    "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+    "fallback_selected": "base",
+    "primary_threshold": 0.21,
+    "fallback_threshold": 0.1,
+    "prediction_deadline_s": 0.5,
+    "alert_policy": {
+      "alert_k": 4,
+      "alert_n": 6,
+      "evidence_expiry_s": 0.8,
+      "clear_benign_predictions": 3,
+      "physics_threshold": 0.010762422533106636,
+      "max_ev_evidence_age_s": 0.35
+    },
+    "validation_alert_acceptance_met": true
+  },
+  "acceptance_targets": {
+    "pooled_end_to_end_evil_twin_recall_min": 0.8,
+    "per_condition_end_to_end_evil_twin_recall_min": 0.7,
+    "pooled_evil_twin_precision_min": 0.95,
+    "per_condition_evil_twin_precision_min": 0.95,
+    "benign_scored_row_fpr_max": 0.065,
+    "benign_mission_alert_rate_max": 0.2,
+    "false_alert_episodes_per_benign_minute_max": 0.35,
+    "evil_twin_pre_attack_alert_mission_rate_max": 0.2,
+    "mean_attack_alert_detection_delay_s_max": 1.5
+  },
+  "dataset_root": "data/ACPDAD_Simulated_Research_v5_4r2_final_test",
+  "evaluation_root": "results/acpdad_research_v5_4r2/final_test",
+  "scored_once": false,
+  "labels_joined_after_inference": true,
+  "scheduled_observations_accounted": true
+}

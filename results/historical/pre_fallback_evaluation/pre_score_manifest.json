@@ -1,0 +1,108 @@
+{
+  "protocol": "V5.4 pre-score generated-test lock",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "pre_generation_lock_sha256": "bfddf35474cb6bf69d9644b2d9002fbe2f587151c1fc466d7cc361a1135b9113",
+  "test_spec_sha256": "9960ac85a973a2da29ef8a0d215ebc31a8f0a3f74fa925e896c028f5772cc87a",
+  "checkpoint_sha256": "066229d9a46dc0bc506f88a706e15b9bc52ae289c6f1a7c1d076406a703209d1",
+  "conditions": {
+    "mission_initial_state": {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r1_final_test/mission_initial_state",
+      "run_manifest_sha256": "0bb99933d25abbf3e8e71f28f2f7149f5847c0115bc89f557cbc796cd34a122a",
+      "checksums_sha256": "ae1b62f9773b2294ac0b66228534b61652469f9d593f32ce39fa9c3e72f95494",
+      "checksums": {
+        "delivered_packets.csv": "14502cad03dd77800817239758d95624177d2bfbc4925bb4f2f238a1b43686bd",
+        "ground_truth.csv": "6839822a8473af10eef2615a506dbd15eac5bfcbbadd0064b3f289f7a4efb956",
+        "run_manifest.csv": "0bb99933d25abbf3e8e71f28f2f7149f5847c0115bc89f557cbc796cd34a122a",
+        "features.csv": "ca351788129b54fbc374e73f55135874c6ef3320a9023f8e85f24417f021d91b",
+        "schema.json": "f6c9110ec8a7fc0a84433d3710fab97e2a6ab2071c559972d105de1cf3b597fb",
+        "experiment_config.json": "c5fd7ea0067d483745979a459b0020317e6b264bb41513531e60cb4c88933207",
+        "emitted_packets.csv": "adfcad8ea929be4f7540db07b2a6f6b4dd781e0257a68c0cefec98cbdb7ef4e2",
+        "true_state.csv": "ebd121c3c4809d487443f0493c1dec64739737c022e6016f2f8ce87a3a4a52ae",
+        "network_flow.csv": "f3c074b2e7da0a7b30833582612657318d4644bd0cb68fbf39b78c1ed0c01bef"
+      },
+      "rows": 30000,
+      "runs": 100
+    },
+    "wind_background_traffic": {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r1_final_test/wind_background_traffic",
+      "run_manifest_sha256": "fc02af1bafd7bc347f9e6cf5eb3d06edf3fb91ebbc33af3857e3cf18516ee817",
+      "checksums_sha256": "dca6013dae210b20aeefd8d5eb0203680f320b7533a7303e3815db03ef18cb61",
+      "checksums": {
+        "delivered_packets.csv": "3731265fc6a4f357888f916623c7c7f7e9d27b23c61c222815e3dce7a2e3f26e",
+        "ground_truth.csv": "9eb32ce21e8af98ecc47b3ea3b9fd01fd8bfd3ebf6b4b1f087bef041d3b28f67",
+        "run_manifest.csv": "fc02af1bafd7bc347f9e6cf5eb3d06edf3fb91ebbc33af3857e3cf18516ee817",
+        "features.csv": "dc5c344bdfb9b765d466bd0adc6c236fb7bce51e3c449b14f8072e86832dd341",
+        "schema.json": "f6c9110ec8a7fc0a84433d3710fab97e2a6ab2071c559972d105de1cf3b597fb",
+        "experiment_config.json": "e410325791fbb06a35c0df198397d5070f70cf9d84be370b95cd86f9beaec9b6",
+        "emitted_packets.csv": "acd3b04e4bf63b060b7421fa655fb042ea9d34b00f68d7c26482d2c58daf2282",
+        "true_state.csv": "60ae4245282676b574baeb4dad82708600939f6057a7da83a88212ba8c455317",
+        "network_flow.csv": "183fe106b3a78ccf5f59e6c490839d5e1086f039a3b89948dc4d7eb1ec9ed77b"
+      },
+      "rows": 30000,
+      "runs": 100
+    },
+    "attack_timing_duration_intensity": {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r1_final_test/attack_timing_duration_intensity",
+      "run_manifest_sha256": "4c8bd9e0fcf2d0aa3d7c07864d9d18295a2a0c0e2170025f45949029c858f3ca",
+      "checksums_sha256": "6710cbfc9deb44e3314cadd17ed60d5633f90213675153f2f31052067465f6b3",
+      "checksums": {
+        "delivered_packets.csv": "3e21528120248f0462988a74091620fac086d866b519f9a73f53e3b22ddbdc08",
+        "ground_truth.csv": "9279baa9cd07563c20b6c468052301accdc517840f435aecec925515d3263705",
+        "run_manifest.csv": "4c8bd9e0fcf2d0aa3d7c07864d9d18295a2a0c0e2170025f45949029c858f3ca",
+        "features.csv": "b571488880e5bd830b71955bdee00481cbd6d07882f39156e1a34ddbaac240ef",
+        "schema.json": "f6c9110ec8a7fc0a84433d3710fab97e2a6ab2071c559972d105de1cf3b597fb",
+        "experiment_config.json": "f46fe327e0d46ef282f07a77fd3c6a72041cc4be7c7196b44a9b849b6592f28a",
+        "emitted_packets.csv": "695470c8bcff897c3862d0f51ef180665988568f259dce4ddb61ea7415b74e74",
+        "true_state.csv": "92264340cdac6dabd864d4cfcdfb2b9daeb260be2bc8a248f0be35e0136815ae",
+        "network_flow.csv": "7225773b6f252e20aeddafab5e56dc87f821772c2d0e0f21cf7f9ed405a73dad"
+      },
+      "rows": 30000,
+      "runs": 100
+    },
+    "replay_delay_source_segment": {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r1_final_test/replay_delay_source_segment",
+      "run_manifest_sha256": "c341620061689bbed67eacce24f5f5e8c473eb093e8bf9f9ff8f01652166c254",
+      "checksums_sha256": "e77d60d1e206708968195a64fc54357b0e784f13edcf61d61fc3415960fdfafd",
+      "checksums": {
+        "delivered_packets.csv": "8ee17444f34ef31dc4da13b250507c95ed66b629b32cf336fea8bccdfe897e6f",
+        "ground_truth.csv": "8b3615555acc681a775db53298ef2b099efa89c68b87e247a3deaab9957906d8",
+        "run_manifest.csv": "c341620061689bbed67eacce24f5f5e8c473eb093e8bf9f9ff8f01652166c254",
+        "features.csv": "c884893bde711811ee86d7f61e4d20592ee143a7e3f5e23ab5a461988c180094",
+        "schema.json": "f6c9110ec8a7fc0a84433d3710fab97e2a6ab2071c559972d105de1cf3b597fb",
+        "experiment_config.json": "12e7912ce19e15d9b71cde717803952fd86fd219c317bffb3e01de7c42383fee",
+        "emitted_packets.csv": "7932d2fd1edb5504f5253483eacbe18b507f8546568abe74222f8d6f45a164c2",
+        "true_state.csv": "fdd20289860869d2431f6cdeb87bb8c123915600185617c0503a8fcbfc55531d",
+        "network_flow.csv": "887500b51364d4d9b5214f859df02c7bf8106d10a888b39a3c092816efe40a17"
+      },
+      "rows": 30000,
+      "runs": 100
+    },
+    "unseen_ap_benign_roaming": {
+      "path": "data/ACPDAD_Simulated_Research_v5_4r1_final_test/unseen_ap_benign_roaming",
+      "run_manifest_sha256": "7d458c27341dfa328705d247ac5c4996caf0246fdfe53167a289e8050b816c1b",
+      "checksums_sha256": "e2d5435aff26d6aa13b54bd14eb835bb5874288356e1d8410046c870411fd8e9",
+      "checksums": {
+        "delivered_packets.csv": "491d320d8ed914412bffdbacae07868275c0dc27e78994b77911b2acb001c415",
+        "ground_truth.csv": "a1d3a9933371a150f4610835092004b377c3fd35250cf73603ff39e98e0dff29",
+        "run_manifest.csv": "7d458c27341dfa328705d247ac5c4996caf0246fdfe53167a289e8050b816c1b",
+        "features.csv": "7d9e527ba9ba1769d974f1b10d88e3b3cbb266f2e5715319dcfc2ce80e63543d",
+        "schema.json": "f6c9110ec8a7fc0a84433d3710fab97e2a6ab2071c559972d105de1cf3b597fb",
+        "experiment_config.json": "d2d0a96955f9dfa7420a381841ec6d76447edaf186380085cbd01aea1b0b464b",
+        "emitted_packets.csv": "0e48d19390d699aa48110b1ac7388a8d74aa5af109c8867aff290ee6662c5514",
+        "true_state.csv": "5f8483cf1941156fc64c9ff1b4b492fc628768a18aaa4484eb42011c5d9e2da2",
+        "network_flow.csv": "533eaa51bc6d9f86d7f5a497ffc5c795636b5dd8456362103b46a1682f2fa3b1"
+      },
+      "rows": 30000,
+      "runs": 100
+    }
+  },
+  "evaluation_started": true,
+  "evaluation_started_utc": "2026-11-08T11:33:38Z",
+  "evaluation_outputs": [
+    "results/acpdad_research_v5_4r1/final_test/evaluations/mission_initial_state",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/wind_background_traffic",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/attack_timing_duration_intensity",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/replay_delay_source_segment",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/unseen_ap_benign_roaming"
+  ]
+}

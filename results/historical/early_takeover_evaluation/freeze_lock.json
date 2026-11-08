@@ -1,0 +1,177 @@
+{
+  "protocol": "ACPDAD V5.3 frozen checkpoint and final test protocol",
+  "created_before_final_test_generation_and_scoring": true,
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "preregistration_sha256": "2e90bc50b848000703b1503d0fc4779654d70f320e012567307c81e6a74f3c20",
+  "specification_sha256": {
+    "experiment_spec_v5_3.json": "a329f2e588da57f9dc2f8c00084441f54facf81ce452d81dc44d20c8e30c6d41",
+    "final_test_spec_v5_3.json": "bf407e75634643d0bce5b349de4fb6268392c90dad5e9c15b317b2c59b59300a",
+    "generalization_matrix_v5_3.json": "6dd6c449d0e92f15e51d979c39546c4506de87ee6c3a20f7195002658d565a62",
+    "legacy_validation_spec_v5_3.json": "a6ba8cbe96190e041792e8c6a046472d6e51c61e0da8237ecd5f9f58ec8665be"
+  },
+  "generation_config_sha256": "6dd6be4fcc9198d703df2e59e6f1b44b4fb2cf1bda20c099cf5f9e1d1f3882bc",
+  "implementation_sha256": {
+    "simulation/research_v5_3/core.py": "2f000635e498b1debd737585672dc0a1e3aa78e13cb26f19d63598dd3901fb19",
+    "simulation/research_v5_3/experiment.py": "3504233236e556f2624685f7af2f04f2dc9895f1b19efb33e68510312a20e2a9",
+    "run_project_v5_3.py": "93be61774140847f128833106aa4688a498a904af89ec157a787ce97c043e74c"
+  },
+  "schema_sha256": "779d7935b53c946290ac3c10c42f413f735b0303fb9bb318d2f2c00b89ca4275",
+  "trainval_checksums_sha256": "434664b1c3eef10e9f1e9bc6bcc218c9e7a1bfbd86a106b0fd668cb7b4982d66",
+  "training_features_sha256": "295e2171d12b4d1175c68b61d3df951b2d6e1ae479bac8ccb294c8e08c2fab39",
+  "checkpoint_sha256": "5790993ef906a04314f15535a14eaebacb94383ffbe6a0bc56b1babffeca09ff",
+  "model_manifest_sha256": "1eddf47a4e465672c5032faf5e48eb82a5dc16b4bba0298f4d9f9473648cdda2",
+  "model_name": "extratrees_temporal",
+  "model_parameters": {
+    "bootstrap": false,
+    "ccp_alpha": 0.0,
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": 0.7,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": 2,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "validation_selection_metrics": {
+    "accuracy": 0.9531581373905026,
+    "macro_f1": 0.9287804083030882,
+    "balanced_accuracy": 0.8946608341601257,
+    "benign_false_positive_rate": 0.00940218916643278,
+    "per_class": {
+      "Benign": {
+        "precision": 0.941325510068009,
+        "recall": 0.9905978108335672,
+        "f1-score": 0.9653333333333334,
+        "support": 7126.0
+      },
+      "DoS": {
+        "precision": 0.9604810996563574,
+        "recall": 0.7443408788282291,
+        "f1-score": 0.8387096774193549,
+        "support": 751.0
+      },
+      "Replay": {
+        "precision": 1.0,
+        "recall": 0.9485436893203884,
+        "f1-score": 0.9735924265072247,
+        "support": 1030.0
+      },
+      "Evil_Twin": {
+        "precision": 0.9934036939313984,
+        "recall": 0.8470191226096738,
+        "f1-score": 0.9143897996357013,
+        "support": 889.0
+      },
+      "FDI": {
+        "precision": 0.9611273080660836,
+        "recall": 0.9428026692087702,
+        "f1-score": 0.9518768046198267,
+        "support": 1049.0
+      }
+    },
+    "evil_twin_mission_recall": {
+      "v5_3_val_3_000": 0.99,
+      "v5_3_val_3_001": 0.9166666666666666,
+      "v5_3_val_3_002": 1.0,
+      "v5_3_val_3_003": 0.29896907216494845,
+      "v5_3_val_3_004": 0.8785046728971962,
+      "v5_3_val_3_005": 0.9747899159663865,
+      "v5_3_val_3_006": 0.706766917293233,
+      "v5_3_val_3_007": 0.9814814814814815
+    },
+    "evil_twin_mission_coverage_at_50pct": 0.875
+  },
+  "selection_rule": "train-only fit; validation-only selection by Evil_Twin F1, then Evil_Twin mission recall coverage, five-class macro-F1, Evil_Twin recall, benign FPR",
+  "test_specification": {
+    "protocol": "ACPDAD V5.3 fresh frozen final test",
+    "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+    "test_master_seed": 8375301,
+    "runs_per_class": 12,
+    "test_ap_base": 7300000,
+    "run_prefix": "v5_3_final",
+    "duration_s": 60,
+    "sampling_hz": 5,
+    "mission_profiles": [
+      "hover",
+      "straight",
+      "patrol",
+      "figure_eight",
+      "climb_descent"
+    ],
+    "environment_ranges": {
+      "altitude_m": [
+        8,
+        35
+      ],
+      "speed_mps": [
+        2,
+        7
+      ],
+      "wind_sigma_mps2": [
+        0.01,
+        0.06
+      ],
+      "background_offered_pps": [
+        18,
+        55
+      ],
+      "background_loss": [
+        0.0,
+        0.06
+      ],
+      "background_jitter_s": [
+        0.002,
+        0.025
+      ],
+      "delivery_capacity_pps": [
+        60,
+        100
+      ]
+    },
+    "attack_ranges": {
+      "attack_start_fraction": [
+        0.22,
+        0.35
+      ],
+      "attack_duration_fraction": [
+        0.35,
+        0.52
+      ],
+      "attack_intensity": [
+        0.35,
+        1.3
+      ],
+      "replay_delay_samples": [
+        4,
+        25
+      ],
+      "replay_repetitions": [
+        1,
+        4
+      ],
+      "replay_segment_samples": [
+        5,
+        25
+      ]
+    },
+    "evil_twin_model": "A scheduled active attempt re-associates to a randomly allocated per-run modeled AP identity and uses an intensity-scaled forwarding path delay. Benign roaming changes to a distinct per-run randomly allocated AP for 2\u20136 samples, emits management traffic, then returns; its handoff delay and recovery overlap the attack latency range. AP identifiers, schedules, and labels are excluded from inputs.",
+    "expected_scheduled_attack_samples_per_mission": [
+      105,
+      155
+    ],
+    "split_isolation": "Fresh seeds and AP pool disjoint from V5.3 train/validation and all V5.2 historical test/evaluation runs. Replay source segments remain within their own mission.",
+    "label_generation": "Independent half-open attack schedule; evaluation labels joined after inference."
+  },
+  "test_set_generated": false,
+  "test_evaluation_performed": false
+}

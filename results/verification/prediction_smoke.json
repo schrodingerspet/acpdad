@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "selected_run_exact": true,
+  "selected_rows_match_manifest_run": true,
+  "all_run_ids_match": true,
+  "all_run_rows_match_packets": true,
+  "arrival_ordered": true,
+  "label_free": true,
+  "unknown_run_rejected": true,
+  "unknown_error_lists_available_ids": true,
+  "active_checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "selected_output": "/tmp/acpdad_v5_4r2_predict_selected_active.csv",
+  "all_output": "/tmp/acpdad_v5_4r2_predict_all_active.csv"
+}

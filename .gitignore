@@ -1,0 +1,40 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node modules & packaging
+node_modules/
+package-lock.json.bak
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Zip / archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+
+# Runtime transient logs
+simulation/.active_attack.json
+mav.tlog
+mav.tlog.raw
+
+data/train_validation/features.csv
+results/frozen_test/analysis/all_observation_audit.csv
+results/frozen_test/analysis/all_predictions_label_free.csv

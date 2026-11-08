@@ -1,0 +1,3 @@
+start_time_ns,end_time_ns,duration_s,source,supporting_models,close_reason,run_id,scheduled_scenario,false_alert,pre_attack,overlaps_scheduled_attack
+9704076304,24914475713,15.210399409,persistent_classifier_attack,primary_temporal,evidence_expiry,v5_4r2_val_3_000,Evil_Twin,False,False,True
+25887614596,31221308073,5.333693477,persistent_classifier_attack,fallback_base;primary_temporal,benign_hysteresis_clear,v5_4r2_val_3_000,Evil_Twin,False,False,True

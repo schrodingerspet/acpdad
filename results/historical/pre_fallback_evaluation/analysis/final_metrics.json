@@ -1,0 +1,1418 @@
+{
+  "created_utc": "2026-11-08T12:06:43Z",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "test_spec_sha256": "9960ac85a973a2da29ef8a0d215ebc31a8f0a3f74fa925e896c028f5772cc87a",
+  "pre_generation_lock_sha256": "bfddf35474cb6bf69d9644b2d9002fbe2f587151c1fc466d7cc361a1135b9113",
+  "pre_score_manifest_sha256": "204b847b500495d80d7869b5b22c11e948159371cc465da97e50d096758a3429",
+  "checkpoint_sha256": "066229d9a46dc0bc506f88a706e15b9bc52ae289c6f1a7c1d076406a703209d1",
+  "model": {
+    "name": "histgb_temporal",
+    "contract": "acpdad-sim-research-v5-4r1",
+    "threshold": 0.21,
+    "physics_threshold": 0.01160565701386662
+  },
+  "test_conditions": [
+    "mission_initial_state",
+    "wind_background_traffic",
+    "attack_timing_duration_intensity",
+    "replay_delay_source_segment",
+    "unseen_ap_benign_roaming"
+  ],
+  "independent_runs": 500,
+  "independent_evil_twin_missions": 100,
+  "independent_evil_twin_missions_support_ge_30": 90,
+  "metrics": {
+    "rows": 107124,
+    "accuracy": 0.9674396027034091,
+    "majority_class": "Benign",
+    "majority_class_baseline": 0.6829281953623838,
+    "macro_f1": 0.9359859211776411,
+    "balanced_accuracy": 0.922994935645041,
+    "per_class": {
+      "Benign": {
+        "precision": 0.9698689603106126,
+        "recall": 0.9833647721370186,
+        "f1": 0.976570241763612,
+        "support": 73158,
+        "correct": 71941,
+        "predicted": 74176
+      },
+      "DoS": {
+        "precision": 0.8502781992918563,
+        "recall": 0.7419995585963364,
+        "f1": 0.7924572775486151,
+        "support": 4531,
+        "correct": 3362,
+        "predicted": 3954
+      },
+      "Replay": {
+        "precision": 0.9904663212435233,
+        "recall": 0.9566609948954059,
+        "f1": 0.973270200091645,
+        "support": 9991,
+        "correct": 9558,
+        "predicted": 9650
+      },
+      "Evil_Twin": {
+        "precision": 0.9823086163590695,
+        "recall": 0.9817725387469984,
+        "f1": 0.9820405043943446,
+        "support": 9162,
+        "correct": 8995,
+        "predicted": 9157
+      },
+      "FDI": {
+        "precision": 0.9600471188770001,
+        "recall": 0.9511768138494456,
+        "f1": 0.9555913820899897,
+        "support": 10282,
+        "correct": 9780,
+        "predicted": 10187
+      }
+    },
+    "evil_twin": {
+      "tp": 8995,
+      "fn": 167,
+      "fp": 162,
+      "support": 9162,
+      "predicted": 9157,
+      "precision": 0.9823086163590695,
+      "recall": 0.9817725387469984
+    },
+    "benign_false_positive_rate": 0.01663522786298149,
+    "confusion_matrix": [
+      [
+        71941,
+        579,
+        92,
+        144,
+        402
+      ],
+      [
+        1155,
+        3362,
+        0,
+        10,
+        4
+      ],
+      [
+        431,
+        1,
+        9558,
+        1,
+        0
+      ],
+      [
+        163,
+        3,
+        0,
+        8995,
+        1
+      ],
+      [
+        486,
+        9,
+        0,
+        7,
+        9780
+      ]
+    ],
+    "normalized_confusion_matrix": [
+      [
+        0.9833647721370186,
+        0.007914377101615681,
+        0.0012575521474069821,
+        0.0019683424915935372,
+        0.005494956122365291
+      ],
+      [
+        0.2549106157581108,
+        0.7419995585963364,
+        0.0,
+        0.0022070183182520413,
+        0.0008828073273008167
+      ],
+      [
+        0.0431388249424482,
+        0.00010009008107296567,
+        0.9566609948954059,
+        0.00010009008107296567,
+        0.0
+      ],
+      [
+        0.01779087535472604,
+        0.0003274394237066143,
+        0.0,
+        0.9817725387469984,
+        0.00010914647456887143
+      ],
+      [
+        0.04726706866368411,
+        0.0008753160863645205,
+        0.0,
+        0.0006808014005057381,
+        0.9511768138494456
+      ]
+    ]
+  },
+  "metrics_by_condition": {
+    "mission_initial_state": {
+      "rows": 24364,
+      "accuracy": 0.9716384830077163,
+      "majority_class": "Benign",
+      "majority_class_baseline": 0.6793629945821704,
+      "macro_f1": 0.9435077973530547,
+      "balanced_accuracy": 0.9282249619070392,
+      "per_class": {
+        "Benign": {
+          "precision": 0.9717497323658856,
+          "recall": 0.9871314644755921,
+          "f1": 0.9793802073967511,
+          "support": 16552,
+          "correct": 16339,
+          "predicted": 16814
+        },
+        "DoS": {
+          "precision": 0.8837953091684435,
+          "recall": 0.726555652936021,
+          "f1": 0.7974987974987975,
+          "support": 1141,
+          "correct": 829,
+          "predicted": 938
+        },
+        "Replay": {
+          "precision": 0.9889196675900277,
+          "recall": 0.9789762340036563,
+          "f1": 0.9839228295819935,
+          "support": 2188,
+          "correct": 2142,
+          "predicted": 2166
+        },
+        "Evil_Twin": {
+          "precision": 0.9950174389636273,
+          "recall": 0.9847140039447732,
+          "f1": 0.9898389095415118,
+          "support": 2028,
+          "correct": 1997,
+          "predicted": 2007
+        },
+        "FDI": {
+          "precision": 0.9700697006970069,
+          "recall": 0.9637474541751527,
+          "f1": 0.9668982427462198,
+          "support": 2455,
+          "correct": 2366,
+          "predicted": 2439
+        }
+      },
+      "evil_twin": {
+        "tp": 1997,
+        "fn": 31,
+        "fp": 10,
+        "support": 2028,
+        "predicted": 2007,
+        "precision": 0.9950174389636273,
+        "recall": 0.9847140039447732
+      },
+      "benign_false_positive_rate": 0.012868535524407927,
+      "confusion_matrix": [
+        [
+          16339,
+          106,
+          24,
+          10,
+          73
+        ],
+        [
+          312,
+          829,
+          0,
+          0,
+          0
+        ],
+        [
+          46,
+          0,
+          2142,
+          0,
+          0
+        ],
+        [
+          28,
+          3,
+          0,
+          1997,
+          0
+        ],
+        [
+          89,
+          0,
+          0,
+          0,
+          2366
+        ]
+      ],
+      "normalized_confusion_matrix": [
+        [
+          0.9871314644755921,
+          0.0064040599323344615,
+          0.0014499758337361043,
+          0.0006041565973900435,
+          0.004410343160947318
+        ],
+        [
+          0.27344434706397897,
+          0.726555652936021,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.02102376599634369,
+          0.0,
+          0.9789762340036563,
+          0.0,
+          0.0
+        ],
+        [
+          0.013806706114398421,
+          0.0014792899408284023,
+          0.0,
+          0.9847140039447732,
+          0.0
+        ],
+        [
+          0.03625254582484725,
+          0.0,
+          0.0,
+          0.0,
+          0.9637474541751527
+        ]
+      ]
+    },
+    "wind_background_traffic": {
+      "rows": 16498,
+      "accuracy": 0.9659958782882774,
+      "majority_class": "Benign",
+      "majority_class_baseline": 0.7002060855861316,
+      "macro_f1": 0.9264923209929208,
+      "balanced_accuracy": 0.9333814109575196,
+      "per_class": {
+        "Benign": {
+          "precision": 0.9777700590482806,
+          "recall": 0.9747229916897507,
+          "f1": 0.976244147737125,
+          "support": 11552,
+          "correct": 11260,
+          "predicted": 11516
+        },
+        "DoS": {
+          "precision": 0.6889880952380952,
+          "recall": 0.7955326460481099,
+          "f1": 0.7384370015948963,
+          "support": 582,
+          "correct": 463,
+          "predicted": 672
+        },
+        "Replay": {
+          "precision": 0.9955686853766618,
+          "recall": 0.9526501766784452,
+          "f1": 0.973636691946551,
+          "support": 1415,
+          "correct": 1348,
+          "predicted": 1354
+        },
+        "Evil_Twin": {
+          "precision": 0.9937743190661479,
+          "recall": 0.9733231707317073,
+          "f1": 0.9834424335772045,
+          "support": 1312,
+          "correct": 1277,
+          "predicted": 1285
+        },
+        "FDI": {
+          "precision": 0.9509275882704967,
+          "recall": 0.9706780696395846,
+          "f1": 0.9607013301088271,
+          "support": 1637,
+          "correct": 1589,
+          "predicted": 1671
+        }
+      },
+      "evil_twin": {
+        "tp": 1277,
+        "fn": 35,
+        "fp": 8,
+        "support": 1312,
+        "predicted": 1285,
+        "precision": 0.9937743190661479,
+        "recall": 0.9733231707317073
+      },
+      "benign_false_positive_rate": 0.02527700831024931,
+      "confusion_matrix": [
+        [
+          11260,
+          202,
+          6,
+          7,
+          77
+        ],
+        [
+          115,
+          463,
+          0,
+          0,
+          4
+        ],
+        [
+          66,
+          1,
+          1348,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          0,
+          1277,
+          1
+        ],
+        [
+          41,
+          6,
+          0,
+          1,
+          1589
+        ]
+      ],
+      "normalized_confusion_matrix": [
+        [
+          0.9747229916897507,
+          0.017486149584487534,
+          0.0005193905817174516,
+          0.0006059556786703601,
+          0.006665512465373961
+        ],
+        [
+          0.19759450171821305,
+          0.7955326460481099,
+          0.0,
+          0.0,
+          0.006872852233676976
+        ],
+        [
+          0.046643109540636045,
+          0.0007067137809187279,
+          0.9526501766784452,
+          0.0,
+          0.0
+        ],
+        [
+          0.025914634146341462,
+          0.0,
+          0.0,
+          0.9733231707317073,
+          0.0007621951219512195
+        ],
+        [
+          0.02504581551618815,
+          0.0036652412950519244,
+          0.0,
+          0.0006108735491753207,
+          0.9706780696395846
+        ]
+      ]
+    },
+    "attack_timing_duration_intensity": {
+      "rows": 24666,
+      "accuracy": 0.957836698289143,
+      "majority_class": "Benign",
+      "majority_class_baseline": 0.686532068434282,
+      "macro_f1": 0.9166184220068043,
+      "balanced_accuracy": 0.8915621796339085,
+      "per_class": {
+        "Benign": {
+          "precision": 0.9552170427213378,
+          "recall": 0.985000590527932,
+          "f1": 0.9698802186300732,
+          "support": 16934,
+          "correct": 16680,
+          "predicted": 17462
+        },
+        "DoS": {
+          "precision": 0.869615832363213,
+          "recall": 0.5966453674121406,
+          "f1": 0.7077214590241592,
+          "support": 1252,
+          "correct": 747,
+          "predicted": 859
+        },
+        "Replay": {
+          "precision": 0.9819648789748457,
+          "recall": 0.9695407685098407,
+          "f1": 0.9757132751709503,
+          "support": 2134,
+          "correct": 2069,
+          "predicted": 2107
+        },
+        "Evil_Twin": {
+          "precision": 0.9940314704286489,
+          "recall": 0.9755058572949947,
+          "f1": 0.984681537221177,
+          "support": 1878,
+          "correct": 1832,
+          "predicted": 1843
+        },
+        "FDI": {
+          "precision": 0.9594989561586639,
+          "recall": 0.9311183144246353,
+          "f1": 0.945095619987662,
+          "support": 2468,
+          "correct": 2298,
+          "predicted": 2395
+        }
+      },
+      "evil_twin": {
+        "tp": 1832,
+        "fn": 46,
+        "fp": 11,
+        "support": 1878,
+        "predicted": 1843,
+        "precision": 0.9940314704286489,
+        "recall": 0.9755058572949947
+      },
+      "benign_false_positive_rate": 0.014999409472068029,
+      "confusion_matrix": [
+        [
+          16680,
+          112,
+          38,
+          7,
+          97
+        ],
+        [
+          501,
+          747,
+          0,
+          4,
+          0
+        ],
+        [
+          65,
+          0,
+          2069,
+          0,
+          0
+        ],
+        [
+          46,
+          0,
+          0,
+          1832,
+          0
+        ],
+        [
+          170,
+          0,
+          0,
+          0,
+          2298
+        ]
+      ],
+      "normalized_confusion_matrix": [
+        [
+          0.985000590527932,
+          0.006613912838077241,
+          0.0022440061414904927,
+          0.00041336955237982755,
+          0.005728120940120467
+        ],
+        [
+          0.4001597444089457,
+          0.5966453674121406,
+          0.0,
+          0.003194888178913738,
+          0.0
+        ],
+        [
+          0.030459231490159326,
+          0.0,
+          0.9695407685098407,
+          0.0,
+          0.0
+        ],
+        [
+          0.024494142705005325,
+          0.0,
+          0.0,
+          0.9755058572949947,
+          0.0
+        ],
+        [
+          0.06888168557536467,
+          0.0,
+          0.0,
+          0.0,
+          0.9311183144246353
+        ]
+      ]
+    },
+    "replay_delay_source_segment": {
+      "rows": 16642,
+      "accuracy": 0.9760245162841005,
+      "majority_class": "Benign",
+      "majority_class_baseline": 0.683030885710852,
+      "macro_f1": 0.9419479288419996,
+      "balanced_accuracy": 0.9439054485512524,
+      "per_class": {
+        "Benign": {
+          "precision": 0.9797970963792199,
+          "recall": 0.9855722706079001,
+          "f1": 0.9826761984123503,
+          "support": 11367,
+          "correct": 11203,
+          "predicted": 11434
+        },
+        "DoS": {
+          "precision": 0.7821782178217822,
+          "recall": 0.8494623655913979,
+          "f1": 0.8144329896907216,
+          "support": 372,
+          "correct": 316,
+          "predicted": 404
+        },
+        "Replay": {
+          "precision": 0.9976971790443293,
+          "recall": 0.9611758180809762,
+          "f1": 0.9790960451977402,
+          "support": 1803,
+          "correct": 1733,
+          "predicted": 1737
+        },
+        "Evil_Twin": {
+          "precision": 0.9921480650588895,
+          "recall": 0.9811425402107599,
+          "f1": 0.9866146123814835,
+          "support": 1803,
+          "correct": 1769,
+          "predicted": 1783
+        },
+        "FDI": {
+          "precision": 0.9517133956386293,
+          "recall": 0.9421742482652274,
+          "f1": 0.9469197985277025,
+          "support": 1297,
+          "correct": 1222,
+          "predicted": 1284
+        }
+      },
+      "evil_twin": {
+        "tp": 1769,
+        "fn": 34,
+        "fp": 14,
+        "support": 1803,
+        "predicted": 1783,
+        "precision": 0.9921480650588895,
+        "recall": 0.9811425402107599
+      },
+      "benign_false_positive_rate": 0.014427729392099938,
+      "confusion_matrix": [
+        [
+          11203,
+          85,
+          4,
+          13,
+          62
+        ],
+        [
+          55,
+          316,
+          0,
+          1,
+          0
+        ],
+        [
+          70,
+          0,
+          1733,
+          0,
+          0
+        ],
+        [
+          34,
+          0,
+          0,
+          1769,
+          0
+        ],
+        [
+          72,
+          3,
+          0,
+          0,
+          1222
+        ]
+      ],
+      "normalized_confusion_matrix": [
+        [
+          0.9855722706079001,
+          0.007477786575173748,
+          0.00035189583883170583,
+          0.0011436614762030438,
+          0.00545438550189144
+        ],
+        [
+          0.1478494623655914,
+          0.8494623655913979,
+          0.0,
+          0.002688172043010753,
+          0.0
+        ],
+        [
+          0.03882418191902385,
+          0.0,
+          0.9611758180809762,
+          0.0,
+          0.0
+        ],
+        [
+          0.018857459789240156,
+          0.0,
+          0.0,
+          0.9811425402107599,
+          0.0
+        ],
+        [
+          0.05551272166538165,
+          0.002313030069390902,
+          0.0,
+          0.0,
+          0.9421742482652274
+        ]
+      ]
+    },
+    "unseen_ap_benign_roaming": {
+      "rows": 24954,
+      "accuracy": 0.9680612326681093,
+      "majority_class": "Benign",
+      "majority_class_baseline": 0.6713552937404825,
+      "macro_f1": 0.9492976677035602,
+      "balanced_accuracy": 0.9396370456248979,
+      "per_class": {
+        "Benign": {
+          "precision": 0.9710324483775811,
+          "recall": 0.982450904315645,
+          "f1": 0.9767083048986737,
+          "support": 16753,
+          "correct": 16459,
+          "predicted": 16950
+        },
+        "DoS": {
+          "precision": 0.9315448658649399,
+          "recall": 0.8505067567567568,
+          "f1": 0.8891832229580574,
+          "support": 1184,
+          "correct": 1007,
+          "predicted": 1081
+        },
+        "Replay": {
+          "precision": 0.9912510936132983,
+          "recall": 0.9245206038351693,
+          "f1": 0.9567236647667299,
+          "support": 2451,
+          "correct": 2266,
+          "predicted": 2286
+        },
+        "Evil_Twin": {
+          "precision": 0.9468512728896828,
+          "recall": 0.9901914992993928,
+          "f1": 0.9680365296803652,
+          "support": 2141,
+          "correct": 2120,
+          "predicted": 2239
+        },
+        "FDI": {
+          "precision": 0.9612176814011676,
+          "recall": 0.9505154639175257,
+          "f1": 0.9558366162139745,
+          "support": 2425,
+          "correct": 2305,
+          "predicted": 2398
+        }
+      },
+      "evil_twin": {
+        "tp": 2120,
+        "fn": 21,
+        "fp": 119,
+        "support": 2141,
+        "predicted": 2239,
+        "precision": 0.9468512728896828,
+        "recall": 0.9901914992993928
+      },
+      "benign_false_positive_rate": 0.017549095684355042,
+      "confusion_matrix": [
+        [
+          16459,
+          74,
+          20,
+          107,
+          93
+        ],
+        [
+          172,
+          1007,
+          0,
+          5,
+          0
+        ],
+        [
+          184,
+          0,
+          2266,
+          1,
+          0
+        ],
+        [
+          21,
+          0,
+          0,
+          2120,
+          0
+        ],
+        [
+          114,
+          0,
+          0,
+          6,
+          2305
+        ]
+      ],
+      "normalized_confusion_matrix": [
+        [
+          0.982450904315645,
+          0.004417119321912493,
+          0.0011938160329493224,
+          0.006386915776278875,
+          0.00555124455321435
+        ],
+        [
+          0.14527027027027026,
+          0.8505067567567568,
+          0.0,
+          0.004222972972972973,
+          0.0
+        ],
+        [
+          0.07507139942880457,
+          0.0,
+          0.9245206038351693,
+          0.0004079967360261118,
+          0.0
+        ],
+        [
+          0.009808500700607193,
+          0.0,
+          0.0,
+          0.9901914992993928,
+          0.0
+        ],
+        [
+          0.047010309278350516,
+          0.0,
+          0.0,
+          0.002474226804123711,
+          0.9505154639175257
+        ]
+      ]
+    }
+  },
+  "scheduled_observation_level_evil_twin": {
+    "definition": "Every scheduled active Evil_Twin ground-truth observation is in the denominator; no prediction due to loss/warm-up counts as a miss.",
+    "support": 12844,
+    "true_positive": 8995,
+    "false_negative_including_no_output": 3849,
+    "no_output_scheduled_observations": 3682,
+    "recall_including_no_output_as_miss": 0.7003270009342883,
+    "run_clustered_95_ci": [
+      0.6504368984778995,
+      0.7452868656984315
+    ],
+    "by_condition": {
+      "mission_initial_state": {
+        "scheduled_support": 2510,
+        "true_positive": 1997,
+        "false_negative_including_no_output": 513,
+        "no_output_scheduled_observations": 482,
+        "recall_including_no_output_as_miss": 0.7956175298804781,
+        "run_clustered_95_ci": [
+          0.7251132077716761,
+          0.8472117318330353
+        ]
+      },
+      "wind_background_traffic": {
+        "scheduled_support": 2467,
+        "true_positive": 1277,
+        "false_negative_including_no_output": 1190,
+        "no_output_scheduled_observations": 1155,
+        "recall_including_no_output_as_miss": 0.5176327523307661,
+        "run_clustered_95_ci": [
+          0.3826574649625921,
+          0.6407234498940131
+        ]
+      },
+      "attack_timing_duration_intensity": {
+        "scheduled_support": 2447,
+        "true_positive": 1832,
+        "false_negative_including_no_output": 615,
+        "no_output_scheduled_observations": 569,
+        "recall_including_no_output_as_miss": 0.7486718430731508,
+        "run_clustered_95_ci": [
+          0.6285387586307293,
+          0.8399548491875151
+        ]
+      },
+      "replay_delay_source_segment": {
+        "scheduled_support": 2768,
+        "true_positive": 1769,
+        "false_negative_including_no_output": 999,
+        "no_output_scheduled_observations": 965,
+        "recall_including_no_output_as_miss": 0.6390895953757225,
+        "run_clustered_95_ci": [
+          0.5069952205141577,
+          0.7540379032969481
+        ]
+      },
+      "unseen_ap_benign_roaming": {
+        "scheduled_support": 2652,
+        "true_positive": 2120,
+        "false_negative_including_no_output": 532,
+        "no_output_scheduled_observations": 511,
+        "recall_including_no_output_as_miss": 0.799396681749623,
+        "run_clustered_95_ci": [
+          0.7133876485773574,
+          0.8652526320426412
+        ]
+      }
+    }
+  },
+  "run_level_summary_by_condition": {
+    "mission_initial_state": {
+      "n_missions": 20,
+      "missions_with_scored_attack_rows": 20,
+      "missions_without_scored_rows_count_as_misses_for_coverage": 0,
+      "mean_recall_scored_missions": 0.9862992867977984,
+      "mean_recall_zero_for_unscored_missions": 0.9862992867977984,
+      "median_recall_zero_for_unscored_missions": 0.9962962962962962,
+      "min_recall_zero_for_unscored_missions": 0.9473684210526315,
+      "p10_recall_zero_for_unscored_missions": 0.9612873647533468,
+      "missions_recall_ge_60pct": 20,
+      "missions_recall_ge_60pct_rate": 1.0,
+      "missions_attack_positive_support_ge_30": 19,
+      "scheduled_attack_any_alert_detected": 20,
+      "preexisting_combined_alert_missions": 9,
+      "mean_any_alert_detection_delay_s": 0.32,
+      "run_clustered_95_ci_pooled_recall": [
+        0.9771552673436927,
+        0.9923959521975374
+      ],
+      "mean_mission_recall_95_ci": [
+        0.9783302158990972,
+        0.9931210354423695
+      ]
+    },
+    "wind_background_traffic": {
+      "n_missions": 20,
+      "missions_with_scored_attack_rows": 16,
+      "missions_without_scored_rows_count_as_misses_for_coverage": 4,
+      "mean_recall_scored_missions": 0.9698481434971327,
+      "mean_recall_zero_for_unscored_missions": 0.7758785147977061,
+      "median_recall_zero_for_unscored_missions": 0.9685876623376624,
+      "min_recall_zero_for_unscored_missions": 0.0,
+      "p10_recall_zero_for_unscored_missions": 0.0,
+      "missions_recall_ge_60pct": 16,
+      "missions_recall_ge_60pct_rate": 0.8,
+      "missions_attack_positive_support_ge_30": 16,
+      "scheduled_attack_any_alert_detected": 16,
+      "preexisting_combined_alert_missions": 15,
+      "mean_any_alert_detection_delay_s": 0.6124999999999999,
+      "run_clustered_95_ci_pooled_recall": [
+        0.9602595108634546,
+        0.9844322629425369
+      ],
+      "mean_mission_recall_95_ci": [
+        0.5830905656848446,
+        0.9261896688676797
+      ]
+    },
+    "attack_timing_duration_intensity": {
+      "n_missions": 20,
+      "missions_with_scored_attack_rows": 20,
+      "missions_without_scored_rows_count_as_misses_for_coverage": 0,
+      "mean_recall_scored_missions": 0.972125069566298,
+      "mean_recall_zero_for_unscored_missions": 0.972125069566298,
+      "median_recall_zero_for_unscored_missions": 0.9883004926108374,
+      "min_recall_zero_for_unscored_missions": 0.8260869565217391,
+      "p10_recall_zero_for_unscored_missions": 0.935054347826087,
+      "missions_recall_ge_60pct": 20,
+      "missions_recall_ge_60pct_rate": 1.0,
+      "missions_attack_positive_support_ge_30": 18,
+      "scheduled_attack_any_alert_detected": 20,
+      "preexisting_combined_alert_missions": 12,
+      "mean_any_alert_detection_delay_s": 1.6300000000000001,
+      "run_clustered_95_ci_pooled_recall": [
+        0.9623905203503349,
+        0.9876059422741746
+      ],
+      "mean_mission_recall_95_ci": [
+        0.9517174163260486,
+        0.9881509392310878
+      ]
+    },
+    "replay_delay_source_segment": {
+      "n_missions": 20,
+      "missions_with_scored_attack_rows": 19,
+      "missions_without_scored_rows_count_as_misses_for_coverage": 1,
+      "mean_recall_scored_missions": 0.972674166805459,
+      "mean_recall_zero_for_unscored_missions": 0.9240404584651861,
+      "median_recall_zero_for_unscored_missions": 0.9844072321320227,
+      "min_recall_zero_for_unscored_missions": 0.0,
+      "p10_recall_zero_for_unscored_missions": 0.9220408163265307,
+      "missions_recall_ge_60pct": 19,
+      "missions_recall_ge_60pct_rate": 0.95,
+      "missions_attack_positive_support_ge_30": 18,
+      "scheduled_attack_any_alert_detected": 19,
+      "preexisting_combined_alert_missions": 11,
+      "mean_any_alert_detection_delay_s": 1.5999999999999999,
+      "run_clustered_95_ci_pooled_recall": [
+        0.9688032490992494,
+        0.9897202516077609
+      ],
+      "mean_mission_recall_95_ci": [
+        0.8170963515332227,
+        0.9869368094437617
+      ]
+    },
+    "unseen_ap_benign_roaming": {
+      "n_missions": 20,
+      "missions_with_scored_attack_rows": 20,
+      "missions_without_scored_rows_count_as_misses_for_coverage": 0,
+      "mean_recall_scored_missions": 0.9860472405733095,
+      "mean_recall_zero_for_unscored_missions": 0.9860472405733095,
+      "median_recall_zero_for_unscored_missions": 0.9923888600588133,
+      "min_recall_zero_for_unscored_missions": 0.9,
+      "p10_recall_zero_for_unscored_missions": 0.9702743518751573,
+      "missions_recall_ge_60pct": 20,
+      "missions_recall_ge_60pct_rate": 1.0,
+      "missions_attack_positive_support_ge_30": 19,
+      "scheduled_attack_any_alert_detected": 20,
+      "preexisting_combined_alert_missions": 15,
+      "mean_any_alert_detection_delay_s": 0.36,
+      "run_clustered_95_ci_pooled_recall": [
+        0.984890091357644,
+        0.9948432035950033
+      ],
+      "mean_mission_recall_95_ci": [
+        0.974643096008723,
+        0.9940561155582287
+      ]
+    }
+  },
+  "pooled_mission_coverage_recall_ge_60pct": 0.95,
+  "mission_coverage_95_ci": [
+    0.91,
+    0.99
+  ],
+  "scheduled_attack_any_alert_detected_missions": 95,
+  "scheduled_attack_any_alert_detection_rate": 0.95,
+  "scheduled_attack_any_alert_detection_rate_95_ci": [
+    0.91,
+    0.99
+  ],
+  "preexisting_combined_alert_missions": 62,
+  "preexisting_combined_alert_rate": 0.62,
+  "preexisting_combined_alert_rate_95_ci": [
+    0.53,
+    0.71
+  ],
+  "pooled_mean_evil_twin_mission_recall": 0.9288781140400596,
+  "pooled_mean_evil_twin_mission_recall_95_ci": [
+    0.8855395486974119,
+    0.965045057279968
+  ],
+  "run_clustered_bootstrap": {
+    "replicates": 5000,
+    "sampling_unit": "complete mission run",
+    "stratification": "condition \u00d7 scheduled class; fixed cohort sizes",
+    "seed": 120261108,
+    "pooled_95_ci": {
+      "evil_twin_precision": [
+        0.9777336071203573,
+        0.9862189701907823
+      ],
+      "evil_twin_recall": [
+        0.9773381593902726,
+        0.9858355127397697
+      ],
+      "benign_false_positive_rate": [
+        0.01398961641791395,
+        0.01948345461418537
+      ],
+      "macro_f1": [
+        0.9211544988774076,
+        0.949043752547327
+      ],
+      "balanced_accuracy": [
+        0.9025267625168636,
+        0.9426478732290071
+      ]
+    },
+    "condition_95_ci": {
+      "mission_initial_state": {
+        "evil_twin_precision": [
+          0.9886971724593083,
+          0.999059708509638
+        ],
+        "evil_twin_recall": [
+          0.9771552673436927,
+          0.9923959521975374
+        ],
+        "benign_false_positive_rate": [
+          0.007566732332650398,
+          0.01906671668368374
+        ],
+        "macro_f1": [
+          0.8986720659536083,
+          0.9703786281568202
+        ],
+        "balanced_accuracy": [
+          0.8747617173828528,
+          0.9687342688370175
+        ]
+      },
+      "wind_background_traffic": {
+        "evil_twin_precision": [
+          0.9869790361973948,
+          0.9984013427725497
+        ],
+        "evil_twin_recall": [
+          0.9602595108634546,
+          0.9844322629425369
+        ],
+        "benign_false_positive_rate": [
+          0.015315373420368757,
+          0.03718961800570086
+        ],
+        "macro_f1": [
+          0.8865755025037781,
+          0.9530622654004959
+        ],
+        "balanced_accuracy": [
+          0.8807507713391535,
+          0.9717123634321299
+        ]
+      },
+      "attack_timing_duration_intensity": {
+        "evil_twin_precision": [
+          0.989630354336389,
+          0.9974785995986042
+        ],
+        "evil_twin_recall": [
+          0.9623905203503349,
+          0.9876059422741746
+        ],
+        "benign_false_positive_rate": [
+          0.010361710723267843,
+          0.020236377094782897
+        ],
+        "macro_f1": [
+          0.8763854988258585,
+          0.9465138969789736
+        ],
+        "balanced_accuracy": [
+          0.8464540080402624,
+          0.934495546757728
+        ]
+      },
+      "replay_delay_source_segment": {
+        "evil_twin_precision": [
+          0.9850906978085826,
+          0.9978357310792656
+        ],
+        "evil_twin_recall": [
+          0.9688032490992494,
+          0.9897202516077609
+        ],
+        "benign_false_positive_rate": [
+          0.00937148991460641,
+          0.020322111062208426
+        ],
+        "macro_f1": [
+          0.8944924792624929,
+          0.9625591286963875
+        ],
+        "balanced_accuracy": [
+          0.9060511851783911,
+          0.9693743290047897
+        ]
+      },
+      "unseen_ap_benign_roaming": {
+        "evil_twin_precision": [
+          0.9296947170055221,
+          0.961433929834815
+        ],
+        "evil_twin_recall": [
+          0.984890091357644,
+          0.9948432035950033
+        ],
+        "benign_false_positive_rate": [
+          0.013519561946963868,
+          0.02203613702819563
+        ],
+        "macro_f1": [
+          0.9262898332743943,
+          0.9663776445743848
+        ],
+        "balanced_accuracy": [
+          0.9055246629927425,
+          0.9673501028507847
+        ]
+      }
+    },
+    "mission_coverage_recall_ge_60pct_95_ci": [
+      0.91,
+      0.99
+    ],
+    "mean_mission_recall_95_ci": [
+      0.8855395486974119,
+      0.965045057279968
+    ],
+    "scheduled_attack_any_alert_detection_rate_95_ci": [
+      0.91,
+      0.99
+    ],
+    "preexisting_combined_alert_rate_95_ci": [
+      0.53,
+      0.71
+    ],
+    "scheduled_sample_recall_including_no_output_as_miss_95_ci": [
+      0.6504368984778995,
+      0.7452868656984315
+    ],
+    "scheduled_sample_recall_by_condition_95_ci": {
+      "mission_initial_state": [
+        0.7251132077716761,
+        0.8472117318330353
+      ],
+      "wind_background_traffic": [
+        0.3826574649625921,
+        0.6407234498940131
+      ],
+      "attack_timing_duration_intensity": [
+        0.6285387586307293,
+        0.8399548491875151
+      ],
+      "replay_delay_source_segment": [
+        0.5069952205141577,
+        0.7540379032969481
+      ],
+      "unseen_ap_benign_roaming": [
+        0.7133876485773574,
+        0.8652526320426412
+      ]
+    }
+  },
+  "validation_only_results": {
+    "mission_initial_state": {
+      "evil_twin_precision": 0.9916247906197655,
+      "evil_twin_recall": 0.9785123966942149,
+      "benign_false_positive_rate": 0.009388771795363097
+    },
+    "wind_background_traffic": {
+      "evil_twin_precision": 0.9928994082840237,
+      "evil_twin_recall": 0.9778554778554779,
+      "benign_false_positive_rate": 0.011037045131679598
+    },
+    "attack_timing_duration_intensity": {
+      "evil_twin_precision": 0.9954579863739591,
+      "evil_twin_recall": 0.9820761762509336,
+      "benign_false_positive_rate": 0.00949248120300752
+    },
+    "replay_delay_source_segment": {
+      "evil_twin_precision": 0.9952418715305313,
+      "evil_twin_recall": 0.9812353401094606,
+      "benign_false_positive_rate": 0.01537090666072622
+    },
+    "unseen_ap_benign_roaming": {
+      "evil_twin_precision": 0.9520089285714286,
+      "evil_twin_recall": 0.9930151338766007,
+      "benign_false_positive_rate": 0.016992009709719834
+    }
+  },
+  "selected_model_validation_threshold": 0.21,
+  "model_comparisons": [
+    {
+      "name": "extratrees_temporal",
+      "validation_threshold": 0.39,
+      "calibration_evil_twin_precision": 0.9901547116736991,
+      "calibration_evil_twin_recall": 0.9727787757358022,
+      "calibration_benign_fpr": 0.023568100849547823,
+      "calibration_mission_coverage_at_60pct": 1.0,
+      "calibration_mean_mission_recall": 0.9722155344396571,
+      "val_accuracy": 0.9696843160180391,
+      "val_macro_f1": 0.954484828023709,
+      "val_balanced_accuracy": 0.9575584406094666,
+      "val_benign_fpr": 0.023330118157704364
+    },
+    {
+      "name": "logistic_temporal",
+      "validation_threshold": 0.05,
+      "calibration_evil_twin_precision": 0.798824442719308,
+      "calibration_evil_twin_recall": 0.9953019206853668,
+      "calibration_benign_fpr": 0.2289363904875004,
+      "calibration_mission_coverage_at_60pct": 1.0,
+      "calibration_mean_mission_recall": 0.9957453256901727,
+      "val_accuracy": 0.8322198095874395,
+      "val_macro_f1": 0.8090245022660877,
+      "val_balanced_accuracy": 0.9095261000252368,
+      "val_benign_fpr": 0.21382927417410175
+    },
+    {
+      "name": "histgb_temporal",
+      "validation_threshold": 0.21,
+      "calibration_evil_twin_precision": 0.9870671672924489,
+      "calibration_evil_twin_recall": 0.9807931463313527,
+      "calibration_benign_fpr": 0.013382661916506805,
+      "calibration_mission_coverage_at_60pct": 1.0,
+      "calibration_mean_mission_recall": 0.9800537399416939,
+      "val_accuracy": 0.9727743444128946,
+      "val_macro_f1": 0.9578452566912402,
+      "val_balanced_accuracy": 0.9533411054937343,
+      "val_benign_fpr": 0.016457680250783698
+    },
+    {
+      "name": "extratrees_raw",
+      "validation_threshold": 0.55,
+      "calibration_evil_twin_precision": 0.9912866686029626,
+      "calibration_evil_twin_recall": 0.9432085118142877,
+      "calibration_benign_fpr": 0.03247465058920252,
+      "calibration_mission_coverage_at_60pct": 1.0,
+      "calibration_mean_mission_recall": 0.9386837834880972,
+      "val_accuracy": 0.9436278603641223,
+      "val_macro_f1": 0.9104225593009441,
+      "val_balanced_accuracy": 0.9060729465470875,
+      "val_benign_fpr": 0.029659995177236557
+    }
+  ],
+  "acceptance_targets": {
+    "basis": "The first five targets use emitted, scorable prediction rows; a separate scheduled-observation metric below counts missing outputs as misses.",
+    "pooled_evil_twin_recall_at_least_0_80": true,
+    "each_condition_evil_twin_recall_at_least_0_70": true,
+    "pooled_evil_twin_precision_at_least_0_95": true,
+    "pooled_benign_false_positive_rate_at_most_0_065": true,
+    "at_least_80pct_evil_twin_missions_recall_at_least_0_60": true,
+    "scheduled_observation_pooled_recall_at_least_0_80_including_no_output": false,
+    "each_condition_scheduled_observation_recall_at_least_0_70_including_no_output": false
+  },
+  "integrity_checks": [
+    {
+      "condition": "mission_initial_state",
+      "runs": 100,
+      "predicted_runs": 99,
+      "runs_without_scored_observations": [
+        "v5_4r1_final_mission_initial_state_test_0_015"
+      ],
+      "dataset_checksums_match": true,
+      "runtime_confusion_recalculated_match": true,
+      "dashboard_assets_resolve": true,
+      "dashboard_assets": [
+        "confusion_matrix.png",
+        "timeline.png"
+      ],
+      "scored_rows": 24364,
+      "labels_joined_after_prediction": true
+    },
+    {
+      "condition": "wind_background_traffic",
+      "runs": 100,
+      "predicted_runs": 88,
+      "runs_without_scored_observations": [
+        "v5_4r1_final_wind_background_traffic_test_0_017",
+        "v5_4r1_final_wind_background_traffic_test_1_004",
+        "v5_4r1_final_wind_background_traffic_test_1_008",
+        "v5_4r1_final_wind_background_traffic_test_1_016",
+        "v5_4r1_final_wind_background_traffic_test_2_004",
+        "v5_4r1_final_wind_background_traffic_test_2_013",
+        "v5_4r1_final_wind_background_traffic_test_2_014",
+        "v5_4r1_final_wind_background_traffic_test_3_002",
+        "v5_4r1_final_wind_background_traffic_test_3_009",
+        "v5_4r1_final_wind_background_traffic_test_4_008",
+        "v5_4r1_final_wind_background_traffic_test_4_014",
+        "v5_4r1_final_wind_background_traffic_test_4_018"
+      ],
+      "dataset_checksums_match": true,
+      "runtime_confusion_recalculated_match": true,
+      "dashboard_assets_resolve": true,
+      "dashboard_assets": [
+        "confusion_matrix.png",
+        "timeline.png"
+      ],
+      "scored_rows": 16498,
+      "labels_joined_after_prediction": true
+    },
+    {
+      "condition": "attack_timing_duration_intensity",
+      "runs": 100,
+      "predicted_runs": 100,
+      "runs_without_scored_observations": [],
+      "dataset_checksums_match": true,
+      "runtime_confusion_recalculated_match": true,
+      "dashboard_assets_resolve": true,
+      "dashboard_assets": [
+        "confusion_matrix.png",
+        "timeline.png"
+      ],
+      "scored_rows": 24666,
+      "labels_joined_after_prediction": true
+    },
+    {
+      "condition": "replay_delay_source_segment",
+      "runs": 100,
+      "predicted_runs": 92,
+      "runs_without_scored_observations": [
+        "v5_4r1_final_replay_delay_source_segment_test_0_001",
+        "v5_4r1_final_replay_delay_source_segment_test_0_008",
+        "v5_4r1_final_replay_delay_source_segment_test_0_014",
+        "v5_4r1_final_replay_delay_source_segment_test_1_008",
+        "v5_4r1_final_replay_delay_source_segment_test_1_009",
+        "v5_4r1_final_replay_delay_source_segment_test_2_012",
+        "v5_4r1_final_replay_delay_source_segment_test_4_004",
+        "v5_4r1_final_replay_delay_source_segment_test_4_008"
+      ],
+      "dataset_checksums_match": true,
+      "runtime_confusion_recalculated_match": true,
+      "dashboard_assets_resolve": true,
+      "dashboard_assets": [
+        "confusion_matrix.png",
+        "timeline.png"
+      ],
+      "scored_rows": 16642,
+      "labels_joined_after_prediction": true
+    },
+    {
+      "condition": "unseen_ap_benign_roaming",
+      "runs": 100,
+      "predicted_runs": 100,
+      "runs_without_scored_observations": [],
+      "dataset_checksums_match": true,
+      "runtime_confusion_recalculated_match": true,
+      "dashboard_assets_resolve": true,
+      "dashboard_assets": [
+        "confusion_matrix.png",
+        "timeline.png"
+      ],
+      "scored_rows": 24954,
+      "labels_joined_after_prediction": true
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-11-08T14:17:31.453921+00:00",
+  "status": "completed",
+  "scored_once": true,
+  "pre_generation_lock_sha256": "66f905181503db16f8e6610d86d6e0b2c4820b71da6e1be276b8693edd000965",
+  "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "test_spec_sha256": "c1cca3555e2322685140b96362a6329d760b0e1c7737ab8a760f21bcd7cc8e70",
+  "condition_results": {
+    "mission_initial_state": {
+      "metrics_sha256": "73310b5196aeb7f95ce4e15e6c56e848e6318f8a2146d86d82356eb6e496afb6",
+      "prediction_ledger_sha256": "18685a33c6d132c5f3360f45425263b4f8ec51157906b009d554c7f8434e399d",
+      "observation_audit_sha256": "48707fe52368fdf07484844d88df114b583023ac02523a7270678561820d744e",
+      "run_count": 100
+    },
+    "wind_background_traffic": {
+      "metrics_sha256": "ed4d6de98c49fe7dae35e51d40f3c6a9bd0567d4b7e6ab8f28ad1bac20749d5b",
+      "prediction_ledger_sha256": "053d75103671a2689f333d3f83d4cac41742a4f765049f602f3d6336d97c4222",
+      "observation_audit_sha256": "5c2da7072104f988f0f812fad0091fdf3b768a9262b73b4e61db4214955eec13",
+      "run_count": 100
+    },
+    "attack_timing_duration_intensity": {
+      "metrics_sha256": "179e678e483c3e6db051155e248950a80f5e52ce37b11818fe72741e7773483b",
+      "prediction_ledger_sha256": "183c2093c980817941500323d2b2bfdbdc68f84bd51373e87a774a3a2bf29074",
+      "observation_audit_sha256": "2e4af091ee9868199e98cf775a5dd0665bf0b992b4f785dadf3eface04071cf8",
+      "run_count": 100
+    },
+    "replay_delay_source_segment": {
+      "metrics_sha256": "0f417c16dc789981b322be5e624823d7a73ddbb9364db2fa718980c9868ee1d7",
+      "prediction_ledger_sha256": "033836e454d68d5d4ebf0ca7ef2ac5f005aa9e6bcdb642040bc158ed6a8a93e8",
+      "observation_audit_sha256": "4fbb7bdcad8f9283f82d8d74735d2c7bcb12ab2b28be9351a33606eb40cc982a",
+      "run_count": 100
+    },
+    "unseen_ap_benign_roaming": {
+      "metrics_sha256": "7de07d2faf6570dff1aa84fe4dbfd39779648496a76841e4b818b50e793dcde3",
+      "prediction_ledger_sha256": "a637569011a11b68d4c2aa6d9c77c3757ccfb88a9dad7b662cbdaf09d4093a7b",
+      "observation_audit_sha256": "35087d798c4fbb13a2f554c0fa83a94bb3b5c1da4f7baf320f4faab7dac0e64b",
+      "run_count": 100
+    },
+    "aggregate": {
+      "metrics_sha256": "de341b20b20c2da09f1deb38237f45686fed5c464e96ffd8347e9978366508cf",
+      "report_sha256": "bbd76f8eda046512f6d56748ff97a240d92cde3f80d742db6f0a936bfd66ea86"
+    }
+  },
+  "completed_utc": "2026-11-08T14:53:08.909047+00:00",
+  "aggregate_metrics_sha256": "de341b20b20c2da09f1deb38237f45686fed5c464e96ffd8347e9978366508cf",
+  "report_sha256": "bbd76f8eda046512f6d56748ff97a240d92cde3f80d742db6f0a936bfd66ea86",
+  "dashboard_sha256": "43b58a9dc1a5974f0f0408aea8b8c7d629a7282c464c3c5fa2945057d0fd6483",
+  "cross_verification_sha256": "0d84adc43cb72b52eb0dae6f1e9087311d34afdc23b6583960c27a3520b8d055"
+}

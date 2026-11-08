@@ -1,0 +1,845 @@
+{
+  "acceptance_targets": {
+    "benign_mission_alert_rate_max": 0.2,
+    "benign_scored_row_fpr_max": 0.065,
+    "evil_twin_pre_attack_alert_mission_rate_max": 0.2,
+    "false_alert_episodes_per_benign_minute_max": 0.35,
+    "mean_attack_alert_detection_delay_s_max": 1.5,
+    "per_condition_end_to_end_evil_twin_recall_min": 0.7,
+    "per_condition_evil_twin_precision_min": 0.95,
+    "pooled_end_to_end_evil_twin_recall_min": 0.8,
+    "pooled_evil_twin_precision_min": 0.95
+  },
+  "all_targets_met": false,
+  "benign_fpr_run_clustered_95_ci": [
+    0.028752249570244057,
+    0.03933533916080042
+  ],
+  "benign_mission_alert_rate": 0.36,
+  "benign_mission_alert_rate_run_clustered_95_ci": [
+    0.27,
+    0.46
+  ],
+  "benign_mission_count": 100,
+  "benign_missions_with_alert": 36,
+  "benign_scored_row_false_positive_rate": 0.033815429983954204,
+  "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "conditional_evil_twin_recall": 0.9874768089053804,
+  "contract": "acpdad-sim-research-v5-4r2",
+  "delayed_offline_reconstruction": {
+    "evil_twin_recall_including_offline_predictions": 0.8475993311569392,
+    "prediction_coverage": 0.9254266666666666,
+    "row_level": {
+      "accuracy": 0.9125088247583096,
+      "balanced_accuracy": 0.8421460065379838,
+      "benign_false_positive_rate": 0.033815429983954204,
+      "confusion_matrix": [
+        [
+          89117,
+          2619,
+          159,
+          169,
+          172
+        ],
+        [
+          7106,
+          4886,
+          0,
+          23,
+          4
+        ],
+        [
+          564,
+          15,
+          11656,
+          2,
+          0
+        ],
+        [
+          129,
+          6,
+          0,
+          10645,
+          0
+        ],
+        [
+          1164,
+          0,
+          0,
+          13,
+          10365
+        ]
+      ],
+      "macro_f1": 0.865729019052867,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.9365161100485508,
+          "precision": 0.9086154159869494,
+          "recall": 0.9661845700160457,
+          "support": 92236.0
+        },
+        "DoS": {
+          "f1-score": 0.49997441800972114,
+          "precision": 0.6492160510231199,
+          "recall": 0.40652300524170065,
+          "support": 12019.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9841900887573964,
+          "precision": 0.980925175082934,
+          "recall": 0.9874768089053804,
+          "support": 10780.0
+        },
+        "FDI": {
+          "f1-score": 0.9387311506588779,
+          "precision": 0.9833032919077886,
+          "recall": 0.8980246057875585,
+          "support": 11542.0
+        },
+        "Replay": {
+          "f1-score": 0.9692333277897888,
+          "precision": 0.9865425306813372,
+          "recall": 0.9525210427392334,
+          "support": 12237.0
+        }
+      },
+      "scored_rows": 138814
+    }
+  },
+  "end_to_end_evil_twin_recall": 0.8475993311569392,
+  "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+    0.8389932993117782,
+    0.8568842763347687
+  ],
+  "end_to_end_per_class_recall": {
+    "Benign": 0.89988084659504,
+    "DoS": 0.37964257964257964,
+    "Evil_Twin": 0.8475993311569392,
+    "FDI": 0.835752298016449,
+    "Replay": 0.8872649767831317
+  },
+  "evil_twin_any_attack_alert_rate": 0.95,
+  "evil_twin_attack_alert_detection_delay_mean_s": 1.232989626105263,
+  "evil_twin_attack_alert_detection_delay_p90_s": 1.9032223218,
+  "evil_twin_confusion": {
+    "fn": 1914,
+    "fp": 207,
+    "support": 12559,
+    "tp": 10645
+  },
+  "evil_twin_mission_count": 100,
+  "evil_twin_missions_at_least_60pct_end_to_end_recall": 100,
+  "evil_twin_missions_count": 100,
+  "evil_twin_missions_with_pre_attack_alerts": 14,
+  "evil_twin_pre_attack_alert_rate": 0.14,
+  "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+    0.08,
+    0.21
+  ],
+  "evil_twin_precision": 0.980925175082934,
+  "evil_twin_precision_run_clustered_95_ci": [
+    0.9746823281020441,
+    0.9857003118917838
+  ],
+  "fallback_schema": "22 base or 3-observation causal (22 base/66 derived) with primary 22/88 unchanged",
+  "false_alert_episode_support_models": {
+    "fallback_base": 1,
+    "primary_temporal": 188
+  },
+  "false_alert_episodes_per_benign_minute": 0.79,
+  "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+    0.54,
+    1.06
+  ],
+  "frozen_protocol_sha256": "c1cca3555e2322685140b96362a6329d760b0e1c7737ab8a760f21bcd7cc8e70",
+  "gap_breakdown": {
+    "packet_never_delivered_network_loss": 11186
+  },
+  "gap_breakdown_reconciles": true,
+  "labels_joined_after_inference": true,
+  "mean_false_alert_episode_duration_s": 3.6625830659788354,
+  "per_condition": {
+    "attack_timing_duration_intensity": {
+      "accuracy": 0.9120808713604328,
+      "balanced_accuracy": 0.8369696916709367,
+      "benign_mission_alert_rate": 0.25,
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.1,
+        0.45
+      ],
+      "benign_scored_row_false_positive_rate": 0.030579225542012728,
+      "conditional_evil_twin_recall": 0.9852875613018279,
+      "end_to_end_evil_twin_recall": 0.8704214257581725,
+      "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+        0.854282976289839,
+        0.8854424330338582
+      ],
+      "evil_twin_attack_alert_detection_delay_mean_s": 1.2793693867894733,
+      "evil_twin_confusion": {
+        "fn": 329,
+        "fp": 11,
+        "support": 2539,
+        "tp": 2210
+      },
+      "evil_twin_pre_attack_alert_rate": 0.15,
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.0,
+        0.3
+      ],
+      "evil_twin_precision": 0.995047276001801,
+      "evil_twin_precision_run_clustered_95_ci": [
+        0.9893770596933849,
+        0.998287726138673
+      ],
+      "false_alert_episodes_per_benign_minute": 0.6,
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.15,
+        1.2
+      ],
+      "gap_breakdown": {
+        "packet_never_delivered_network_loss": 1906
+      },
+      "macro_f1": 0.8663697315750275,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.935807996668055,
+          "precision": 0.9044480225420147,
+          "recall": 0.9694207744579872,
+          "support": 18542.0
+        },
+        "DoS": {
+          "f1-score": 0.5282258064516129,
+          "precision": 0.6890203813280736,
+          "recall": 0.428279525950143,
+          "support": 2447.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9901433691756273,
+          "precision": 0.995047276001801,
+          "recall": 0.9852875613018279,
+          "support": 2243.0
+        },
+        "FDI": {
+          "f1-score": 0.9239876864788066,
+          "precision": 0.9799095931692616,
+          "recall": 0.8741039426523297,
+          "support": 2232.0
+        },
+        "Replay": {
+          "f1-score": 0.9536837991010357,
+          "precision": 0.9811017289907519,
+          "recall": 0.9277566539923955,
+          "support": 2630.0
+        }
+      },
+      "prediction_coverage": 0.9364666666666667,
+      "scored_confusion_matrix": [
+        [
+          17975,
+          469,
+          47,
+          11,
+          40
+        ],
+        [
+          1399,
+          1048,
+          0,
+          0,
+          0
+        ],
+        [
+          188,
+          2,
+          2440,
+          0,
+          0
+        ],
+        [
+          31,
+          2,
+          0,
+          2210,
+          0
+        ],
+        [
+          281,
+          0,
+          0,
+          0,
+          1951
+        ]
+      ]
+    },
+    "mission_initial_state": {
+      "accuracy": 0.9100748784555875,
+      "balanced_accuracy": 0.8350209610948797,
+      "benign_mission_alert_rate": 0.3,
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.1,
+        0.5
+      ],
+      "benign_scored_row_false_positive_rate": 0.028040395358831113,
+      "conditional_evil_twin_recall": 0.9902189101071263,
+      "end_to_end_evil_twin_recall": 0.8734593262119967,
+      "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+        0.8608691242613987,
+        0.8855037602752898
+      ],
+      "evil_twin_attack_alert_detection_delay_mean_s": 1.1691715980526316,
+      "evil_twin_confusion": {
+        "fn": 308,
+        "fp": 7,
+        "support": 2434,
+        "tp": 2126
+      },
+      "evil_twin_pre_attack_alert_rate": 0.05,
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.0,
+        0.15
+      ],
+      "evil_twin_precision": 0.9967182372245663,
+      "evil_twin_precision_run_clustered_95_ci": [
+        0.9927400316311156,
+        0.9988012876004498
+      ],
+      "false_alert_episodes_per_benign_minute": 0.7,
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.2,
+        1.3
+      ],
+      "gap_breakdown": {
+        "packet_never_delivered_network_loss": 1821
+      },
+      "macro_f1": 0.8567884394029537,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.9347522859947306,
+          "precision": 0.9002885859289481,
+          "recall": 0.9719596046411689,
+          "support": 18616.0
+        },
+        "DoS": {
+          "f1-score": 0.42454569396892283,
+          "precision": 0.6422310756972112,
+          "recall": 0.3170731707317073,
+          "support": 2542.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9934579439252337,
+          "precision": 0.9967182372245663,
+          "recall": 0.9902189101071263,
+          "support": 2147.0
+        },
+        "FDI": {
+          "f1-score": 0.952480636382667,
+          "precision": 0.9827213822894169,
+          "recall": 0.9240454914703493,
+          "support": 2462.0
+        },
+        "Replay": {
+          "f1-score": 0.978705636743215,
+          "precision": 0.9857022708158116,
+          "recall": 0.9718076285240465,
+          "support": 2412.0
+        }
+      },
+      "prediction_coverage": 0.9393,
+      "scored_confusion_matrix": [
+        [
+          18094,
+          443,
+          34,
+          6,
+          39
+        ],
+        [
+          1734,
+          806,
+          0,
+          1,
+          1
+        ],
+        [
+          63,
+          5,
+          2344,
+          0,
+          0
+        ],
+        [
+          20,
+          1,
+          0,
+          2126,
+          0
+        ],
+        [
+          187,
+          0,
+          0,
+          0,
+          2275
+        ]
+      ]
+    },
+    "replay_delay_source_segment": {
+      "accuracy": 0.9099373190132326,
+      "balanced_accuracy": 0.8490457189893394,
+      "benign_mission_alert_rate": 0.4,
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.2,
+        0.6
+      ],
+      "benign_scored_row_false_positive_rate": 0.043634157105030894,
+      "conditional_evil_twin_recall": 0.9902552204176334,
+      "end_to_end_evil_twin_recall": 0.8210850327048865,
+      "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+        0.8018119111271726,
+        0.840530509466715
+      ],
+      "evil_twin_attack_alert_detection_delay_mean_s": 1.208500778277778,
+      "evil_twin_confusion": {
+        "fn": 465,
+        "fp": 22,
+        "support": 2599,
+        "tp": 2134
+      },
+      "evil_twin_pre_attack_alert_rate": 0.1,
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.0,
+        0.25
+      ],
+      "evil_twin_precision": 0.9897959183673469,
+      "evil_twin_precision_run_clustered_95_ci": [
+        0.9786795631937886,
+        0.9957011881330311
+      ],
+      "false_alert_episodes_per_benign_minute": 1.0,
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.4,
+        1.65
+      ],
+      "gap_breakdown": {
+        "packet_never_delivered_network_loss": 2719
+      },
+      "macro_f1": 0.8674594482653614,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.9341307686090682,
+          "precision": 0.9129061134221473,
+          "recall": 0.9563658428949691,
+          "support": 18128.0
+        },
+        "DoS": {
+          "f1-score": 0.4844324589360137,
+          "precision": 0.5694524495677233,
+          "recall": 0.42150170648464164,
+          "support": 2344.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9900255161215495,
+          "precision": 0.9897959183673469,
+          "recall": 0.9902552204176334,
+          "support": 2155.0
+        },
+        "FDI": {
+          "f1-score": 0.9444199382443759,
+          "precision": 0.9893715341959335,
+          "recall": 0.9033755274261603,
+          "support": 2370.0
+        },
+        "Replay": {
+          "f1-score": 0.9842885594158,
+          "precision": 0.9950782997762864,
+          "recall": 0.9737302977232924,
+          "support": 2284.0
+        }
+      },
+      "prediction_coverage": 0.9093666666666667,
+      "scored_confusion_matrix": [
+        [
+          17337,
+          741,
+          11,
+          19,
+          20
+        ],
+        [
+          1351,
+          988,
+          0,
+          2,
+          3
+        ],
+        [
+          56,
+          4,
+          2224,
+          0,
+          0
+        ],
+        [
+          19,
+          2,
+          0,
+          2134,
+          0
+        ],
+        [
+          228,
+          0,
+          0,
+          1,
+          2141
+        ]
+      ]
+    },
+    "unseen_ap_benign_roaming": {
+      "accuracy": 0.9272727272727272,
+      "balanced_accuracy": 0.8658342130638614,
+      "benign_mission_alert_rate": 0.2,
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.05,
+        0.4
+      ],
+      "benign_scored_row_false_positive_rate": 0.02663771646454483,
+      "conditional_evil_twin_recall": 0.9900990099009901,
+      "end_to_end_evil_twin_recall": 0.8536585365853658,
+      "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+        0.8370512868228595,
+        0.8701799117499887
+      ],
+      "evil_twin_attack_alert_detection_delay_mean_s": 1.1374763605,
+      "evil_twin_confusion": {
+        "fn": 360,
+        "fp": 140,
+        "support": 2460,
+        "tp": 2100
+      },
+      "evil_twin_pre_attack_alert_rate": 0.2,
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.05,
+        0.4
+      ],
+      "evil_twin_precision": 0.9375,
+      "evil_twin_precision_run_clustered_95_ci": [
+        0.8982023515817744,
+        0.9599865465731153
+      ],
+      "false_alert_episodes_per_benign_minute": 0.45,
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.05,
+        1.1
+      ],
+      "gap_breakdown": {
+        "packet_never_delivered_network_loss": 2005
+      },
+      "macro_f1": 0.8890096855963947,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.9482780859022314,
+          "precision": 0.9244542802534956,
+          "recall": 0.9733622835354552,
+          "support": 18883.0
+        },
+        "DoS": {
+          "f1-score": 0.6326276463262764,
+          "precision": 0.7987421383647799,
+          "recall": 0.5237113402061856,
+          "support": 2425.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9630818619582665,
+          "precision": 0.9375,
+          "recall": 0.9900990099009901,
+          "support": 2121.0
+        },
+        "FDI": {
+          "f1-score": 0.9327036599763873,
+          "precision": 0.9855289421157685,
+          "recall": 0.8852532496638279,
+          "support": 2231.0
+        },
+        "Replay": {
+          "f1-score": 0.9683571738188123,
+          "precision": 0.9802544975866608,
+          "recall": 0.956745182012848,
+          "support": 2335.0
+        }
+      },
+      "prediction_coverage": 0.9331666666666667,
+      "scored_confusion_matrix": [
+        [
+          18380,
+          319,
+          45,
+          110,
+          29
+        ],
+        [
+          1137,
+          1270,
+          0,
+          18,
+          0
+        ],
+        [
+          101,
+          0,
+          2234,
+          0,
+          0
+        ],
+        [
+          20,
+          1,
+          0,
+          2100,
+          0
+        ],
+        [
+          244,
+          0,
+          0,
+          12,
+          1975
+        ]
+      ]
+    },
+    "wind_background_traffic": {
+      "accuracy": 0.9028791490922428,
+      "balanced_accuracy": 0.8241128074438933,
+      "benign_mission_alert_rate": 0.65,
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.45,
+        0.85
+      ],
+      "benign_scored_row_false_positive_rate": 0.04073725577018874,
+      "conditional_evil_twin_recall": 0.9815515610217597,
+      "end_to_end_evil_twin_recall": 0.8211317768104471,
+      "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+        0.7978278229162157,
+        0.8444871548757246
+      ],
+      "evil_twin_attack_alert_detection_delay_mean_s": 1.3741681341578946,
+      "evil_twin_confusion": {
+        "fn": 452,
+        "fp": 27,
+        "support": 2527,
+        "tp": 2075
+      },
+      "evil_twin_pre_attack_alert_rate": 0.2,
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.05,
+        0.4
+      ],
+      "evil_twin_precision": 0.9871550903901046,
+      "evil_twin_precision_run_clustered_95_ci": [
+        0.9746607834406353,
+        0.9945286647084928
+      ],
+      "false_alert_episodes_per_benign_minute": 1.2,
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.75,
+        1.7
+      ],
+      "gap_breakdown": {
+        "packet_never_delivered_network_loss": 2735
+      },
+      "macro_f1": 0.8469407798970151,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.9292263149428985,
+          "precision": 0.9010137769690668,
+          "recall": 0.9592627442298113,
+          "support": 18067.0
+        },
+        "DoS": {
+          "f1-score": 0.4199674443841563,
+          "precision": 0.5431578947368421,
+          "recall": 0.3423264042459089,
+          "support": 2261.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9843453510436433,
+          "precision": 0.9871550903901046,
+          "recall": 0.9815515610217597,
+          "support": 2114.0
+        },
+        "FDI": {
+          "f1-score": 0.9378766805748725,
+          "precision": 0.9787131107885825,
+          "recall": 0.9003115264797508,
+          "support": 2247.0
+        },
+        "Replay": {
+          "f1-score": 0.9632881085395052,
+          "precision": 0.9909688013136289,
+          "recall": 0.937111801242236,
+          "support": 2576.0
+        }
+      },
+      "prediction_coverage": 0.9088333333333334,
+      "scored_confusion_matrix": [
+        [
+          17331,
+          647,
+          22,
+          23,
+          44
+        ],
+        [
+          1485,
+          774,
+          0,
+          2,
+          0
+        ],
+        [
+          156,
+          4,
+          2414,
+          2,
+          0
+        ],
+        [
+          39,
+          0,
+          0,
+          2075,
+          0
+        ],
+        [
+          224,
+          0,
+          0,
+          0,
+          2023
+        ]
+      ]
+    }
+  },
+  "physics_warning_episodes": 407,
+  "physics_warning_support_models": {
+    "fallback_base": 30,
+    "primary_temporal": 380
+  },
+  "post_evaluation_reporting_correction": {
+    "correction": "Fixed pooled conditional-recall denominator shadowing; verified run-local scored-support values against the saved audit and original report ledger.",
+    "formula": "Evil_Twin true positives among timely predictions / scheduled Evil_Twin rows with timely predictions.",
+    "generated_once_artifacts_preserved_at": "analysis/generated_once/",
+    "labels_or_predictions_modified": false,
+    "per_mission_metrics_reconstructed_from_run_mapped_audit": true,
+    "per_mission_support_values_verified_unchanged": true,
+    "predictions_rerun": false
+  },
+  "pre_attack_alert_support_models": {
+    "primary_temporal": 54
+  },
+  "pre_generation_lock_sha256": "66f905181503db16f8e6610d86d6e0b2c4820b71da6e1be276b8693edd000965",
+  "prediction_coverage": 0.9254266666666666,
+  "prediction_coverage_run_clustered_95_ci": [
+    0.9222398333333333,
+    0.92866
+  ],
+  "prediction_deadline_s": 0.5,
+  "prediction_inference_latency_max_ms": 153.56669200000002,
+  "prediction_inference_latency_p50_ms": 14.159154999999998,
+  "prediction_inference_latency_p95_ms": 16.7015511,
+  "primary_model": "HistGradientBoostingClassifier",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "row_level": {
+    "accuracy": 0.9125088247583096,
+    "balanced_accuracy": 0.8421460065379838,
+    "benign_false_positive_rate": 0.033815429983954204,
+    "confusion_matrix": [
+      [
+        89117,
+        2619,
+        159,
+        169,
+        172
+      ],
+      [
+        7106,
+        4886,
+        0,
+        23,
+        4
+      ],
+      [
+        564,
+        15,
+        11656,
+        2,
+        0
+      ],
+      [
+        129,
+        6,
+        0,
+        10645,
+        0
+      ],
+      [
+        1164,
+        0,
+        0,
+        13,
+        10365
+      ]
+    ],
+    "macro_f1": 0.865729019052867,
+    "per_class": {
+      "Benign": {
+        "f1-score": 0.9365161100485508,
+        "precision": 0.9086154159869494,
+        "recall": 0.9661845700160457,
+        "support": 92236.0
+      },
+      "DoS": {
+        "f1-score": 0.49997441800972114,
+        "precision": 0.6492160510231199,
+        "recall": 0.40652300524170065,
+        "support": 12019.0
+      },
+      "Evil_Twin": {
+        "f1-score": 0.9841900887573964,
+        "precision": 0.980925175082934,
+        "recall": 0.9874768089053804,
+        "support": 10780.0
+      },
+      "FDI": {
+        "f1-score": 0.9387311506588779,
+        "precision": 0.9833032919077886,
+        "recall": 0.8980246057875585,
+        "support": 11542.0
+      },
+      "Replay": {
+        "f1-score": 0.9692333277897888,
+        "precision": 0.9865425306813372,
+        "recall": 0.9525210427392334,
+        "support": 12237.0
+      }
+    },
+    "scored_rows": 138814
+  },
+  "scheduled_observations": 150000,
+  "target_results": {
+    "benign_alert_mission_rate": false,
+    "benign_scored_row_fpr": true,
+    "every_condition_end_to_end_evil_twin_recall": true,
+    "every_condition_evil_twin_precision": false,
+    "evil_twin_pre_attack_alert_rate": true,
+    "false_alert_episode_rate": false,
+    "mean_attack_alert_detection_delay": true,
+    "pooled_end_to_end_evil_twin_recall": true,
+    "pooled_evil_twin_precision": true
+  },
+  "test_condition_count": 5,
+  "test_mission_count": 500,
+  "test_seed_count": 500,
+  "timely_predictions": 138814,
+  "total_false_alert_episodes": 189
+}

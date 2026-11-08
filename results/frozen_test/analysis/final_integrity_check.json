@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-11-08T15:28:40.222100+00:00",
+  "status": "PASS",
+  "frozen_evaluation_completed_once": true,
+  "prediction_and_audit_hashes_unchanged": true,
+  "test_dataset_checksums_match": true,
+  "source_hashes": {
+    "simulation/research_v5_4r2/core.py": {
+      "active_source_matches_frozen": true
+    },
+    "simulation/research_v5_4r2/experiment.py": {
+      "frozen_source_backup_matches": true,
+      "active_postscore_sha256": "4258319b4c7ae962db43ea65418c192b915226e1a5f4af40580fbef2483fcad1"
+    },
+    "simulation/research_v5_4r2/protocol.py": {
+      "active_source_matches_frozen": true
+    },
+    "simulation/research_v5_4r2/experiment_spec_v5_4r2.json": {
+      "active_source_matches_frozen": true
+    },
+    "simulation/research_v5_4r2/validation_matrix_v5_4r2.json": {
+      "active_source_matches_frozen": true
+    },
+    "simulation/research_v5_4r2/final_test_spec_v5_4r2.json": {
+      "active_source_matches_frozen": true
+    },
+    "run_project.py": {
+      "active_source_matches_frozen": true
+    },
+    "run_project_v5_4r2.py": {
+      "active_source_matches_frozen": true
+    },
+    "simulation/models/acpdad_research_v5_4r2/checkpoint.pkl": {
+      "active_source_matches_frozen": true
+    },
+    "simulation/models/acpdad_research_v5_4r2/manifest.json": {
+      "active_source_matches_frozen": true
+    }
+  },
+  "corrected_artifact_hashes": {
+    "metrics": true,
+    "report": true,
+    "dashboard": true,
+    "per_condition_metrics": true,
+    "per_mission_metrics": true,
+    "cross_verification": true,
+    "dashboard_asset_check": true
+  },
+  "inference_rerun": false
+}

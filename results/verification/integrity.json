@@ -1,0 +1,62 @@
+{
+  "simulated_datasets": [
+    {
+      "dataset": "data/train_validation",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/validation/attack_timing_duration_intensity",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/validation/mission_initial_state",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/validation/replay_delay_source_segment",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/validation/unseen_ap_benign_roaming",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/validation/wind_background_traffic",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/frozen_test/attack_timing_duration_intensity",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/frozen_test/mission_initial_state",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/frozen_test/replay_delay_source_segment",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/frozen_test/unseen_ap_benign_roaming",
+      "files_checked": 9,
+      "mismatches": []
+    },
+    {
+      "dataset": "data/frozen_test/wind_background_traffic",
+      "files_checked": 9,
+      "mismatches": []
+    }
+  ],
+  "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "checkpoint_manifest_matches": true,
+  "all_match": true
+}

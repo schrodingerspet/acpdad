@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/run_project.py", line 11, in <module>
+    main()
+    ~~~~^^
+  File "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/simulation/research_v5_4r2/experiment.py", line 956, in main
+    result=train(args.data,args.model,args.results,args.validation_data);print('Trained V5.4R2:',result['fallback_selected']);return 0
+  File "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/simulation/research_v5_4r2/experiment.py", line 503, in train
+    score=_evaluate_alert_choice(validations,fallback,pthr,fthr,candidate_policy,DEADLINE_S)
+  File "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/simulation/research_v5_4r2/experiment.py", line 453, in _evaluate_alert_choice
+    records=[(d,_validation_summary(d,views,cache,fallback,pthr,fthr,policy,deadline_s)) for d,views,cache in validation]
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/simulation/research_v5_4r2/experiment.py", line 366, in _validation_summary
+    aa,ee,pp=_alert_intervals(grouped.get(run_id,[]),end,policy['alert_k'],policy['alert_n'],policy['evidence_expiry_s'],policy['clear_benign_predictions'],policy['physics_threshold'],policy.get('max_ev_evidence_age_s',float('inf')))
+             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/simulation/research_v5_4r2/experiment.py", line 285, in _alert_intervals
+    if physics_active and t-physics_last>p_expiry:
+                          ~^~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'int' and 'NoneType'

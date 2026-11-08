@@ -1,0 +1,7 @@
+{
+  "pages": 7,
+  "local_links_checked": 37,
+  "images_decoded": 20,
+  "missing": [],
+  "browser_rendering": "unverified: Chromium exited 133 (crashpad sandbox); Firefox exited 139 (headless segmentation fault)"
+}

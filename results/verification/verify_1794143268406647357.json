@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "contract": "acpdad-sim-research-v5-4r2",
+  "feature_contract": "acpdad-sim-research-v5-4r1",
+  "rows": 4059,
+  "runs": 15,
+  "primary_features": 22,
+  "temporal_features": 88,
+  "fallback_window": 3,
+  "checkpoint_sha256": "40dd9e92265c0a46d1fa02645c82e7fef5bc2c8aa7cdd45cfea6538a7806850f",
+  "primary_reconstruction": true,
+  "batch_stream_agreement": true,
+  "run_state_isolation": true,
+  "out_of_order_arrival_rejected": true,
+  "long_gap_window_reset": true,
+  "stale_replay_payload_detected": true,
+  "benign_roaming_present": true,
+  "fallback_rows_checked": 9,
+  "primary_rows_checked": 26,
+  "stale_alert_expiry": true,
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED"
+}

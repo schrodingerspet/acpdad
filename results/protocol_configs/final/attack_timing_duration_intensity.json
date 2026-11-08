@@ -1,0 +1,147 @@
+{
+  "contract": "acpdad-sim-research-v5-4r2",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "sampling_hz": 5,
+  "duration_s": 60,
+  "runs_per_class": {
+    "train": 0,
+    "val": 0,
+    "test": 20
+  },
+  "master_seeds": {
+    "train": 0,
+    "val": 0,
+    "test": 84300000
+  },
+  "mission_profiles": [
+    "hover",
+    "straight",
+    "patrol",
+    "figure_eight",
+    "climb_descent"
+  ],
+  "altitude_m": [
+    6,
+    40
+  ],
+  "speed_mps": [
+    1.5,
+    8
+  ],
+  "wind_sigma_mps2": [
+    0.01,
+    0.11
+  ],
+  "background_offered_pps": [
+    18,
+    70
+  ],
+  "background_loss": [
+    0,
+    0.1
+  ],
+  "background_jitter_s": [
+    0.002,
+    0.05
+  ],
+  "attack_start_fraction": [
+    0.12,
+    0.45
+  ],
+  "attack_duration_fraction": [
+    0.25,
+    0.6
+  ],
+  "attack_intensity": [
+    0.22,
+    0.68
+  ],
+  "replay_delay_samples": [
+    4,
+    30
+  ],
+  "replay_repetitions": [
+    1,
+    4
+  ],
+  "replay_segment_samples": [
+    5,
+    30
+  ],
+  "delivery_capacity_pps": [
+    55,
+    100
+  ],
+  "queue_limit_packets": 30,
+  "max_delivery_lag_s": 0.45,
+  "train_ap_base": 50000000,
+  "val_ap_base": 51020000,
+  "test_ap_base": 54200000,
+  "held_out_conditions": {
+    "mission": "independent configurations across five named profile families",
+    "attack": "independent timing, duration, and intensity",
+    "replay": "within-run source segments with independent delay/repetition",
+    "ap": "disjoint train/validation/test AP identity pools",
+    "background": "independent wind, traffic, loss, jitter, and capacity"
+  },
+  "run_prefix": "v5_4r2_final_attack_timing_duration_intensity",
+  "simulation_behavior": "persistent_takeover_v5_3",
+  "benign_roam_interval_samples": [
+    30,
+    90
+  ],
+  "benign_roam_duration_samples": [
+    2,
+    10
+  ],
+  "benign_roam_handoff_delay_s": [
+    0.02,
+    0.12
+  ],
+  "benign_roam_recovery_samples": [
+    1,
+    5
+  ],
+  "evil_twin_relay_delay_s": [
+    0.018,
+    0.08
+  ],
+  "startup_age_baseline_observations": 10,
+  "ap_identity_assignment": "Home, temporary roam, and takeover AP identities are sampled independently from split-specific pools. AP IDs are metadata only. Inference uses transition/persistence summaries derived from received AP changes; no numeric identifier is exposed.",
+  "mission_radius_m": [
+    12,
+    55
+  ],
+  "initial_position_xy_m_range": [
+    -15,
+    15
+  ],
+  "initial_velocity_xy_mps_range": [
+    -0.8,
+    0.8
+  ],
+  "feature_contract_note": "V5.4R1 adds noninitial_association_duration_s and association_latency_excess_s. Run initial AP and association state persist across delivery gaps, while rolling sequence/window history resets. The latency reference is based on pre-transition delivered packet ages, not a startup-only baseline.",
+  "runtime_revision": "acpdad-sim-research-v5-4r2",
+  "telemetry_queue_policy": "expedited_priority",
+  "telemetry_scheduling_note": "Uniform expedited service for telemetry uses one packet service interval at the same configured capacity. Background offered load, queue capacity, random loss probability, jitter, attack relay/handoff delay and 450 ms delivery limit are unchanged. This is a modeled priority queue, not a validated radio scheduler.",
+  "matrix_condition_id": "attack_timing_duration_intensity",
+  "matrix_protocol_sha256": "c1cca3555e2322685140b96362a6329d760b0e1c7737ab8a760f21bcd7cc8e70",
+  "matrix_protocol_stage": "final_test",
+  "prediction_deadline_s": 0.5,
+  "frozen_model_settings": {
+    "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+    "fallback_selected": "base",
+    "primary_threshold": 0.21,
+    "fallback_threshold": 0.1,
+    "prediction_deadline_s": 0.5,
+    "alert_policy": {
+      "alert_k": 4,
+      "alert_n": 6,
+      "evidence_expiry_s": 0.8,
+      "clear_benign_predictions": 3,
+      "physics_threshold": 0.010762422533106636,
+      "max_ev_evidence_age_s": 0.35
+    },
+    "validation_alert_acceptance_met": true
+  }
+}

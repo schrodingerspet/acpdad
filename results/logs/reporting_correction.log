@@ -1,0 +1,48 @@
+{
+  "pooled_conditional_evil_twin_recall": 0.9874768089053804,
+  "pooled_tp": 10645,
+  "pooled_timely_evil_twin_rows": 10780,
+  "pooled_scheduled_evil_twin_rows": 12559,
+  "per_condition": {
+    "mission_initial_state": {
+      "conditional_evil_twin_recall": 0.9902189101071263,
+      "tp": 2126,
+      "timely_evil_twin_rows": 2147,
+      "scheduled_evil_twin_rows": 2434
+    },
+    "wind_background_traffic": {
+      "conditional_evil_twin_recall": 0.9815515610217597,
+      "tp": 2075,
+      "timely_evil_twin_rows": 2114,
+      "scheduled_evil_twin_rows": 2527
+    },
+    "attack_timing_duration_intensity": {
+      "conditional_evil_twin_recall": 0.9852875613018279,
+      "tp": 2210,
+      "timely_evil_twin_rows": 2243,
+      "scheduled_evil_twin_rows": 2539
+    },
+    "replay_delay_source_segment": {
+      "conditional_evil_twin_recall": 0.9902552204176334,
+      "tp": 2134,
+      "timely_evil_twin_rows": 2155,
+      "scheduled_evil_twin_rows": 2599
+    },
+    "unseen_ap_benign_roaming": {
+      "conditional_evil_twin_recall": 0.9900990099009901,
+      "tp": 2100,
+      "timely_evil_twin_rows": 2121,
+      "scheduled_evil_twin_rows": 2460
+    }
+  },
+  "corrected_artifact_sha256": {
+    "metrics": "e2d1de76a9fec71a6536bd19c94be9a48c24e327adc0fa3e23977c9b1f85d4f4",
+    "report": "5e67396ca712b06ce95dd5ee94ded570c4e0e250980b493af86bd64791bd535b",
+    "dashboard": "12883d208fb0bbf25480d09e5c7c73708232ba7046117a5324769e7090cccca7",
+    "per_condition_metrics": "d19c0c320ba5d91504b75616e090503c01d5d93f09dfb8459494ef48d4a6ac4d",
+    "per_mission_metrics": "bb550a61aa1f064f4d059503a53e17feff96a905c803d70dafdb539e0e08b2e5",
+    "cross_verification": "3befbc715bba0f4789f7962a3d9e90953b5c5eba35d762e3907d2027915b95cc"
+  },
+  "generated_once_archive": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/acpdad_research_v5_4r2/final_test/analysis/generated_once",
+  "inference_rerun": false
+}

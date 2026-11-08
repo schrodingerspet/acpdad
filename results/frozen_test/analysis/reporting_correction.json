@@ -1,0 +1,161 @@
+{
+  "corrected_artifact_sha256": {
+    "cross_verification": "3befbc715bba0f4789f7962a3d9e90953b5c5eba35d762e3907d2027915b95cc",
+    "dashboard": "12883d208fb0bbf25480d09e5c7c73708232ba7046117a5324769e7090cccca7",
+    "dashboard_asset_check": "5ae45b6f22d116ddfb5ef6265ec4359c53c47df0f1448d1d338d0a0eaa7e01e2",
+    "final_integrity_check": "c694e9cdced60c59ba6c3cb55f6ae5749ef918a4ddbc7107fca3071d5d23e5f5",
+    "metrics": "e2d1de76a9fec71a6536bd19c94be9a48c24e327adc0fa3e23977c9b1f85d4f4",
+    "per_condition_metrics": "d19c0c320ba5d91504b75616e090503c01d5d93f09dfb8459494ef48d4a6ac4d",
+    "per_mission_metrics": "bb550a61aa1f064f4d059503a53e17feff96a905c803d70dafdb539e0e08b2e5",
+    "report": "55250cd3d7ce001b1394ca950e885ffd026549a1f6d75e88eadf7a04c3be8657"
+  },
+  "corrected_conditional_recall": {
+    "per_condition": {
+      "attack_timing_duration_intensity": {
+        "conditional_evil_twin_recall": 0.9852875613018279,
+        "scheduled_evil_twin_rows": 2539,
+        "timely_evil_twin_rows": 2243,
+        "tp": 2210
+      },
+      "mission_initial_state": {
+        "conditional_evil_twin_recall": 0.9902189101071263,
+        "scheduled_evil_twin_rows": 2434,
+        "timely_evil_twin_rows": 2147,
+        "tp": 2126
+      },
+      "replay_delay_source_segment": {
+        "conditional_evil_twin_recall": 0.9902552204176334,
+        "scheduled_evil_twin_rows": 2599,
+        "timely_evil_twin_rows": 2155,
+        "tp": 2134
+      },
+      "unseen_ap_benign_roaming": {
+        "conditional_evil_twin_recall": 0.9900990099009901,
+        "scheduled_evil_twin_rows": 2460,
+        "timely_evil_twin_rows": 2121,
+        "tp": 2100
+      },
+      "wind_background_traffic": {
+        "conditional_evil_twin_recall": 0.9815515610217597,
+        "scheduled_evil_twin_rows": 2527,
+        "timely_evil_twin_rows": 2114,
+        "tp": 2075
+      }
+    },
+    "pooled": {
+      "recall": 0.9874768089053804,
+      "scheduled_evil_twin_rows": 12559,
+      "timely_evil_twin_rows": 10780,
+      "tp": 10645
+    }
+  },
+  "created_utc": "2026-11-08T15:25:54.806604+00:00",
+  "frozen_checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "frozen_evaluation_scored_once": true,
+  "frozen_evaluation_status": "completed",
+  "frozen_test_spec_sha256": "c1cca3555e2322685140b96362a6329d760b0e1c7737ab8a760f21bcd7cc8e70",
+  "generated_once_archive": "results/acpdad_research_v5_4r2/final_test/analysis/generated_once",
+  "inference_rerun": false,
+  "original_experiment_py_sha256": "20661ecaacb49bdf3d0d67aab9f14f139abee509e6163c1752b490a0a56c127e",
+  "original_generated_once_hashes": {
+    "aggregate_metrics": "de341b20b20c2da09f1deb38237f45686fed5c464e96ffd8347e9978366508cf",
+    "attack_timing_duration_intensity_metrics": "179e678e483c3e6db051155e248950a80f5e52ce37b11818fe72741e7773483b",
+    "dashboard": "43b58a9dc1a5974f0f0408aea8b8c7d629a7282c464c3c5fa2945057d0fd6483",
+    "implementation_report": "bbd76f8eda046512f6d56748ff97a240d92cde3f80d742db6f0a936bfd66ea86",
+    "mission_initial_state_metrics": "73310b5196aeb7f95ce4e15e6c56e848e6318f8a2146d86d82356eb6e496afb6",
+    "per_mission_metrics": "76dd497bd80a21c5b62455401abefe15a5bf155cbb0c50550382bfc30db1014a",
+    "replay_delay_source_segment_metrics": "0f417c16dc789981b322be5e624823d7a73ddbb9364db2fa718980c9868ee1d7",
+    "unseen_ap_benign_roaming_metrics": "7de07d2faf6570dff1aa84fe4dbfd39779648496a76841e4b818b50e793dcde3",
+    "wind_background_traffic_metrics": "ed4d6de98c49fe7dae35e51d40f3c6a9bd0567d4b7e6ab8f28ad1bac20749d5b"
+  },
+  "predictions_or_labels_changed": false,
+  "protocol": "post-evaluation reporting correction; no inference",
+  "reporting_correction_script_sha256": "9463963198e060da530a68151bc12e104af40a2d11fd70a0fdd5eea64dd62eff",
+  "reporting_fixed_experiment_py_sha256": "4258319b4c7ae962db43ea65418c192b915226e1a5f4af40580fbef2483fcad1",
+  "run_clustered_alert_rate_intervals": {
+    "attack_timing_duration_intensity": {
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.1,
+        0.45
+      ],
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.0,
+        0.3
+      ],
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.15,
+        1.2
+      ]
+    },
+    "mission_initial_state": {
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.1,
+        0.5
+      ],
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.0,
+        0.15
+      ],
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.2,
+        1.3
+      ]
+    },
+    "pooled": {
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.27,
+        0.46
+      ],
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.08,
+        0.21
+      ],
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.54,
+        1.06
+      ]
+    },
+    "replay_delay_source_segment": {
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.2,
+        0.6
+      ],
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.0,
+        0.25
+      ],
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.4,
+        1.65
+      ]
+    },
+    "unseen_ap_benign_roaming": {
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.05,
+        0.4
+      ],
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.05,
+        0.4
+      ],
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.05,
+        1.1
+      ]
+    },
+    "wind_background_traffic": {
+      "benign_mission_alert_rate_run_clustered_95_ci": [
+        0.45,
+        0.85
+      ],
+      "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+        0.05,
+        0.4
+      ],
+      "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+        0.75,
+        1.7
+      ]
+    }
+  }
+}

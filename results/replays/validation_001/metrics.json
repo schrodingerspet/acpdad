@@ -1,0 +1,234 @@
+{
+  "contract": "acpdad-sim-research-v5-4r2",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "scheduled_observations": 300,
+  "timely_predictions": 257,
+  "prediction_coverage": 0.8566666666666667,
+  "prediction_coverage_run_clustered_95_ci": [
+    0.8566666666666667,
+    0.8566666666666667
+  ],
+  "conditional_evil_twin_recall": 1.0,
+  "end_to_end_evil_twin_recall": 0.7889908256880734,
+  "delayed_offline_reconstruction": {
+    "prediction_coverage": 0.8566666666666667,
+    "evil_twin_recall_including_offline_predictions": 0.7889908256880734,
+    "row_level": {
+      "scored_rows": 257,
+      "accuracy": 1.0,
+      "macro_f1": 0.4,
+      "balanced_accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          171,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          86,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Benign": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 171.0
+        },
+        "DoS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "Replay": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "Evil_Twin": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 86.0
+        },
+        "FDI": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        }
+      },
+      "benign_false_positive_rate": 0.0
+    }
+  },
+  "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+    0.7889908256880734,
+    0.7889908256880734
+  ],
+  "evil_twin_precision": 1.0,
+  "evil_twin_precision_run_clustered_95_ci": [
+    1.0,
+    1.0
+  ],
+  "evil_twin_confusion": {
+    "tp": 86,
+    "fn": 23,
+    "fp": 0,
+    "support": 109
+  },
+  "benign_scored_row_false_positive_rate": 0.0,
+  "benign_fpr_run_clustered_95_ci": [
+    0.0,
+    0.0
+  ],
+  "row_level": {
+    "scored_rows": 257,
+    "accuracy": 1.0,
+    "macro_f1": 0.4,
+    "balanced_accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        171,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        86,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "per_class": {
+      "Benign": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 171.0
+      },
+      "DoS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Replay": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "Evil_Twin": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 86.0
+      },
+      "FDI": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      }
+    },
+    "benign_false_positive_rate": 0.0
+  },
+  "end_to_end_per_class_recall": {
+    "Benign": 0.8952879581151832,
+    "DoS": 0.0,
+    "Replay": 0.0,
+    "Evil_Twin": 0.7889908256880734,
+    "FDI": 0.0
+  },
+  "gap_breakdown": {
+    "packet_never_delivered_network_loss": 43
+  },
+  "gap_breakdown_reconciles": true,
+  "total_false_alert_episodes": 0,
+  "benign_missions_with_alert": 0,
+  "benign_mission_count": 0,
+  "benign_mission_alert_rate": 0.0,
+  "false_alert_episodes_per_benign_minute": 0.0,
+  "mean_false_alert_episode_duration_s": 0.0,
+  "false_alert_episode_support_models": {},
+  "pre_attack_alert_support_models": {},
+  "evil_twin_missions_with_pre_attack_alerts": 0,
+  "evil_twin_mission_count": 1,
+  "evil_twin_pre_attack_alert_rate": 0.0,
+  "evil_twin_any_attack_alert_rate": 1.0,
+  "evil_twin_attack_alert_detection_delay_mean_s": 0.904076304,
+  "evil_twin_attack_alert_detection_delay_p90_s": 0.904076304,
+  "primary_model": "HistGradientBoostingClassifier",
+  "fallback_schema": "22 base or 3-observation causal (22 base/66 derived) with primary 22/88 unchanged",
+  "labels_joined_after_inference": true,
+  "physics_warning_episodes": 1,
+  "physics_warning_support_models": {
+    "fallback_base": 1
+  },
+  "prediction_inference_batch_seconds": 7.854462973,
+  "prediction_inference_latency_p50_ms": 28.680978999999997,
+  "prediction_inference_latency_p95_ms": 45.02589259999999,
+  "prediction_inference_latency_max_ms": 76.585877,
+  "prediction_deadline_s": 0.5,
+  "alert_policy": {
+    "alert_k": 4,
+    "alert_n": 6,
+    "evidence_expiry_s": 0.8,
+    "clear_benign_predictions": 3,
+    "physics_threshold": 0.010762422533106636,
+    "max_ev_evidence_age_s": 0.35
+  }
+}

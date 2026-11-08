@@ -1,0 +1,239 @@
+{
+  "contract": "acpdad-sim-research-v5-4r2",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "scheduled_observations": 30000,
+  "timely_predictions": 27995,
+  "prediction_coverage": 0.9331666666666667,
+  "prediction_coverage_run_clustered_95_ci": [
+    0.9264666666666667,
+    0.9395
+  ],
+  "conditional_evil_twin_recall": 2100.0,
+  "end_to_end_evil_twin_recall": 0.8536585365853658,
+  "delayed_offline_reconstruction": {
+    "prediction_coverage": 0.9331666666666667,
+    "evil_twin_recall_including_offline_predictions": 0.8536585365853658,
+    "row_level": {
+      "scored_rows": 27995,
+      "accuracy": 0.9272727272727272,
+      "macro_f1": 0.8890096855963947,
+      "balanced_accuracy": 0.8658342130638614,
+      "confusion_matrix": [
+        [
+          18380,
+          319,
+          45,
+          110,
+          29
+        ],
+        [
+          1137,
+          1270,
+          0,
+          18,
+          0
+        ],
+        [
+          101,
+          0,
+          2234,
+          0,
+          0
+        ],
+        [
+          20,
+          1,
+          0,
+          2100,
+          0
+        ],
+        [
+          244,
+          0,
+          0,
+          12,
+          1975
+        ]
+      ],
+      "per_class": {
+        "Benign": {
+          "precision": 0.9244542802534956,
+          "recall": 0.9733622835354552,
+          "f1-score": 0.9482780859022314,
+          "support": 18883.0
+        },
+        "DoS": {
+          "precision": 0.7987421383647799,
+          "recall": 0.5237113402061856,
+          "f1-score": 0.6326276463262764,
+          "support": 2425.0
+        },
+        "Replay": {
+          "precision": 0.9802544975866608,
+          "recall": 0.956745182012848,
+          "f1-score": 0.9683571738188123,
+          "support": 2335.0
+        },
+        "Evil_Twin": {
+          "precision": 0.9375,
+          "recall": 0.9900990099009901,
+          "f1-score": 0.9630818619582665,
+          "support": 2121.0
+        },
+        "FDI": {
+          "precision": 0.9855289421157685,
+          "recall": 0.8852532496638279,
+          "f1-score": 0.9327036599763873,
+          "support": 2231.0
+        }
+      },
+      "benign_false_positive_rate": 0.02663771646454483
+    }
+  },
+  "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+    0.8370512868228595,
+    0.8701799117499887
+  ],
+  "evil_twin_precision": 0.9375,
+  "evil_twin_precision_run_clustered_95_ci": [
+    0.8982023515817744,
+    0.9599865465731153
+  ],
+  "evil_twin_confusion": {
+    "tp": 2100,
+    "fn": 360,
+    "fp": 140,
+    "support": 2460
+  },
+  "benign_scored_row_false_positive_rate": 0.02663771646454483,
+  "benign_fpr_run_clustered_95_ci": [
+    0.01847968684526823,
+    0.03553956021739244
+  ],
+  "row_level": {
+    "scored_rows": 27995,
+    "accuracy": 0.9272727272727272,
+    "macro_f1": 0.8890096855963947,
+    "balanced_accuracy": 0.8658342130638614,
+    "confusion_matrix": [
+      [
+        18380,
+        319,
+        45,
+        110,
+        29
+      ],
+      [
+        1137,
+        1270,
+        0,
+        18,
+        0
+      ],
+      [
+        101,
+        0,
+        2234,
+        0,
+        0
+      ],
+      [
+        20,
+        1,
+        0,
+        2100,
+        0
+      ],
+      [
+        244,
+        0,
+        0,
+        12,
+        1975
+      ]
+    ],
+    "per_class": {
+      "Benign": {
+        "precision": 0.9244542802534956,
+        "recall": 0.9733622835354552,
+        "f1-score": 0.9482780859022314,
+        "support": 18883.0
+      },
+      "DoS": {
+        "precision": 0.7987421383647799,
+        "recall": 0.5237113402061856,
+        "f1-score": 0.6326276463262764,
+        "support": 2425.0
+      },
+      "Replay": {
+        "precision": 0.9802544975866608,
+        "recall": 0.956745182012848,
+        "f1-score": 0.9683571738188123,
+        "support": 2335.0
+      },
+      "Evil_Twin": {
+        "precision": 0.9375,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9630818619582665,
+        "support": 2121.0
+      },
+      "FDI": {
+        "precision": 0.9855289421157685,
+        "recall": 0.8852532496638279,
+        "f1-score": 0.9327036599763873,
+        "support": 2231.0
+      }
+    },
+    "benign_false_positive_rate": 0.02663771646454483
+  },
+  "end_to_end_per_class_recall": {
+    "Benign": 0.9148830263812843,
+    "DoS": 0.4953198127925117,
+    "Replay": 0.8879173290937997,
+    "Evil_Twin": 0.8536585365853658,
+    "FDI": 0.8333333333333334
+  },
+  "gap_breakdown": {
+    "packet_never_delivered_network_loss": 2005
+  },
+  "gap_breakdown_reconciles": true,
+  "total_false_alert_episodes": 28,
+  "benign_missions_with_alert": 4,
+  "benign_mission_count": 20,
+  "benign_mission_alert_rate": 0.2,
+  "false_alert_episodes_per_benign_minute": 0.45,
+  "mean_false_alert_episode_duration_s": 1.4048535725,
+  "false_alert_episode_support_models": {
+    "primary_temporal": 28
+  },
+  "pre_attack_alert_support_models": {
+    "primary_temporal": 6
+  },
+  "evil_twin_missions_with_pre_attack_alerts": 4,
+  "evil_twin_mission_count": 20,
+  "evil_twin_pre_attack_alert_rate": 0.2,
+  "evil_twin_any_attack_alert_rate": 1.0,
+  "evil_twin_attack_alert_detection_delay_mean_s": 1.1374763605,
+  "evil_twin_attack_alert_detection_delay_p90_s": 1.6797302376000005,
+  "primary_model": "HistGradientBoostingClassifier",
+  "fallback_schema": "22 base or 3-observation causal (22 base/66 derived) with primary 22/88 unchanged",
+  "labels_joined_after_inference": true,
+  "physics_warning_episodes": 89,
+  "physics_warning_support_models": {
+    "primary_temporal": 84,
+    "fallback_base": 5
+  },
+  "prediction_inference_batch_seconds": 400.054326183,
+  "prediction_inference_latency_p50_ms": 14.158265,
+  "prediction_inference_latency_p95_ms": 16.1927841,
+  "prediction_inference_latency_max_ms": 29.723488,
+  "prediction_deadline_s": 0.5,
+  "alert_policy": {
+    "alert_k": 4,
+    "alert_n": 6,
+    "evidence_expiry_s": 0.8,
+    "clear_benign_predictions": 3,
+    "physics_threshold": 0.010762422533106636,
+    "max_ev_evidence_age_s": 0.35
+  }
+}

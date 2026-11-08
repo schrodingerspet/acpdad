@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "test": "pooled conditional denominator and per-mission support remain correct when a non-EV run is last",
+  "selected_evil_twin_runs": [
+    {
+      "run_id": "v5_4r2_final_mission_initial_state_test_3_000",
+      "timely_ev_support": 116,
+      "tp": 116
+    },
+    {
+      "run_id": "v5_4r2_final_mission_initial_state_test_3_001",
+      "timely_ev_support": 76,
+      "tp": 75
+    }
+  ],
+  "last_run_id": "v5_4r2_final_mission_initial_state_test_4_019",
+  "last_run_scenario": "FDI",
+  "pooled_tp": 191,
+  "pooled_timely_ev_support": 192,
+  "conditional_recall": 0.9947916666666666,
+  "five_class_recall": 0.9947916666666666,
+  "per_mission_scored_support": {
+    "v5_4r2_final_mission_initial_state_test_3_000": 116,
+    "v5_4r2_final_mission_initial_state_test_3_001": 76
+  },
+  "inference_rerun": false
+}

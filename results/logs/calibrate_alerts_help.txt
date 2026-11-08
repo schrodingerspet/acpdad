@@ -1,0 +1,10 @@
+usage: run_project.py calibrate-alerts [-h] [--data DATA] [--model MODEL]
+                                       [--results RESULTS]
+                                       [--validation-data VALIDATION_DATA]
+
+options:
+  -h, --help            show this help message and exit
+  --data DATA
+  --model MODEL
+  --results RESULTS
+  --validation-data VALIDATION_DATA

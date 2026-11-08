@@ -1,0 +1,152 @@
+{
+  "top_level_folders": {
+    "config": {
+      "files": 3,
+      "bytes": 12080
+    },
+    "data": {
+      "files": 110,
+      "bytes": 753111116
+    },
+    "docs": {
+      "files": 1,
+      "bytes": 107163
+    },
+    "models": {
+      "files": 2,
+      "bytes": 5525353
+    },
+    "results": {
+      "files": 267,
+      "bytes": 392714736
+    },
+    "src": {
+      "files": 4,
+      "bytes": 151654
+    }
+  },
+  "results_sections": {
+    "frozen_test": {
+      "files": 105,
+      "bytes": 335947689
+    },
+    "historical": {
+      "files": 65,
+      "bytes": 48562380
+    },
+    "logs": {
+      "files": 34,
+      "bytes": 25502
+    },
+    "protocol_configs": {
+      "files": 10,
+      "bytes": 36574
+    },
+    "replays": {
+      "files": 13,
+      "bytes": 345061
+    },
+    "selection": {
+      "files": 7,
+      "bytes": 1111427
+    },
+    "verification": {
+      "files": 32,
+      "bytes": 6684033
+    }
+  },
+  "html_pages_checked": 20,
+  "missing_local_references": 22,
+  "archival_generated_once_missing_references": 22,
+  "active_or_other_missing_references": [],
+  "archival_missing_details": [
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/all_observation_audit.csv"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/all_predictions_label_free.csv"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/gap_breakdown.csv"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/attack_alert_episodes.csv"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/confusion_matrix_end_to_end.csv"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/condition_recall_coverage.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/index.html",
+      "reference": "analysis/benign_false_alert_rate.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/attack_timing_duration_intensity/index.html",
+      "reference": "gap_breakdown.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/attack_timing_duration_intensity/index.html",
+      "reference": "mission_coverage.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/attack_timing_duration_intensity/index.html",
+      "reference": "timeline.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/mission_initial_state/index.html",
+      "reference": "gap_breakdown.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/mission_initial_state/index.html",
+      "reference": "mission_coverage.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/mission_initial_state/index.html",
+      "reference": "timeline.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/replay_delay_source_segment/index.html",
+      "reference": "gap_breakdown.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/replay_delay_source_segment/index.html",
+      "reference": "mission_coverage.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/replay_delay_source_segment/index.html",
+      "reference": "timeline.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/unseen_ap_benign_roaming/index.html",
+      "reference": "gap_breakdown.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/unseen_ap_benign_roaming/index.html",
+      "reference": "mission_coverage.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/unseen_ap_benign_roaming/index.html",
+      "reference": "timeline.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/wind_background_traffic/index.html",
+      "reference": "gap_breakdown.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/wind_background_traffic/index.html",
+      "reference": "mission_coverage.png"
+    },
+    {
+      "page": "results/frozen_test/analysis/generated_once/evaluations/wind_background_traffic/index.html",
+      "reference": "timeline.png"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "rows": 257,
+  "exact_field_mismatches": {
+    "run_id": 0,
+    "observation_id": 0,
+    "sample_index": 0,
+    "observation_time_ns": 0,
+    "source_time_ns": 0,
+    "arrival_time_ns": 0,
+    "prediction": 0,
+    "selected_model": 0,
+    "status": 0,
+    "timely": 0,
+    "fallback_used": 0,
+    "primary_ready": 0,
+    "attack_alert": 0,
+    "evil_twin_alert": 0,
+    "physics_warning": 0,
+    "communication_warning": 0
+  },
+  "numeric_max_abs_difference": {
+    "confidence": 0.0,
+    "evil_twin_probability": 0.0,
+    "decision_threshold": 0.0,
+    "physics_score": 0.0
+  },
+  "classification_outputs_match": true,
+  "runtime_timing_columns_excluded": [
+    "prediction_attempt_time_ns",
+    "prediction_time_ns",
+    "inference_latency_s",
+    "evidence_age_s",
+    "observation_age_s"
+  ]
+}

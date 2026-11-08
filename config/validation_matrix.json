@@ -1,0 +1,150 @@
+{
+  "contract": "acpdad-sim-research-v5-4r2",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "runs_per_class": 12,
+  "split": "val",
+  "conditions": [
+    {
+      "id": "mission_initial_state",
+      "master_seed": 83100000,
+      "ap_base": 53000000,
+      "overrides": {
+        "mission_radius_m": [
+          12,
+          55
+        ],
+        "initial_position_xy_m_range": [
+          -18,
+          18
+        ],
+        "initial_velocity_xy_mps_range": [
+          -1,
+          1
+        ],
+        "altitude_m": [
+          6,
+          40
+        ],
+        "speed_mps": [
+          1.5,
+          8
+        ],
+        "telemetry_queue_policy": "expedited_priority"
+      }
+    },
+    {
+      "id": "wind_background_traffic",
+      "master_seed": 83200000,
+      "ap_base": 53100000,
+      "overrides": {
+        "wind_sigma_mps2": [
+          0.05,
+          0.11
+        ],
+        "background_offered_pps": [
+          35,
+          70
+        ],
+        "background_loss": [
+          0.01,
+          0.1
+        ],
+        "background_jitter_s": [
+          0.01,
+          0.05
+        ],
+        "delivery_capacity_pps": [
+          55,
+          90
+        ],
+        "telemetry_queue_policy": "expedited_priority"
+      }
+    },
+    {
+      "id": "attack_timing_duration_intensity",
+      "master_seed": 83300000,
+      "ap_base": 53200000,
+      "overrides": {
+        "attack_start_fraction": [
+          0.14,
+          0.42
+        ],
+        "attack_duration_fraction": [
+          0.28,
+          0.58
+        ],
+        "attack_intensity": [
+          0.25,
+          0.75
+        ],
+        "evil_twin_relay_delay_s": [
+          0.02,
+          0.075
+        ],
+        "telemetry_queue_policy": "expedited_priority"
+      }
+    },
+    {
+      "id": "replay_delay_source_segment",
+      "master_seed": 83400000,
+      "ap_base": 53300000,
+      "overrides": {
+        "replay_delay_samples": [
+          35,
+          80
+        ],
+        "replay_repetitions": [
+          1,
+          5
+        ],
+        "replay_segment_samples": [
+          20,
+          60
+        ],
+        "background_offered_pps": [
+          35,
+          70
+        ],
+        "background_loss": [
+          0.01,
+          0.1
+        ],
+        "background_jitter_s": [
+          0.01,
+          0.05
+        ],
+        "delivery_capacity_pps": [
+          55,
+          90
+        ],
+        "telemetry_queue_policy": "expedited_priority"
+      }
+    },
+    {
+      "id": "unseen_ap_benign_roaming",
+      "master_seed": 83500000,
+      "ap_base": 53400000,
+      "overrides": {
+        "benign_roam_interval_samples": [
+          30,
+          75
+        ],
+        "benign_roam_duration_samples": [
+          2,
+          12
+        ],
+        "benign_roam_handoff_delay_s": [
+          0.02,
+          0.13
+        ],
+        "benign_roam_recovery_samples": [
+          1,
+          6
+        ],
+        "telemetry_queue_policy": "expedited_priority"
+      }
+    }
+  ],
+  "isolation": "New complete validation missions and AP pools disjoint from V4, V5.3, V5.4R1 and V5.4R2 trainval. All conditions use uniform expedited telemetry scheduling; loss, capacity, offered traffic, relay/handoff delay and max lag stay in the configured ranges. Labels are joined only after inference.",
+  "runtime_revision": "acpdad-sim-research-v5-4r2"
+}

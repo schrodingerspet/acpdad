@@ -1,0 +1,251 @@
+{
+  "alert_policy": {
+    "alert_k": 4,
+    "alert_n": 6,
+    "clear_benign_predictions": 3,
+    "evidence_expiry_s": 0.8,
+    "max_ev_evidence_age_s": 0.35,
+    "physics_threshold": 0.010762422533106636
+  },
+  "benign_fpr_run_clustered_95_ci": [
+    0.017351962765780368,
+    0.04158250076425203
+  ],
+  "benign_mission_alert_rate": 0.3,
+  "benign_mission_alert_rate_run_clustered_95_ci": [
+    0.1,
+    0.5
+  ],
+  "benign_mission_count": 20,
+  "benign_missions_with_alert": 6,
+  "benign_scored_row_false_positive_rate": 0.028040395358831113,
+  "conditional_evil_twin_recall": 0.9902189101071263,
+  "contract": "acpdad-sim-research-v5-4r2",
+  "delayed_offline_reconstruction": {
+    "evil_twin_recall_including_offline_predictions": 0.8734593262119967,
+    "prediction_coverage": 0.9393,
+    "row_level": {
+      "accuracy": 0.9100748784555875,
+      "balanced_accuracy": 0.8350209610948797,
+      "benign_false_positive_rate": 0.028040395358831113,
+      "confusion_matrix": [
+        [
+          18094,
+          443,
+          34,
+          6,
+          39
+        ],
+        [
+          1734,
+          806,
+          0,
+          1,
+          1
+        ],
+        [
+          63,
+          5,
+          2344,
+          0,
+          0
+        ],
+        [
+          20,
+          1,
+          0,
+          2126,
+          0
+        ],
+        [
+          187,
+          0,
+          0,
+          0,
+          2275
+        ]
+      ],
+      "macro_f1": 0.8567884394029537,
+      "per_class": {
+        "Benign": {
+          "f1-score": 0.9347522859947306,
+          "precision": 0.9002885859289481,
+          "recall": 0.9719596046411689,
+          "support": 18616.0
+        },
+        "DoS": {
+          "f1-score": 0.42454569396892283,
+          "precision": 0.6422310756972112,
+          "recall": 0.3170731707317073,
+          "support": 2542.0
+        },
+        "Evil_Twin": {
+          "f1-score": 0.9934579439252337,
+          "precision": 0.9967182372245663,
+          "recall": 0.9902189101071263,
+          "support": 2147.0
+        },
+        "FDI": {
+          "f1-score": 0.952480636382667,
+          "precision": 0.9827213822894169,
+          "recall": 0.9240454914703493,
+          "support": 2462.0
+        },
+        "Replay": {
+          "f1-score": 0.978705636743215,
+          "precision": 0.9857022708158116,
+          "recall": 0.9718076285240465,
+          "support": 2412.0
+        }
+      },
+      "scored_rows": 28179
+    }
+  },
+  "end_to_end_evil_twin_recall": 0.8734593262119967,
+  "end_to_end_evil_twin_recall_run_clustered_95_ci": [
+    0.8608691242613987,
+    0.8855037602752898
+  ],
+  "end_to_end_per_class_recall": {
+    "Benign": 0.9172665517590997,
+    "DoS": 0.299739680178505,
+    "Evil_Twin": 0.8734593262119967,
+    "FDI": 0.869980879541109,
+    "Replay": 0.9242902208201893
+  },
+  "evil_twin_any_attack_alert_rate": 0.95,
+  "evil_twin_attack_alert_detection_delay_mean_s": 1.1691715980526316,
+  "evil_twin_attack_alert_detection_delay_p90_s": 1.7278363153999998,
+  "evil_twin_confusion": {
+    "fn": 308,
+    "fp": 7,
+    "support": 2434,
+    "tp": 2126
+  },
+  "evil_twin_mission_count": 20,
+  "evil_twin_missions_with_pre_attack_alerts": 1,
+  "evil_twin_pre_attack_alert_rate": 0.05,
+  "evil_twin_pre_attack_alert_rate_run_clustered_95_ci": [
+    0.0,
+    0.15
+  ],
+  "evil_twin_precision": 0.9967182372245663,
+  "evil_twin_precision_run_clustered_95_ci": [
+    0.9927400316311156,
+    0.9988012876004498
+  ],
+  "fallback_schema": "22 base or 3-observation causal (22 base/66 derived) with primary 22/88 unchanged",
+  "false_alert_episode_support_models": {
+    "primary_temporal": 28
+  },
+  "false_alert_episodes_per_benign_minute": 0.7,
+  "false_alert_episodes_per_benign_minute_run_clustered_95_ci": [
+    0.2,
+    1.3
+  ],
+  "gap_breakdown": {
+    "packet_never_delivered_network_loss": 1821
+  },
+  "gap_breakdown_reconciles": true,
+  "labels_joined_after_inference": true,
+  "mean_false_alert_episode_duration_s": 5.986810336392858,
+  "physics_warning_episodes": 76,
+  "physics_warning_support_models": {
+    "fallback_base": 7,
+    "primary_temporal": 69
+  },
+  "pre_attack_alert_support_models": {
+    "primary_temporal": 9
+  },
+  "prediction_coverage": 0.9393,
+  "prediction_coverage_run_clustered_95_ci": [
+    0.9328,
+    0.9459741666666666
+  ],
+  "prediction_deadline_s": 0.5,
+  "prediction_inference_batch_seconds": 398.779717307,
+  "prediction_inference_latency_max_ms": 43.62975,
+  "prediction_inference_latency_p50_ms": 13.990345,
+  "prediction_inference_latency_p95_ms": 16.335081299999995,
+  "primary_model": "HistGradientBoostingClassifier",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "row_level": {
+    "accuracy": 0.9100748784555875,
+    "balanced_accuracy": 0.8350209610948797,
+    "benign_false_positive_rate": 0.028040395358831113,
+    "confusion_matrix": [
+      [
+        18094,
+        443,
+        34,
+        6,
+        39
+      ],
+      [
+        1734,
+        806,
+        0,
+        1,
+        1
+      ],
+      [
+        63,
+        5,
+        2344,
+        0,
+        0
+      ],
+      [
+        20,
+        1,
+        0,
+        2126,
+        0
+      ],
+      [
+        187,
+        0,
+        0,
+        0,
+        2275
+      ]
+    ],
+    "macro_f1": 0.8567884394029537,
+    "per_class": {
+      "Benign": {
+        "f1-score": 0.9347522859947306,
+        "precision": 0.9002885859289481,
+        "recall": 0.9719596046411689,
+        "support": 18616.0
+      },
+      "DoS": {
+        "f1-score": 0.42454569396892283,
+        "precision": 0.6422310756972112,
+        "recall": 0.3170731707317073,
+        "support": 2542.0
+      },
+      "Evil_Twin": {
+        "f1-score": 0.9934579439252337,
+        "precision": 0.9967182372245663,
+        "recall": 0.9902189101071263,
+        "support": 2147.0
+      },
+      "FDI": {
+        "f1-score": 0.952480636382667,
+        "precision": 0.9827213822894169,
+        "recall": 0.9240454914703493,
+        "support": 2462.0
+      },
+      "Replay": {
+        "f1-score": 0.978705636743215,
+        "precision": 0.9857022708158116,
+        "recall": 0.9718076285240465,
+        "support": 2412.0
+      }
+    },
+    "scored_rows": 28179
+  },
+  "scheduled_observations": 30000,
+  "timely_predictions": 28179,
+  "total_false_alert_episodes": 28
+}

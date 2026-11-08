@@ -1,0 +1,24 @@
+{
+  "protocol": "single frozen scoring pass",
+  "started_utc": "2026-11-08T11:33:38Z",
+  "pre_generation_lock_sha256": "bfddf35474cb6bf69d9644b2d9002fbe2f587151c1fc466d7cc361a1135b9113",
+  "test_spec_sha256": "9960ac85a973a2da29ef8a0d215ebc31a8f0a3f74fa925e896c028f5772cc87a",
+  "checkpoint_sha256": "066229d9a46dc0bc506f88a706e15b9bc52ae289c6f1a7c1d076406a703209d1",
+  "pre_score_manifest_sha256_before_evaluation": "204b847b500495d80d7869b5b22c11e948159371cc465da97e50d096758a3429",
+  "conditions": [
+    "mission_initial_state",
+    "wind_background_traffic",
+    "attack_timing_duration_intensity",
+    "replay_delay_source_segment",
+    "unseen_ap_benign_roaming"
+  ],
+  "outputs": [
+    "results/acpdad_research_v5_4r1/final_test/evaluations/mission_initial_state",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/wind_background_traffic",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/attack_timing_duration_intensity",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/replay_delay_source_segment",
+    "results/acpdad_research_v5_4r1/final_test/evaluations/unseen_ap_benign_roaming"
+  ],
+  "labels_join_after_inference": true,
+  "no_tuning_or_edits_after_results": true
+}

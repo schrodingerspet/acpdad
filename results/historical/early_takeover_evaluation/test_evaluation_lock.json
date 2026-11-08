@@ -1,0 +1,39 @@
+{
+  "protocol": "ACPDAD V5.3 generated final-test dataset lock",
+  "created_before_evaluation": true,
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "freeze_lock_sha256": "9ebf899a0a721d9f8f986d543cf913e8c5d50e68e4e0cc806decafbf031cc8f7",
+  "test_spec_sha256": "bf407e75634643d0bce5b349de4fb6268392c90dad5e9c15b317b2c59b59300a",
+  "generation_config_sha256": "6dd6be4fcc9198d703df2e59e6f1b44b4fb2cf1bda20c099cf5f9e1d1f3882bc",
+  "checkpoint_sha256": "5790993ef906a04314f15535a14eaebacb94383ffbe6a0bc56b1babffeca09ff",
+  "model_manifest_sha256": "1eddf47a4e465672c5032faf5e48eb82a5dc16b4bba0298f4d9f9473648cdda2",
+  "run_manifest_sha256": "22893dc355ff236beb3312e78e3882efa8300824b37f72b6cc57cef13e95b437",
+  "checksums_file_sha256": "cb0f7987d92be5d35431c44bb0eae8eaf13b8cdc81e0dbf7dafcb881e8549f94",
+  "dataset_checksums": {
+    "delivered_packets.csv": "6de9c32065ddd9ad64f4bc82e3248a39f013ad4500137772deee1981674fe113",
+    "ground_truth.csv": "dea826f79504b83f1478871b3a7e0842cd30bb1dfa6159201a9f30015dd096cb",
+    "run_manifest.csv": "22893dc355ff236beb3312e78e3882efa8300824b37f72b6cc57cef13e95b437",
+    "features.csv": "6d55bb65fec30aa9649fa77c82d2fa80cfe82b8ca6139afb6525cf45584bbc8d",
+    "schema.json": "779d7935b53c946290ac3c10c42f413f735b0303fb9bb318d2f2c00b89ca4275",
+    "experiment_config.json": "fc90b3b57442868d80411e6060c56640dfa8cd05d00277e7578fe25d5707f8c0",
+    "emitted_packets.csv": "e85c734c65bec0c927bcd4451ecbb4f370bbb38518199b534d3cc8b8f84f3cf9",
+    "true_state.csv": "37f47884c6b013c261c2679bb299a02635c23a4ea6fb175b02f0f71fa14623ab",
+    "network_flow.csv": "593b22fcc63dc4f0a6be56b2efb81bf2baf839094d732043339e97d518e1451d"
+  },
+  "run_count": 60,
+  "runs_per_class": {
+    "Benign": 12,
+    "DoS": 12,
+    "Evil_Twin": 12,
+    "FDI": 12,
+    "Replay": 12
+  },
+  "unique_seeds": 60,
+  "disjoint_training_validation_seed_and_AP_ids": true,
+  "distinct_random_AP_roles_per_run": true,
+  "evil_twin_scheduled_sample_minmax": [
+    113,
+    154
+  ],
+  "evaluation_performed": false
+}

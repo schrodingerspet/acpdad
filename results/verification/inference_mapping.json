@@ -1,0 +1,13 @@
+{
+  "dataset": "data/validation/mission_initial_state",
+  "manifest_runs": 60,
+  "output_runs": 60,
+  "run_ids_match": true,
+  "delivered_packets": 16814,
+  "output_rows": 16814,
+  "row_mapping_exact": true,
+  "arrival_order_per_run": true,
+  "duplicate_observations": 0,
+  "forbidden_columns": [],
+  "selected_run_output_rows": 257
+}

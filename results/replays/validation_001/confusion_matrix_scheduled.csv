@@ -1,0 +1,7 @@
+,Benign,DoS,Replay,Evil_Twin,FDI,UNAVAILABLE
+Benign,171,0,0,0,0,20
+DoS,0,0,0,0,0,0
+Replay,0,0,0,0,0,0
+Evil_Twin,0,0,0,86,0,23
+FDI,0,0,0,0,0,0
+UNAVAILABLE,0,0,0,0,0,0

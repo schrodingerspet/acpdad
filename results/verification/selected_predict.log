@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "runs": 1,
+  "delivered_packets": 257,
+  "prediction_rows": 257,
+  "output": "results/verification/selected_validation.csv",
+  "label_free": true,
+  "order": "run_id,arrival_time_ns stable",
+  "provenance": "SIMULATED_ONLY"
+}

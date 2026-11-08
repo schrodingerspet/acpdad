@@ -1,0 +1,11 @@
+usage: run_project.py [-h]
+                      {generate,train,calibrate-alerts,evaluate,demo,predict,verify,evaluate-final,protocol} ...
+
+ACPDAD V5.4R2: causal simulated telemetry detection and complete-gap
+accounting.
+
+positional arguments:
+  {generate,train,calibrate-alerts,evaluate,demo,predict,verify,evaluate-final,protocol}
+
+options:
+  -h, --help            show this help message and exit

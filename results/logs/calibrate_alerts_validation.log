@@ -1,0 +1,20 @@
+{
+  "selected_policy": {
+    "alert_k": 4,
+    "alert_n": 6,
+    "evidence_expiry_s": 0.8,
+    "clear_benign_predictions": 3,
+    "physics_threshold": 0.010762422533106636,
+    "max_ev_evidence_age_s": 0.35
+  },
+  "validation_acceptance_met": true,
+  "acceptance_thresholds": {
+    "benign_mission_alert_rate_max": 0.2,
+    "false_alert_episodes_per_benign_minute_max": 0.35,
+    "evil_twin_pre_attack_mission_rate_max": 0.2,
+    "mean_attack_alert_detection_delay_s_max": 1.5
+  },
+  "old_checkpoint_sha256": "edaa48018e8bad0a91689915b3ebac8b61d6c37414b9521aa6826761ee6f292e",
+  "new_checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d"
+}
+Saved results/acpdad_research_v5_4r2/development/alert_calibration/alert_policy_calibration.json

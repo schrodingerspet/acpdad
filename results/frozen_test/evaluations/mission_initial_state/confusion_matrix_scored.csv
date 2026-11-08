@@ -1,0 +1,6 @@
+,Benign,DoS,Replay,Evil_Twin,FDI
+Benign,18094,443,34,6,39
+DoS,1734,806,0,1,1
+Replay,63,5,2344,0,0
+Evil_Twin,20,1,0,2126,0
+FDI,187,0,0,0,2275

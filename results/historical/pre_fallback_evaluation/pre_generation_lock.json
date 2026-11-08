@@ -1,0 +1,164 @@
+{
+  "protocol": "ACPDAD V5.4R1 frozen fresh simulated test; no test-driven tuning",
+  "provenance": "SIMULATED_ONLY_NOT_SITL_NOT_CAPTURED",
+  "created_utc": "2026-11-08T11:32:10Z",
+  "test_spec_sha256": "9960ac85a973a2da29ef8a0d215ebc31a8f0a3f74fa925e896c028f5772cc87a",
+  "test_config_sha256": {
+    "mission_initial_state.json": "fad94588eb79eac85ba514b671b1fbf784aaad6a3912f18f0a182e36e6ac1d9a",
+    "wind_background_traffic.json": "323c53ed2bb346787d17d7c617a71c494a5702640bf324f0ceb2ce4743dce896",
+    "attack_timing_duration_intensity.json": "b5cee58dd20047bee5156a564a167c9f4af9d014b5e07d6af9e707c7056248be",
+    "replay_delay_source_segment.json": "144d2043079555a2e0b8dfeef1d29a970f2e9fb238213ad20d6cfa0337902586",
+    "unseen_ap_benign_roaming.json": "a4cb6aa69c15a27b587d3f98785666cf9459d7455e0426d250828985d42aab95"
+  },
+  "checkpoint_sha256": "066229d9a46dc0bc506f88a706e15b9bc52ae289c6f1a7c1d076406a703209d1",
+  "model_manifest_sha256": "02560d81abdf84d630b7ce0cdeb5f56976d7327c01aa6a50dc5c4addd4535853",
+  "source_sha256": {
+    "simulation/research_v5_4r1/core.py": "cdedfcd8a61e92a6f303762cf8cf5752437aca751195b6411edd8628db453a48",
+    "simulation/research_v5_4r1/experiment.py": "331793bf085e1532b5605d6956ddd97058863b962d50d29a8f0cc23aca6e7271",
+    "simulation/research_v5_4r1/protocol.py": "3ce75b63e5c63c8888c40b0a17ffd42875c4e3e4c40751e16bb2cc3e5e903524",
+    "run_project_v5_4r1.py": "4260e5e98ed367807b9d6c5f61535868c2a27e55c4d444b6f4c4faf774c40d97",
+    "run_project.py": "b242187d6cff487fbd60f87501c105b4261a095c0a101071536b3758dce2a18a"
+  },
+  "conditions": [
+    {
+      "id": "mission_initial_state",
+      "master_seed": 61100000,
+      "ap_base": 28100000,
+      "overrides": {
+        "mission_radius_m": [
+          10,
+          60
+        ],
+        "initial_position_xy_m_range": [
+          -22,
+          22
+        ],
+        "initial_velocity_xy_mps_range": [
+          -1.2,
+          1.2
+        ],
+        "altitude_m": [
+          5,
+          42
+        ],
+        "speed_mps": [
+          1.2,
+          8.5
+        ]
+      }
+    },
+    {
+      "id": "wind_background_traffic",
+      "master_seed": 62100000,
+      "ap_base": 28200000,
+      "overrides": {
+        "wind_sigma_mps2": [
+          0.07,
+          0.13
+        ],
+        "background_offered_pps": [
+          45,
+          75
+        ],
+        "background_loss": [
+          0.03,
+          0.12
+        ],
+        "background_jitter_s": [
+          0.02,
+          0.06
+        ],
+        "delivery_capacity_pps": [
+          50,
+          85
+        ]
+      }
+    },
+    {
+      "id": "attack_timing_duration_intensity",
+      "master_seed": 63100000,
+      "ap_base": 28300000,
+      "overrides": {
+        "attack_start_fraction": [
+          0.12,
+          0.45
+        ],
+        "attack_duration_fraction": [
+          0.25,
+          0.6
+        ],
+        "attack_intensity": [
+          0.22,
+          0.68
+        ],
+        "evil_twin_relay_delay_s": [
+          0.018,
+          0.08
+        ]
+      }
+    },
+    {
+      "id": "replay_delay_source_segment",
+      "master_seed": 64100000,
+      "ap_base": 28400000,
+      "overrides": {
+        "replay_delay_samples": [
+          45,
+          90
+        ],
+        "replay_repetitions": [
+          1,
+          6
+        ],
+        "replay_segment_samples": [
+          20,
+          70
+        ],
+        "background_offered_pps": [
+          45,
+          75
+        ],
+        "background_loss": [
+          0.03,
+          0.12
+        ],
+        "background_jitter_s": [
+          0.02,
+          0.06
+        ],
+        "delivery_capacity_pps": [
+          50,
+          85
+        ]
+      }
+    },
+    {
+      "id": "unseen_ap_benign_roaming",
+      "master_seed": 65100000,
+      "ap_base": 28500000,
+      "overrides": {
+        "benign_roam_interval_samples": [
+          25,
+          70
+        ],
+        "benign_roam_duration_samples": [
+          2,
+          12
+        ],
+        "benign_roam_handoff_delay_s": [
+          0.02,
+          0.14
+        ],
+        "benign_roam_recovery_samples": [
+          1,
+          6
+        ]
+      }
+    }
+  ],
+  "runs_per_class_per_condition": 20,
+  "dataset_root": "data/ACPDAD_Simulated_Research_v5_4r1_final_test",
+  "evaluation_root": "results/acpdad_research_v5_4r1/final_test",
+  "scored_once": false,
+  "labels_joined_after_model_inference": true
+}
