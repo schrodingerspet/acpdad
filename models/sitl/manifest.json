@@ -1,0 +1,21 @@
+{
+  "schema_version": "acpdad-sitl-model-v3",
+  "contract": "acpdad-sitl-v3",
+  "provenance": "SITL_TRAINED_MODEL",
+  "altitude_neutralized": true,
+  "checkpoint_sha256": "3136fe66c123a51a38bea30ba502aeda8fdc3ae326fc5494bcef0393561698ac",
+  "checkpoint_file": "checkpoint.pkl",
+  "classes": [
+    "Benign",
+    "DoS",
+    "Replay",
+    "FDI"
+  ],
+  "feature_count_base": 22,
+  "feature_count_temporal": 88,
+  "primary_threshold": 0.5999999999999999,
+  "fallback_threshold": 0.5,
+  "training_runs_count": 80,
+  "validation_runs_count": 40,
+  "created_utc": "2026-11-10T14:36:29.919697+00:00"
+}

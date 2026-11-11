@@ -1,0 +1,209 @@
+{
+  "runs_evaluated": 80,
+  "total_scheduled_observations": 38035,
+  "total_covered_observations": 24160,
+  "overall_coverage_rate": 0.6352044169843565,
+  "scored_confusion_matrix": {
+    "Benign": {
+      "Benign": 1294,
+      "DoS": 11790,
+      "Replay": 0,
+      "FDI": 7995
+    },
+    "DoS": {
+      "Benign": 8,
+      "DoS": 760,
+      "Replay": 0,
+      "FDI": 105
+    },
+    "Replay": {
+      "Benign": 31,
+      "DoS": 534,
+      "Replay": 0,
+      "FDI": 469
+    },
+    "FDI": {
+      "Benign": 25,
+      "DoS": 52,
+      "Replay": 0,
+      "FDI": 1097
+    }
+  },
+  "operational_confusion_matrix": {
+    "Benign": {
+      "Benign": 807,
+      "DoS": 14797,
+      "Replay": 0,
+      "FDI": 10749,
+      "UNAVAILABLE": 5957
+    },
+    "DoS": {
+      "Benign": 1,
+      "DoS": 1651,
+      "Replay": 0,
+      "FDI": 256,
+      "UNAVAILABLE": 1
+    },
+    "Replay": {
+      "Benign": 20,
+      "DoS": 1028,
+      "Replay": 0,
+      "FDI": 805,
+      "UNAVAILABLE": 48
+    },
+    "FDI": {
+      "Benign": 7,
+      "DoS": 110,
+      "Replay": 0,
+      "FDI": 1791,
+      "UNAVAILABLE": 7
+    }
+  },
+  "per_class": {
+    "Benign": {
+      "scored_support": 21079,
+      "scored_tp": 1294,
+      "scored_predicted": 1358,
+      "scored_precision": 0.9528718703976435,
+      "scored_precision_ci95": [
+        0.9402669818882449,
+        0.9629217590049691
+      ],
+      "scored_recall": 0.06138811139048342,
+      "scored_recall_ci95": [
+        0.05822681122538877,
+        0.06470925447080278
+      ],
+      "operational_support": 32310,
+      "operational_tp": 807,
+      "operational_predicted": 835,
+      "operational_unavailable": 5957,
+      "operational_precision": 0.9664670658682635,
+      "operational_precision_ci95": [
+        0.9519621795946955,
+        0.9766994413835679
+      ],
+      "operational_recall": 0.02497678737233055,
+      "operational_recall_ci95": [
+        0.023330801265056312,
+        0.02673571883572923
+      ],
+      "operational_f1": 0.04869512747020667
+    },
+    "DoS": {
+      "scored_support": 873,
+      "scored_tp": 760,
+      "scored_predicted": 13136,
+      "scored_precision": 0.05785627283800244,
+      "scored_precision_ci95": [
+        0.05399140749954129,
+        0.06197967087327563
+      ],
+      "scored_recall": 0.870561282932417,
+      "scored_recall_ci95": [
+        0.8466594128800781,
+        0.8912161623663518
+      ],
+      "operational_support": 1909,
+      "operational_tp": 1651,
+      "operational_predicted": 17586,
+      "operational_unavailable": 1,
+      "operational_precision": 0.09388149664505857,
+      "operational_precision_ci95": [
+        0.08965897885861543,
+        0.09828140600533924
+      ],
+      "operational_recall": 0.8648507071765322,
+      "operational_recall_ci95": [
+        0.8487792143024765,
+        0.879456725359229
+      ],
+      "operational_f1": 0.169376763272634
+    },
+    "Replay": {
+      "scored_support": 1034,
+      "scored_tp": 0,
+      "scored_predicted": 0,
+      "scored_precision": 0.0,
+      "scored_precision_ci95": [
+        0.0,
+        0.0
+      ],
+      "scored_recall": 0.0,
+      "scored_recall_ci95": [
+        0.0,
+        0.003701528248626765
+      ],
+      "operational_support": 1901,
+      "operational_tp": 0,
+      "operational_predicted": 0,
+      "operational_unavailable": 48,
+      "operational_precision": 0.0,
+      "operational_precision_ci95": [
+        0.0,
+        0.0
+      ],
+      "operational_recall": 0.0,
+      "operational_recall_ci95": [
+        0.0,
+        0.0020167556189449034
+      ],
+      "operational_f1": 0.0
+    },
+    "FDI": {
+      "scored_support": 1174,
+      "scored_tp": 1097,
+      "scored_predicted": 9666,
+      "scored_precision": 0.11349058555762466,
+      "scored_precision_ci95": [
+        0.1073200757743453,
+        0.11996819748961385
+      ],
+      "scored_recall": 0.934412265758092,
+      "scored_recall_ci95": [
+        0.9187864160103255,
+        0.9472043929405555
+      ],
+      "operational_support": 1915,
+      "operational_tp": 1791,
+      "operational_predicted": 13601,
+      "operational_unavailable": 7,
+      "operational_precision": 0.13168149400779355,
+      "operational_precision_ci95": [
+        0.1261024136019721,
+        0.13746857865419648
+      ],
+      "operational_recall": 0.935248041775457,
+      "operational_recall_ci95": [
+        0.9233312414367949,
+        0.9454220730629534
+      ],
+      "operational_f1": 0.2308584686774942
+    }
+  },
+  "benign_scored_fpr": 0.9386118886095166,
+  "benign_scored_fpr_ci95": [
+    0.9352907455291972,
+    0.9417731887746112
+  ],
+  "benign_false_alert_episodes_per_minute": 10.510677808727948,
+  "average_detection_latency_s": 0.05414447930000001,
+  "macro_operational_recall": 0.4562688840810799,
+  "timely_alert_rate_by_class": {
+    "DoS": {
+      "missions": 20,
+      "timely_alert_missions": 20,
+      "rate": 1.0
+    },
+    "Replay": {
+      "missions": 20,
+      "timely_alert_missions": 0,
+      "rate": 0.0
+    },
+    "FDI": {
+      "missions": 20,
+      "timely_alert_missions": 20,
+      "rate": 1.0
+    }
+  }
+}

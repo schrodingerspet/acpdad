@@ -1,0 +1,295 @@
+{
+  "created_utc": "2026-11-10T16:52:52Z",
+  "provenance": "ACPDAD SITL integration checks; fake-message checks are not an ArduPilot execution",
+  "pymavlink": "2.4.50",
+  "checkpoint_sha256": "3136fe66c123a51a38bea30ba502aeda8fdc3ae326fc5494bcef0393561698ac",
+  "items": [
+    {
+      "item": "SITL schema remains a separately named 22/88 mapping",
+      "status": "PASS",
+      "evidence": {
+        "schema": "acpdad-sitl-mavlink-v1",
+        "base_count": 22,
+        "temporal_count": 88,
+        "window": 10
+      },
+      "issue": ""
+    },
+    {
+      "item": "Wi-Fi-only evidence is explicitly unavailable",
+      "status": "PASS",
+      "evidence": {
+        "unsupported_features": [
+          "packet_age_s",
+          "ap_changed",
+          "association_duration_s",
+          "noninitial_association_duration_s",
+          "packet_age_excess_s",
+          "association_latency_excess_s",
+          "management_frame"
+        ]
+      },
+      "issue": ""
+    },
+    {
+      "item": "MAVLink physical units and 22-feature order are emitted",
+      "status": "PASS",
+      "evidence": {
+        "rows": 12,
+        "feature_count": 22,
+        "height_cm": 1011.0,
+        "vx_mps": 0.2
+      },
+      "issue": ""
+    },
+    {
+      "item": "Received message ledger retains exact MAVLink frame bytes",
+      "status": "PASS",
+      "evidence": {
+        "frame_sha256": "35373e1824006716cd9c4a1821d27b190eaebfa16fe28f168b8da459f6f6fd01",
+        "raw_frame_hex": "6174742d3131"
+      },
+      "issue": ""
+    },
+    {
+      "item": "Clock-domain-sensitive and Wi-Fi features remain NaN",
+      "status": "PASS",
+      "evidence": {
+        "unsupported_nan": [
+          "packet_age_s",
+          "ap_changed",
+          "association_duration_s",
+          "noninitial_association_duration_s",
+          "packet_age_excess_s",
+          "association_latency_excess_s",
+          "management_frame"
+        ]
+      },
+      "issue": ""
+    },
+    {
+      "item": "Fallback starts immediately and temporal model starts at W=10",
+      "status": "PASS",
+      "evidence": {
+        "first_stage": "fallback_base",
+        "ninth_stage": "fallback_base",
+        "tenth_stage": "primary_temporal",
+        "window": 10
+      },
+      "issue": ""
+    },
+    {
+      "item": "Transfer predictions contain five probabilities and no label fields",
+      "status": "PASS",
+      "evidence": {
+        "prediction_count": 12,
+        "classes": [
+          "Benign",
+          "DoS",
+          "Replay",
+          "Evil_Twin",
+          "FDI"
+        ],
+        "keys": [
+          "run_id",
+          "observation_id",
+          "arrival_time_ns",
+          "source_time_ms",
+          "sequence",
+          "system_id",
+          "component_id",
+          "prediction",
+          "confidence",
+          "stage",
+          "health_status",
+          "communication_warning",
+          "attack_alert_candidate",
+          "alert_policy_status",
+          "physics_warning_candidate",
+          "prob_Benign",
+          "prob_DoS",
+          "prob_Replay",
+          "prob_Evil_Twin",
+          "prob_FDI"
+        ]
+      },
+      "issue": ""
+    },
+    {
+      "item": "Malformed MAVLink frames are recorded, excluded from model inputs, and reset temporal history",
+      "status": "PASS",
+      "evidence": {
+        "audit": {
+          "run_id": "selfcheck_run_a",
+          "message_index": 24,
+          "message_type": "BAD_DATA",
+          "system_id": 1,
+          "component_id": 1,
+          "sequence": 18,
+          "arrival_time_ns": 11200000000,
+          "frame_length": 9,
+          "frame_sha256": "bef7859b935a80e11c12bb0f2fe044c763f4148c55f84a1b9a1496531f5faaac",
+          "raw_frame_hex": "626164206672616d65",
+          "malformed": true,
+          "issue": "pymavlink_bad_data"
+        },
+        "feature_row_emitted": false,
+        "history_length": 0,
+        "pending_reset_reason": "malformed_observation"
+      },
+      "issue": ""
+    },
+    {
+      "item": "Source timestamp and MAVLink sequence regression are derived from received data",
+      "status": "PASS",
+      "evidence": {
+        "source_regression": 1.0,
+        "sequence_regression": 1.0
+      },
+      "issue": ""
+    },
+    {
+      "item": "Long delivery gap resets causal history",
+      "status": "PASS",
+      "evidence": {
+        "reset_reason": "delivery_gap",
+        "history_length": 1
+      },
+      "issue": ""
+    },
+    {
+      "item": "Telemetry recovery rebuilds a fresh temporal window without crossing the gap",
+      "status": "PASS",
+      "evidence": {
+        "rows_after_gap": 9,
+        "window_size": 10,
+        "gap_resets": 1
+      },
+      "issue": ""
+    },
+    {
+      "item": "Run state is isolated",
+      "status": "PASS",
+      "evidence": {
+        "run_a": "selfcheck_run_a",
+        "run_b": "selfcheck_run_b"
+      },
+      "issue": ""
+    },
+    {
+      "item": "Prediction output preserves arrival ordering",
+      "status": "PASS",
+      "evidence": {
+        "observations": 12
+      },
+      "issue": ""
+    },
+    {
+      "item": "Attack labels use a half-open schedule interval",
+      "status": "PASS",
+      "evidence": {
+        "interval_s": [
+          8.0,
+          20.0
+        ],
+        "boundary": "[start, end)"
+      },
+      "issue": ""
+    },
+    {
+      "item": "Evil_Twin is rejected unless a WLAN simulator is integrated",
+      "status": "PASS",
+      "evidence": {
+        "status": "unsupported",
+        "reason": "MAVLink has no AP association semantics"
+      },
+      "issue": ""
+    },
+    {
+      "item": "Controller and detector routes remain separated on loopback MAVProxy outputs",
+      "status": "PASS",
+      "evidence": {
+        "controller": "udpin:127.0.0.1:14550",
+        "mavproxy_outputs": [
+          "--out=udp:127.0.0.1:14550",
+          "--out=udp:127.0.0.1:14552"
+        ]
+      },
+      "issue": ""
+    },
+    {
+      "item": "Optional QGroundControl observer tap forwards to dedicated UDP port without altering controller/relay routes",
+      "status": "PASS",
+      "evidence": {
+        "qgc_port": 14600,
+        "command_qgc_outputs": [
+          "--out=udp:127.0.0.1:14550",
+          "--out=udp:127.0.0.1:14552",
+          "--out=udp:127.0.0.1:14600"
+        ]
+      },
+      "issue": ""
+    },
+    {
+      "item": "QGroundControl port derivation correctly offsets by instance and supports explicit override",
+      "status": "PASS",
+      "evidence": {
+        "instance_0": 14600,
+        "instance_1": 14601,
+        "instance_2": 14602,
+        "override": 14650
+      },
+      "issue": ""
+    },
+    {
+      "item": "QGroundControl port allocator rejects collisions with reserved SITL instance ports",
+      "status": "PASS",
+      "evidence": {
+        "rejected_port": 14550
+      },
+      "issue": ""
+    },
+    {
+      "item": "FDI relay preserves MAVLink source time and packet sequence while changing defined telemetry",
+      "status": "PASS",
+      "evidence": {
+        "tested": true,
+        "source_time_ms": 1000,
+        "sequence": 0,
+        "altitude_offset_mm": 5000
+      },
+      "issue": ""
+    },
+    {
+      "item": "DoS causes configured detector-branch loss without modifying source datagrams",
+      "status": "PASS",
+      "evidence": {
+        "first_output_count": 1,
+        "second_output_count": 0,
+        "dropped": 1
+      },
+      "issue": ""
+    },
+    {
+      "item": "Replay forwards an earlier exact MAVLink datagram with stale source time/sequence",
+      "status": "PASS",
+      "evidence": {
+        "output_matches_captured_segment": true,
+        "replayed": 1
+      },
+      "issue": ""
+    },
+    {
+      "item": "Malformed raw datagram is retained as invalid evidence rather than rewritten as telemetry",
+      "status": "PASS",
+      "evidence": {
+        "forwarded_unchanged": true,
+        "message_type": "MALFORMED"
+      },
+      "issue": ""
+    }
+  ],
+  "passed": 23,
+  "failed": 0,
+  "not_verified": 0
+}

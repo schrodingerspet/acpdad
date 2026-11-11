@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-11-10T15:11:45.342666+00:00",
+  "mission_matrix": {
+    "training_missions": 80,
+    "validation_missions": 40,
+    "test_missions": 80,
+    "total_study_missions": 200
+  },
+  "total_scheduled_test_observations": 38035,
+  "coverage_rate": 0.6352044169843565,
+  "synthetic_baseline": {
+    "benign_fpr": 0.9386118886095166,
+    "fdi_precision": 0.11349058555762466,
+    "fdi_recall": 0.935248041775457,
+    "dos_op_recall": 0.8648507071765322,
+    "dos_op_precision": 0.09388149664505857,
+    "replay_precision": 0.0,
+    "replay_recall": 0.0,
+    "macro_op_recall": 0.4562688840810799
+  },
+  "sitl_v1_historical": {
+    "benign_fpr": 0.14640163195597514,
+    "fdi_precision": 0.1444069431051109,
+    "fdi_recall": 0.5723237597911227,
+    "dos_op_recall": 0.020429544264012573,
+    "dos_op_precision": 0.03672316384180791,
+    "replay_precision": 0.5418060200668896,
+    "replay_recall": 0.2556549184639663,
+    "macro_op_recall": 0.3395006938222854
+  },
+  "sitl_v2_historical": {
+    "benign_fpr": 0.04170027041130983,
+    "fdi_precision": 0.9574468085106383,
+    "fdi_recall": 0.08511749347258486,
+    "dos_op_recall": 0.29491880565741224,
+    "dos_op_precision": 0.1332544378698225,
+    "replay_precision": 0.80248833592535,
+    "replay_recall": 0.271436086270384,
+    "macro_op_recall": 0.3148953324998941
+  },
+  "sitl_v3_improved": {
+    "benign_fpr": 0.017173490203520093,
+    "fdi_precision": 0.9477292202227935,
+    "fdi_recall": 0.9347258485639687,
+    "dos_op_recall": 0.8716605552645365,
+    "dos_op_precision": 0.4974588938714499,
+    "replay_precision": 0.8321951219512195,
+    "replay_recall": 0.8974224092582851,
+    "macro_op_recall": 0.8320416492636505,
+    "latency_s": 0.21186665753333334,
+    "false_alert_episodes_per_minute": 1.4633240482822656
+  }
+}

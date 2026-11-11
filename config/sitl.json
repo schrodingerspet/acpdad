@@ -1,0 +1,83 @@
+{
+  "schema_version": "acpdad-sitl-mavlink-v1",
+  "provenance": "ARDUPILOT_SITL_LOCAL_SIMULATION",
+  "software": {
+    "ardupilot_tag": "Copter-4.7.2",
+    "mavproxy": "1.8.75",
+    "pymavlink": "2.4.50",
+    "pexpect": "4.9.0",
+    "mavlink_dialect": "ardupilotmega",
+    "mavlink_version": 2
+  },
+  "endpoints": {
+    "sitl_master": "tcp:127.0.0.1:5760",
+    "controller": "udpin:127.0.0.1:14550",
+    "controller_gcs_forward": "udp:127.0.0.1:14550",
+    "proxy_relay_forward": "udp:127.0.0.1:14552",
+    "relay_bind_host": "127.0.0.1",
+    "relay_bind_port": 14552,
+    "detector_bind_host": "127.0.0.1",
+    "detector_bind_port": 14551,
+    "qgroundcontrol_base_port": 14600
+  },
+  "vehicle": {
+    "type": "ArduCopter",
+    "frame": "quad",
+    "speedup": 2,
+    "controller_altitude_m": 15.0,
+    "cruise_speed_mps": 16.0,
+    "route_laps": 2,
+    "radius_north_m": 180.0,
+    "radius_east_m": 120.0,
+    "arm_timeout_s": 60.0,
+    "takeoff_timeout_s": 45.0,
+    "land_timeout_s": 60.0
+  },
+  "collection": {
+    "minimum_duration_s": 10.0,
+    "message_types": [
+      "HEARTBEAT",
+      "GLOBAL_POSITION_INT",
+      "ATTITUDE",
+      "VFR_HUD",
+      "SYS_STATUS",
+      "BAD_DATA"
+    ],
+    "max_attitude_age_s": 1.0,
+    "rate_window_s": 1.0,
+    "max_gap_s": 2.0
+  },
+  "scenarios": {
+    "attack_start_s": 8.0,
+    "attack_duration_s": 12.0,
+    "fdi": {
+      "subtype": "step",
+      "altitude_offset_m": 5.0,
+      "drift_m_per_s": 0.25,
+      "intermittent_period_s": 2.0
+    },
+    "dos": {
+      "drop_every_nth_global_position": 2
+    },
+    "replay": {
+      "delay_s": 2.0,
+      "repetitions": 1,
+      "buffer_s": 10.0
+    }
+  },
+  "model": {
+    "path": "models/sitl",
+    "checkpoint_sha256": "3136fe66c123a51a38bea30ba502aeda8fdc3ae326fc5494bcef0393561698ac"
+  },
+  "transfer_model": {
+    "path": "models/selected",
+    "expected_checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+    "mode": "frozen_synthetic_checkpoint_transfer_only",
+    "unsupported_features_are_nan": true,
+    "sitl_metrics_claimed": false
+  },
+  "evil_twin": {
+    "status": "unsupported_without_wireless_or_network_simulator",
+    "reason": "MAVLink has no Wi-Fi access-point association or BSSID semantics"
+  }
+}

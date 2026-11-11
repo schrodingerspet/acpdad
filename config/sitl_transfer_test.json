@@ -1,0 +1,41 @@
+{
+  "protocol_id": "acpdad-sitl-frozen-transfer-v1",
+  "status": "FROZEN_SPEC_NOT_GENERATED_OR_EVALUATED",
+  "provenance": "ARDUPILOT_SITL_LOCAL_SIMULATION",
+  "purpose": "One-pass, no-tuning transfer evaluation of the already selected synthetic checkpoint on new ArduCopter SITL sessions.",
+  "model_selection": "none; this protocol does not train, calibrate, or select a model",
+  "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+  "feature_schema": "acpdad-sitl-mavlink-v1",
+  "ardupilot_tag": "Copter-4.7.2",
+  "mavproxy_version": "1.8.75",
+  "pymavlink_version": "2.4.50",
+  "pexpect_version": "4.9.0",
+  "duration_s": 60,
+  "attack_start_s": 15,
+  "attack_duration_s": 30,
+  "controller_altitude_m": 5.0,
+  "runs_per_condition": 10,
+  "run_independence": "Each mission uses a fresh ArduPilot SITL process and a virtual EEPROM wipe. The harness does not expose or set an ArduPilot stochastic seed; repeated sessions are independent run units but not claimed to be seeded stochastic replicates.",
+  "conditions": [
+    {"condition_id": "benign", "scenario": "benign", "subtype": null, "replay_delay_s": null},
+    {"condition_id": "fdi_step", "scenario": "FDI", "subtype": "step", "replay_delay_s": null},
+    {"condition_id": "fdi_drift", "scenario": "FDI", "subtype": "drift", "replay_delay_s": null},
+    {"condition_id": "fdi_intermittent", "scenario": "FDI", "subtype": "intermittent", "replay_delay_s": null},
+    {"condition_id": "fdi_coordinated", "scenario": "FDI", "subtype": "coordinated", "replay_delay_s": null},
+    {"condition_id": "dos_detector_branch_loss", "scenario": "DoS", "subtype": null, "replay_delay_s": null},
+    {"condition_id": "replay_delay_0_5s", "scenario": "Replay", "subtype": "stale_global_position_datagram", "replay_delay_s": 0.5},
+    {"condition_id": "replay_delay_2s", "scenario": "Replay", "subtype": "stale_global_position_datagram", "replay_delay_s": 2.0},
+    {"condition_id": "replay_delay_5s", "scenario": "Replay", "subtype": "stale_global_position_datagram", "replay_delay_s": 5.0}
+  ],
+  "outputs_root": "results/sitl/transfer_test_v1",
+  "metrics": ["accuracy_end_to_end", "macro_f1_end_to_end", "balanced_accuracy", "per_class_precision_recall_f1_support", "benign_scored_row_false_positive_rate", "prediction_coverage", "confusion_matrix_including_unavailable", "per_mission_metrics", "run_clustered_95_percent_intervals"],
+  "rules": [
+    "Do not combine these runs with custom synthetic datasets.",
+    "Do not fit, tune, or change thresholds using these observations or their labels.",
+    "Save every run and condition, including failures and zero-prediction runs.",
+    "Compute predictions before reading or joining the ground-truth schedule.",
+    "An unavailable or late prediction is a miss in end-to-end metrics.",
+    "Do not claim an Evil_Twin condition; this protocol has no wireless simulator or AP association stream.",
+    "If the test is inspected and further development follows, archive it as development evidence and freeze a new protocol before evaluating another test."
+  ]
+}

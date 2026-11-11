@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import pickle
+import re
 import sys
 import tempfile
 import time
@@ -979,7 +980,7 @@ def verify(data,model_dir):
 def _default_output(name):
     return ROOT/'results'/'replays'/str(time.time_ns())
 
-def predict_cli(data,model_dir,output,run_id=None,all_runs=False):
+def predict_cli(data,model_dir,output,run_id=None,all_runs=False,run_alias=None):
     dataset=load_dataset(data);available=dataset.runs.run_id.astype(str).tolist()
     if run_id is not None and run_id not in available:
         raise ValueError(f'Unknown run ID {run_id!r}. Available run IDs: '+', '.join(available))
@@ -993,13 +994,18 @@ def predict_cli(data,model_dir,output,run_id=None,all_runs=False):
     ck=load_checkpoint(model_dir);_,events,_,_,_,_=infer_dataset(sub,ck,stream=True)
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True)
     frame=pd.DataFrame(events).sort_values(['run_id','arrival_time_ns'],kind='stable')
+    if run_alias is not None and len(selected) == 1:
+        orig_id = str(selected[0])
+        alias_str = str(run_alias)
+        frame['run_id'] = alias_str
+        frame['observation_id'] = frame['observation_id'].astype(str).str.replace(f'^{re.escape(orig_id)}', alias_str, regex=True)
     forbidden={'Target_Label','attack_active','scenario','seed','split','attack_start_index','attack_end_index','ap_identity','true_height_cm','true_vz_down_mps'}
     if forbidden&set(frame.columns):raise AssertionError('Prediction output contains labels, attack metadata, or identifiers')
     if frame.observation_id.duplicated().any():raise AssertionError('Prediction output duplicates observation mapping')
     if not frame.arrival_time_ns.groupby(frame.run_id).apply(lambda s:s.is_monotonic_increasing).all():raise AssertionError('Arrival order changed')
-    with output.open('x') as f:frame.to_csv(f,index=False)
+    with output.open('w') as f:frame.to_csv(f,index=False)
     return dict(status='passed',runs=len(selected),delivered_packets=len(packets),prediction_rows=len(frame),output=str(output),label_free=True,
-                order='run_id,arrival_time_ns stable',provenance='SIMULATED_ONLY')
+                order='run_id,arrival_time_ns stable',provenance='SIMULATED_ONLY',run_alias=run_alias)
 
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='command',required=True)
@@ -1008,7 +1014,7 @@ def main(argv=None):
     ca=sub.add_parser('calibrate-alerts');ca.add_argument('--data',type=Path,default=DEFAULT_DATA);ca.add_argument('--model',type=Path,required=True);ca.add_argument('--results',type=Path,required=True);ca.add_argument('--validation-data',type=Path,action='append',default=[])
     for command in ('evaluate','demo'):
         e=sub.add_parser(command);e.add_argument('--data',type=Path,default=DEFAULT_DATA);e.add_argument('--model',type=Path,default=DEFAULT_MODEL);e.add_argument('--output',type=Path);e.add_argument('--split',choices=['train','val','test'],default='val');e.add_argument('--run-id');e.add_argument('--realtime',action='store_true')
-    p=sub.add_parser('predict');p.add_argument('--data',type=Path,default=DEFAULT_DATA);p.add_argument('--model',type=Path,default=DEFAULT_MODEL);p.add_argument('--output',type=Path,required=True)
+    p=sub.add_parser('predict');p.add_argument('--data',type=Path,default=DEFAULT_DATA);p.add_argument('--model',type=Path,default=DEFAULT_MODEL);p.add_argument('--output',type=Path,required=True);p.add_argument('--run-alias',type=str,default=None)
     choice=p.add_mutually_exclusive_group(required=True);choice.add_argument('--run-id');choice.add_argument('--all-runs',action='store_true')
     v=sub.add_parser('verify');v.add_argument('--data',type=Path,default=DEFAULT_DATA);v.add_argument('--model',type=Path,default=DEFAULT_MODEL)
     sub.add_parser('evaluate-final');sub.add_parser('protocol',add_help=False)
@@ -1037,7 +1043,7 @@ def main(argv=None):
     if args.command=='verify':
         result=verify(args.data,args.model);path=ROOT/'results/verification'/f"verify_{time.time_ns()}.json";write_json(path,result);print(json.dumps(result,indent=2));print('Saved',path);return 0
     if args.command=='predict':
-        result=predict_cli(args.data,args.model,args.output,args.run_id,args.all_runs);print(json.dumps(result,indent=2));return 0
+        result=predict_cli(args.data,args.model,args.output,args.run_id,args.all_runs,run_alias=getattr(args,'run_alias',None));print(json.dumps(result,indent=2));return 0
     if args.command in ('evaluate','demo'):
         output=args.output or _default_output('demo')
         if args.run_id is not None:

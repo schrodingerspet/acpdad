@@ -1,0 +1,6 @@
+# Optional localhost-only ArduPilot SITL/MAVLink toolchain.
+# Base synthetic workflow dependencies remain pinned in requirements.txt.
+pymavlink==2.4.50
+MAVProxy==1.8.75
+pexpect==4.9.0
+empy==3.3.4

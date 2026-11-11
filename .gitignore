@@ -3,6 +3,7 @@
 venv/
 env/
 ENV/
+.sitl/
 
 # Python bytecode and caches
 __pycache__/
@@ -30,11 +31,18 @@ Thumbs.db
 *.tar.bz2
 *.rar
 
-# Runtime transient logs
+# Runtime transient logs & raw flight traces
 simulation/.active_attack.json
-mav.tlog
-mav.tlog.raw
+*.tlog
+*.tlog.raw
+*.jsonl
+results/sitl/runs/
+results/sitl/sessions/
+results/sitl/dataset/
+results/sitl/evaluation/test_runs/
+results/historical/sitl_iterations/
 
 data/train_validation/features.csv
 results/frozen_test/analysis/all_observation_audit.csv
 results/frozen_test/analysis/all_predictions_label_free.csv
+

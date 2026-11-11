@@ -1,0 +1,54 @@
+{
+  "checkpoint_timestamp": "2026-11-11T03:07:00+05:30",
+  "conversation_id": "ae0e880c-65aa-4c38-a907-31406b8e4d3f",
+  "project_root": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD",
+  "git_branch": "main",
+  "git_commit_created": false,
+  "verified_runs": [
+    {
+      "run_id": "live_concurrent_001",
+      "scenario": "combined",
+      "status": "completed",
+      "laps_flown": 2,
+      "waypoints_reached": 16,
+      "distance_m": 2065.4,
+      "flight_duration_s": 146.7,
+      "cruise_speed_mps": 16.0,
+      "altitude_m": 15.0,
+      "qgc_port": 14600,
+      "concurrent_injections": {
+        "fdi_mutated": 310,
+        "dos_dropped": 310,
+        "replay_injected": 310
+      },
+      "detection_results": {
+        "received_observations": 620,
+        "ml_predictions": {
+          "Benign": 616,
+          "FDI": 4
+        },
+        "model_alerts": 4,
+        "physics_warnings": 499,
+        "dos_unavailable": 310
+      },
+      "output_dir": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/sitl/runs/live_concurrent_001"
+    }
+  ],
+  "verification": {
+    "sitl_selfcheck": {
+      "passed": 23,
+      "failed": 0,
+      "report": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/verification/latest_sitl_selfcheck.json"
+    },
+    "synthetic_contract_verify": {
+      "status": "passed",
+      "rows": 81056,
+      "checkpoint_sha256": "cdbe7a1b7fba8823c3c17ca722b34002c0852de446c5e7e0a41ba878a741bc4d",
+      "report": "/run/media/schrodingerspet/D/Restricted/Projects/ACPDAD/results/verification/latest_verify.json"
+    }
+  },
+  "key_artifacts": {
+    "report_markdown": "/home/schrodingerspet/.gemini/antigravity-cli/brain/ae0e880c-65aa-4c38-a907-31406b8e4d3f/sitl_concurrent_attack_report.md",
+    "checkpoint_markdown": "/home/schrodingerspet/.gemini/antigravity-cli/brain/ae0e880c-65aa-4c38-a907-31406b8e4d3f/session_summary_checkpoint.md"
+  }
+}
